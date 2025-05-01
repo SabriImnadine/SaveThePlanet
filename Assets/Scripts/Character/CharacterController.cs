@@ -3,32 +3,46 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
-    [SerializeField] private float movementSpeed = 5f;
+    public float moveSpeed = 5f;
+
     private bool isMoving = false;
+    private Vector2 input;
+    private Animator animator;
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     private void Update()
     {
-        if (isMoving)
-            return;
-
-        float moveX = Input.GetAxisRaw("Horizontal");
-        float moveY = Input.GetAxisRaw("Vertical");
-        Vector2 moveInput = new Vector2(moveX, moveY);
-
-        if (moveInput != Vector2.zero)
+        if (!isMoving)
         {
-            Vector3 destination = transform.position + new Vector3(moveInput.x, moveInput.y, 0f);
-            StartCoroutine(MoveTo(destination));
+            input.x = Input.GetAxisRaw("Horizontal");
+            input.y = Input.GetAxisRaw("Vertical");
+
+            if (input.x != 0) input.y = 0;
+
+            if (input != Vector2.zero)
+            {
+                animator.SetFloat("moveX", input.x);
+                animator.SetFloat("moveY", input.y);
+
+                Vector3 targetPos = transform.position + new Vector3(input.x, input.y, 0f);
+                StartCoroutine(Move(targetPos));
+            }
         }
+        
+        animator.SetBool("isMoving", isMoving);
     }
 
-    private IEnumerator MoveTo(Vector3 destination)
+    private IEnumerator Move(Vector3 destination)
     {
         isMoving = true;
 
         while ((destination - transform.position).sqrMagnitude > Mathf.Epsilon)
         {
-            transform.position = Vector3.MoveTowards(transform.position, destination, movementSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, destination, moveSpeed * Time.deltaTime);
             yield return null;
         }
 
@@ -36,5 +50,3 @@ public class CharacterController : MonoBehaviour
         isMoving = false;
     }
 }
-
-
