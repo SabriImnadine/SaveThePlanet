@@ -4,6 +4,7 @@ using UnityEngine;
 public class CharacterController : MonoBehaviour
 {
     public float moveSpeed = 5f;
+    public LayerMask solidObjectsLayer;
 
     private bool isMoving = false;
     private Vector2 input;
@@ -29,6 +30,8 @@ public class CharacterController : MonoBehaviour
                 animator.SetFloat("moveY", input.y);
 
                 Vector3 targetPos = transform.position + new Vector3(input.x, input.y, 0f);
+                
+                if(IsWalkable(targetPos))
                 StartCoroutine(Move(targetPos));
             }
         }
@@ -48,5 +51,14 @@ public class CharacterController : MonoBehaviour
 
         transform.position = destination;
         isMoving = false;
+    }
+
+    private bool IsWalkable(Vector3 targetPos)
+    {
+      if  (Physics2D.OverlapCircle(targetPos, 0.2f, solidObjectsLayer ) !=  null)
+      {
+        return false;
+      }
+      return true;
     }
 }
