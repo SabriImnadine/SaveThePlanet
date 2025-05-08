@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class CharacterController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public LayerMask solidObjectsLayer;
@@ -9,11 +9,11 @@ public class CharacterController : MonoBehaviour
 
     private bool isMoving = false;
     private Vector2 input;
-    private Animator animator;
+    private AnimatorCharacter animator;
 
     private void Awake()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponent<AnimatorCharacter>();
     }
 
     public void HandleUpdate()
@@ -27,8 +27,8 @@ public class CharacterController : MonoBehaviour
 
             if (input != Vector2.zero)
             {
-                animator.SetFloat("moveX", input.x);
-                animator.SetFloat("moveY", input.y);
+                animator.HorizontalInput = input.x;
+                animator.VerticalInput = input.y;
 
                 Vector3 targetPos = transform.position + new Vector3(input.x, input.y, 0f);
                 
@@ -37,7 +37,7 @@ public class CharacterController : MonoBehaviour
             }
         }
         
-        animator.SetBool("isMoving", isMoving);
+        animator.IsCharacterMoving = isMoving;
 
         if (Input.GetKeyDown(KeyCode.Space))
         Interact();
@@ -45,7 +45,7 @@ public class CharacterController : MonoBehaviour
 
     void Interact()
     {
-        var facingDir = new Vector3(animator.GetFloat("moveX"), animator.GetFloat("moveY"));
+        var facingDir = new Vector3(animator.HorizontalInput, animator.VerticalInput);
         var interactPos = transform.position + facingDir;
 
         // Debug.DrawLine(transform.position, interactPos, Color.green, 0.5f);

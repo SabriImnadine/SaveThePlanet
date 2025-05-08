@@ -6,7 +6,7 @@ public enum GameState { FreeRoam, Dialog }
 
 public class GameController : MonoBehaviour
 {
-    [SerializeField] CharacterController playerController;
+    [SerializeField] PlayerController playerController;
 
     GameState state;
 
