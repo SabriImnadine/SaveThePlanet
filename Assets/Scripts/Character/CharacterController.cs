@@ -16,7 +16,7 @@ public class CharacterController : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    private void Update()
+    public void HandleUpdate()
     {
         if (!isMoving)
         {
@@ -70,6 +70,7 @@ public class CharacterController : MonoBehaviour
         transform.position = destination;
         isMoving = false;
     }
+
 
     private bool IsWalkable(Vector3 targetPos)
     {
