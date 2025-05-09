@@ -1,0 +1,55 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Character : MonoBehaviour
+{
+    public float moveSpeed = 5f;
+
+    public bool IsCharacterMoving { get; private set; }
+    private AnimatorCharacter animator;
+
+    private void Awake()
+    {
+        animator = GetComponent<AnimatorCharacter>();
+    }
+
+    public IEnumerator Move(Vector2 moveVec)
+    {
+        animator.HorizontalInput = Mathf.Clamp(moveVec.x, -1f, 1f);
+        animator.VerticalInput = Mathf.Clamp(moveVec.y, -1, 1f);
+
+        Vector3 targetPos = transform.position + new Vector3(moveVec.x, moveVec.y, 0f);
+
+        if (!IsWalkable(targetPos))
+            yield break;
+
+        IsCharacterMoving = true;
+
+        while ((targetPos - transform.position).sqrMagnitude > Mathf.Epsilon)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
+            yield return null;
+        }
+
+        transform.position = targetPos;
+        IsCharacterMoving = false;
+    }
+
+    public void HandleUpdate()
+    {
+        animator.IsCharacterMoving = IsCharacterMoving;
+    }
+
+    private bool IsWalkable(Vector3 targetPos)
+    {
+        if (Physics2D.OverlapCircle(targetPos, 0.2f, Layers.i.SolidLayer | Layers.i.InteractableLayer) != null)
+        {
+            return false;
+        }
+        return true;
+    }
+
+    public AnimatorCharacter Animator => animator;
+}
+
