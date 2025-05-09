@@ -21,7 +21,7 @@ public class Character : MonoBehaviour
 
         Vector3 targetPos = transform.position + new Vector3(moveVec.x, moveVec.y, 0f);
 
-        if (!IsWalkable(targetPos))
+        if (!IsObstacleClear(targetPos))
             yield break;
 
         IsCharacterMoving = true;
@@ -41,12 +41,38 @@ public class Character : MonoBehaviour
         animator.IsCharacterMoving = IsCharacterMoving;
     }
 
+    public void Watching(Vector3 targetPos)
+{
+    float xDiff = Mathf.Floor(targetPos.x) - Mathf.Floor(transform.position.x);
+    float yDiff = Mathf.Floor(targetPos.y) - Mathf.Floor(transform.position.y);
+
+    if (xDiff == 0 || yDiff == 0)
+    {
+        animator.HorizontalInput = Mathf.Clamp(xDiff, -1f, 1f);
+        animator.VerticalInput = Mathf.Clamp(yDiff, -1f, 1f);
+    }
+    else
+    {
+        Debug.LogError("Character can't watch diagonally");
+    }
+}
+
     private bool IsWalkable(Vector3 targetPos)
     {
         if (Physics2D.OverlapCircle(targetPos, 0.2f, Layers.i.SolidLayer | Layers.i.InteractableLayer) != null)
         {
             return false;
         }
+        return true;
+    }
+
+    private bool IsObstacleClear(Vector3 targetPos)
+    {
+        var diff = targetPos - transform.position;
+        var dir = diff.normalized;
+        if (Physics2D.BoxCast(transform.position + dir, new Vector2(0.2f, 0.2f), 0f, dir, diff.magnitude - 1, Layers.i.SolidLayer | Layers.i.InteractableLayer | Layers.i.CharacterLayer ) == true)
+        return false;
+
         return true;
     }
 

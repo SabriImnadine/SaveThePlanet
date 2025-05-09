@@ -20,16 +20,22 @@ public class NpcController  : MonoBehaviour, Interactable
     {
         character = GetComponent<Character>();
     }
-    public void Interact()
+    public void Interact(Transform initiator)
     {
         if (state == NPCState.Wait)
-       StartCoroutine(DialogManager.Instance.Showdialog(dialog));
+        {
+
+        state = NPCState.Dialog;
+        character.Watching(initiator.position);
+        StartCoroutine(DialogManager.Instance.Showdialog(dialog, () => {
+          waitTimer = 0f;
+          state = NPCState.Wait;  
+        }));
+        }
     }
 
     private void Update()
     {
-        if (DialogManager.Instance.IsReading) return;
-
         if (state == NPCState.Wait)
         {
             waitTimer += Time.deltaTime;
@@ -48,11 +54,15 @@ public class NpcController  : MonoBehaviour, Interactable
     {
         state = NPCState.Walking;
 
+        var oldPosition = transform.position;
+
        yield return character.Move(pathSequence[currentSequence]);
+
+       if (transform.position != oldPosition)
        currentSequence = (currentSequence + 1) % pathSequence.Count;
 
         state = NPCState.Wait;
     }
 }
 
-public enum NPCState { Wait, Walking }
+public enum NPCState { Wait, Walking, Dialog }

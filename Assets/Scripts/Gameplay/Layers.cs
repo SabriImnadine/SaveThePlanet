@@ -6,12 +6,17 @@ public class Layers : MonoBehaviour
 {
     [SerializeField] LayerMask solidObjectsLayer;
     [SerializeField] LayerMask interactableLayer;
+    [SerializeField] LayerMask characterLayer;
 
     public static Layers i { get; set; }
 
     private void Awake()
     {
         i = this;
+    }
+
+    public LayerMask CharacterLayer {
+        get => characterLayer;
     }
 
     public LayerMask SolidLayer {
