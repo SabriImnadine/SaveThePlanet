@@ -8,6 +8,9 @@ public class AnimatorCharacter : MonoBehaviour
     [SerializeField] private List<Sprite> rightSprites;
     [SerializeField] private List<Sprite> leftSprites;
 
+    [SerializeField] WatchingDirection defaultDirection = WatchingDirection.Down;
+
+
     public float HorizontalInput { get; set; }
     public float VerticalInput { get; set; }
     public bool IsCharacterMoving { get; set; }
@@ -29,6 +32,7 @@ public class AnimatorCharacter : MonoBehaviour
         upAnim = new AnimatorSprite(upSprites, spriteRenderer);
         rightAnim = new AnimatorSprite(rightSprites, spriteRenderer);
         leftAnim = new AnimatorSprite(leftSprites, spriteRenderer);
+        setWatchingDirection(defaultDirection);
 
         currentAnim = downAnim;
     }
@@ -56,5 +60,39 @@ public class AnimatorCharacter : MonoBehaviour
 
         wasMovingPreviously = IsCharacterMoving;    
     }
+    public void setWatchingDirection(WatchingDirection dir)
+{
+    currentDirection = dir;
+
+    if (dir == WatchingDirection.Right)
+    {
+        HorizontalInput = 1;
+        VerticalInput = 0;
+    }
+    else if (dir == WatchingDirection.Left)
+    {
+        HorizontalInput = -1;
+        VerticalInput = 0;
+    }
+    else if (dir == WatchingDirection.Up)
+    {
+        VerticalInput = 1;
+        HorizontalInput = 0;
+    }
+    else if (dir == WatchingDirection.Down)
+    {
+        VerticalInput = -1;
+        HorizontalInput = 0;
+    }
 }
 
+  private WatchingDirection currentDirection;
+
+public WatchingDirection ViewDirection {
+    get => currentDirection;
+}
+}
+
+
+
+public enum WatchingDirection { Up, Down, Left, Right}

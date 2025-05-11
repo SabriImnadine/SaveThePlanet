@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum GameState { FreeRoam, Dialog }
+public enum GameState { FreeRoam, Dialog, Stopscene }
 
 public class GameController : MonoBehaviour
 {
@@ -12,6 +12,18 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
+        playerController.OnEnterSecondCharacterView += (Collider2D secondcharacterCollider ) =>
+        {
+            var secondcharacter = secondcharacterCollider.GetComponentInParent<SecondCharacterController>();
+
+            if (secondcharacter !=null )
+            {
+                state = GameState.Stopscene;
+                StartCoroutine(secondcharacter.LaunchInteractionSequence(playerController));
+
+            }
+        };  
+
         DialogManager.Instance.OnShowDialog += () =>
         {
             state = GameState.Dialog;

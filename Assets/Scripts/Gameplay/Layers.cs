@@ -6,6 +6,7 @@ public class Layers : MonoBehaviour
 {
     [SerializeField] LayerMask solidObjectsLayer;
     [SerializeField] LayerMask interactableLayer;
+    [SerializeField] LayerMask viewLayer;
     [SerializeField] LayerMask characterLayer;
 
     public static Layers i { get; set; }
@@ -21,6 +22,10 @@ public class Layers : MonoBehaviour
 
     public LayerMask SolidLayer {
         get => solidObjectsLayer;
+    }
+
+     public LayerMask ViewLayer {
+        get => viewLayer;
     }
 
     public LayerMask InteractableLayer {

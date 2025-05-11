@@ -1,8 +1,11 @@
 using System.Collections;
+using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+
+    public event Action<Collider2D> OnEnterSecondCharacterView;
     private Vector2 input;
     private Character character;
 
@@ -22,7 +25,7 @@ public class PlayerController : MonoBehaviour
 
             if (input != Vector2.zero)
             {
-                StartCoroutine(character.Move(input));
+                StartCoroutine(character.Move(input, OnOver));
             }
         }
 
@@ -42,6 +45,23 @@ public class PlayerController : MonoBehaviour
         {
             collider.GetComponent<Interactable>()?.Interact(transform);
         }
+    }
+
+    private void OnOver()
+    {
+        CheckIfInSecondCharacterView();
+    }
+
+    private void CheckIfInSecondCharacterView()
+    {
+        
+    Collider2D detectedField = Physics2D.OverlapCircle(transform.position, 0.2f, Layers.i.ViewLayer);
+    
+    if (detectedField != null)
+    {
+        character.Animator.IsCharacterMoving = false;
+        OnEnterSecondCharacterView?.Invoke(detectedField);
+    }
     }
 }
 

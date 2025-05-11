@@ -14,7 +14,7 @@ public class Character : MonoBehaviour
         animator = GetComponent<AnimatorCharacter>();
     }
 
-    public IEnumerator Move(Vector2 moveVec)
+    public IEnumerator Move(Vector2 moveVec, System.Action onMoveComplete = null)
     {
         animator.HorizontalInput = Mathf.Clamp(moveVec.x, -1f, 1f);
         animator.VerticalInput = Mathf.Clamp(moveVec.y, -1, 1f);
@@ -34,6 +34,8 @@ public class Character : MonoBehaviour
 
         transform.position = targetPos;
         IsCharacterMoving = false;
+
+        onMoveComplete?.Invoke();
     }
 
     public void HandleUpdate()
