@@ -49,8 +49,19 @@ public class PlayerController : MonoBehaviour
 
     private void OnOver()
     {
-        CheckIfInSecondCharacterView();
+    var colliders = Physics2D.OverlapCircleAll(transform.position, 0.2f, Layers.i.TriggerLayer);
+
+    foreach (var collider in colliders)
+    {
+        var triggerable = collider.GetComponent<Trigger>();
+        if (triggerable != null)
+        {
+            triggerable.onPlayerTrigger(this);
+            break;
+        }
     }
+    }
+
 
     private void CheckIfInSecondCharacterView()
     {
@@ -63,5 +74,8 @@ public class PlayerController : MonoBehaviour
         OnEnterSecondCharacterView?.Invoke(detectedField);
     }
     }
+
+    public Character Character => character;
+
 }
 

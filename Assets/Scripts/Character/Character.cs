@@ -7,11 +7,22 @@ public class Character : MonoBehaviour
     public float moveSpeed = 5f;
 
     public bool IsCharacterMoving { get; private set; }
+
+    public float OffsetY { get; private set; } = 0.3f;
     private AnimatorCharacter animator;
 
+    public void SnapToTile(Vector2 pos)
+    {
+        pos.x = Mathf.Floor(pos.x) + 0.5f;
+        pos.y = Mathf.Floor(pos.y) + 0.5f + OffsetY;
+
+        transform.position=pos;
+    }
+    
     private void Awake()
     {
         animator = GetComponent<AnimatorCharacter>();
+        SnapToTile(transform.position);
     }
 
     public IEnumerator Move(Vector2 moveVec, System.Action onMoveComplete = null)

@@ -2,13 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum GameState { FreeRoam, Dialog, Stopscene }
+public enum GameState { FreeRoam, Dialog, Stopscene, Paused }
 
 public class GameController : MonoBehaviour
 {
     [SerializeField] PlayerController playerController;
 
     GameState state;
+    GameState StateBeforePause;
+
+    public static GameController Instance { get; private set; }
+
+    private void Awake()
+    {
+    if (Instance == null)
+        Instance = this;
+    else
+        Destroy(gameObject);
+    }
+
 
     private void Start()
     {
@@ -45,6 +57,19 @@ public class GameController : MonoBehaviour
         else if (state == GameState.FreeRoam)
         {
             playerController.HandleUpdate();
+        }
+    }
+
+    public void PauseTheGame(bool  pause)
+    {
+        if (pause)
+        {
+            StateBeforePause = state;
+            state = GameState.Paused;
+        }
+        else
+        {
+            state = StateBeforePause;
         }
     }
 

@@ -8,6 +8,7 @@ public class Layers : MonoBehaviour
     [SerializeField] LayerMask interactableLayer;
     [SerializeField] LayerMask viewLayer;
     [SerializeField] LayerMask characterLayer;
+     [SerializeField] LayerMask tpLayer;
 
     public static Layers i { get; set; }
 
@@ -30,5 +31,13 @@ public class Layers : MonoBehaviour
 
     public LayerMask InteractableLayer {
         get => interactableLayer;
+    }
+
+    public LayerMask TpLayer {
+     get =>  tpLayer;  
+    }
+
+     public LayerMask TriggerLayer {
+     get =>  viewLayer | tpLayer;  
     }
 }
