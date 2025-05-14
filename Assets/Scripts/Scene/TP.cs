@@ -15,6 +15,7 @@ public class TP : MonoBehaviour, Trigger
     [SerializeField] Transform spawn;
 
     PlayerController player;
+     private Fade fade;
  
     
     public void onPlayerTrigger(PlayerController player)
@@ -23,10 +24,19 @@ public class TP : MonoBehaviour, Trigger
         StartCoroutine(NextScene());
     }
 
+    private void Start()
+    {
+        fade = FindFirstObjectByType<Fade>();
+    }
+    
     IEnumerator NextScene()
     {
         DontDestroyOnLoad(gameObject);
         GameController.Instance.PauseTheGame(true);
+
+        player.Character.ResetAnimationState();
+
+        yield return fade.Show(0.6f);
 
         yield return SceneManager.LoadSceneAsync(sceneToCharge);
 
@@ -34,6 +44,7 @@ public class TP : MonoBehaviour, Trigger
 
         player.Character.SnapToTile(destinationTP.Spawn.position);
 
+        yield return fade.Hide(0.6f);
         GameController.Instance.PauseTheGame(false);
 
         yield break;

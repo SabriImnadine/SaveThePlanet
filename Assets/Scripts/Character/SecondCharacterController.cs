@@ -53,4 +53,10 @@ public class SecondCharacterController : MonoBehaviour
 
         view.transform.eulerAngles = new Vector3(0f, 0f, rotation);
     }
+
+    private void Update()
+{
+    characterControl.HandleUpdate();
+}
+
 }

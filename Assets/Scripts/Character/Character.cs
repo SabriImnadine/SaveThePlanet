@@ -40,11 +40,13 @@ public class Character : MonoBehaviour
         while ((targetPos - transform.position).sqrMagnitude > Mathf.Epsilon)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
+           
             yield return null;
         }
 
         transform.position = targetPos;
         IsCharacterMoving = false;
+        
 
         onMoveComplete?.Invoke();
     }
@@ -88,6 +90,14 @@ public class Character : MonoBehaviour
 
         return true;
     }
+
+    public void ResetAnimationState()
+{
+    animator.HorizontalInput = 0;
+    animator.VerticalInput = 0;
+    animator.IsCharacterMoving = false;
+    IsCharacterMoving = false;
+}
 
     public AnimatorCharacter Animator => animator;
 }
