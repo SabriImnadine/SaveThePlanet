@@ -11,6 +11,7 @@ public class TP : MonoBehaviour, Trigger
 
 
     [SerializeField] int sceneToCharge = -1;
+    [SerializeField] TPDefiner tpdefiner;
     [SerializeField] Transform spawn;
 
     PlayerController player;
@@ -29,7 +30,7 @@ public class TP : MonoBehaviour, Trigger
 
         yield return SceneManager.LoadSceneAsync(sceneToCharge);
 
-        var destinationTP = Object.FindObjectsByType<TP>(FindObjectsSortMode.None).FirstOrDefault(x => x != this);
+        var destinationTP = Object.FindObjectsByType<TP>(FindObjectsSortMode.None).FirstOrDefault(x => x != this && x.tpdefiner == this.tpdefiner);
 
         player.Character.SnapToTile(destinationTP.Spawn.position);
 
@@ -41,5 +42,7 @@ public class TP : MonoBehaviour, Trigger
 
     public Transform Spawn => spawn;
 }
+
+public enum TPDefiner { TP1, TP2, TP3, TP4 }
 
 

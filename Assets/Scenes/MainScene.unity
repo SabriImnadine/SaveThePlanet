@@ -8025,7 +8025,7 @@ MonoBehaviour:
   - {fileID: 7369579285134121275, guid: 667eef3cbed95024c86e712c39dc41ec, type: 3}
   - {fileID: -1211714280344312584, guid: 667eef3cbed95024c86e712c39dc41ec, type: 3}
   - {fileID: 6842672397523141539, guid: 667eef3cbed95024c86e712c39dc41ec, type: 3}
-  defaultDirection: 0
+  defaultDirection: 1
 --- !u!114 &1000240452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8193,7 +8193,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1149719146}
-  - component: {fileID: 1149719145}
   m_Layer: 0
   m_Name: UIController
   m_TagString: Untagged
@@ -8201,21 +8200,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1149719145
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1149719144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa7ed114b5093964681915c3d3e7b1df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogBox: {fileID: 0}
-  dialogText: {fileID: 0}
-  lettersPerSecond: 45
 --- !u!4 &1149719146
 Transform:
   m_ObjectHideFlags: 0
