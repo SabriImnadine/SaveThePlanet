@@ -7,8 +7,21 @@ public class SecondCharacterController : MonoBehaviour
     [SerializeField] Dialog dialogToShow;
     [SerializeField] GameObject view;
     [SerializeField] GameObject alertIcon;
+    [SerializeField] private QuestData quest;
+    [SerializeField] private GameObject pickupSpawner;
+    [SerializeField] private Dialog startDialog;
+    [SerializeField] private Dialog inProgressDialog;
+    [SerializeField] private Dialog completeDialog;
+
+    
+
 
     private Character characterControl;
+    private bool isPlayerInRange = false;
+    private PlayerController playerRef;
+
+
+
 
     private void Awake()
     {
@@ -17,28 +30,46 @@ public class SecondCharacterController : MonoBehaviour
 
    private IEnumerator Start()
 {
-    yield return null; // attend une frame que tous les Start soient exécutés
+    yield return null;
+     quest.ResetProgress();
     SetViewRotation(characterControl.Animator.ViewDirection);
 }
 
-    public IEnumerator LaunchInteractionSequence(PlayerController player)
-    {
-     
-        alertIcon.SetActive(true);
-        yield return new WaitForSeconds(0.5f);
-        alertIcon.SetActive(false);
+   public IEnumerator LaunchInteractionSequence(PlayerController player)
+{
 
-        Vector3 direction = player.transform.position - transform.position;
-        Vector2 movementVector = direction - direction.normalized;
-        movementVector = new Vector2(Mathf.Round(movementVector.x), Mathf.Round(movementVector.y));
+    
+    alertIcon.SetActive(true);
+    yield return new WaitForSeconds(0.5f);
+    alertIcon.SetActive(false);
 
-        yield return characterControl.Move(movementVector);
+    Vector3 direction = player.transform.position - transform.position;
+    Vector2 movementVector = direction - direction.normalized;
+    movementVector = new Vector2(Mathf.Round(movementVector.x), Mathf.Round(movementVector.y));
+    yield return characterControl.Move(movementVector);
 
-        StartCoroutine(DialogManager.Instance.Showdialog(dialogToShow, () =>
+        if (!quest.isStarted)
         {
-            Debug.Log("Second character triggered a dialog.");
-        }));
+            quest.isStarted = true;
+            quest.currentAmount = 0;
+
+            if (pickupSpawner != null)
+                pickupSpawner.SetActive(true);
+
+            yield return DialogManager.Instance.Showdialog(startDialog);
+        }
+        else if (!quest.isCompleted)
+        {
+            yield return DialogManager.Instance.Showdialog(inProgressDialog);
+        yield break;
     }
+        else
+        {
+            yield return DialogManager.Instance.Showdialog(completeDialog);
+
+        }
+}
+
 
      public void SetViewRotation(WatchingDirection dir)
     {
@@ -55,8 +86,12 @@ public class SecondCharacterController : MonoBehaviour
     }
 
     private void Update()
-{
-    characterControl.HandleUpdate();
+    {
+        characterControl.HandleUpdate();
+      if (isPlayerInRange && Input.GetKeyDown(KeyCode.Space))
+    {
+        StartCoroutine(LaunchInteractionSequence(playerRef));
+    }
 }
 
 }

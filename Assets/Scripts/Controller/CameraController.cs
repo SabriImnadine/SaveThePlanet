@@ -11,7 +11,7 @@ public class CameraController : MonoBehaviour
             transform.position = new Vector3(
                 target.position.x,
                 target.position.y,
-                transform.position.z // généralement -10 pour les caméras 2D
+                transform.position.z 
             );
         }
     }

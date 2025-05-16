@@ -4,6 +4,7 @@ using System.Collections;
 public class Object : MonoBehaviour, Interactable
 {
     [SerializeField] private Dialog pickupDialog;
+    [SerializeField] private QuestData quest; // ← AJOUT ICI
 
     public void Interact(Transform initiator)
     {
@@ -12,13 +13,18 @@ public class Object : MonoBehaviour, Interactable
 
     private IEnumerator PickupRoutine()
     {
-        Debug.Log("Pickup is working");
+        if (quest == null || !quest.isStarted || quest.isCompleted)
+            yield break;
 
         if (pickupDialog != null)
-        {
             yield return DialogManager.Instance.Showdialog(pickupDialog);
-        }
 
-        Destroy(gameObject); 
+        quest.currentAmount++;
+
+        if (quest.currentAmount >= quest.requiredAmount)
+            quest.isCompleted = true;
+
+        Destroy(gameObject);
     }
 }
+
