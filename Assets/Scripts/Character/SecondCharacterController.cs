@@ -2,9 +2,9 @@ using System.Collections;
 using UnityEngine;
 using System;
 
-public class SecondCharacterController : MonoBehaviour
+public class SecondCharacterController : MonoBehaviour, Interactable
 {
-    [SerializeField] Dialog dialogToShow;
+    
     [SerializeField] GameObject view;
     [SerializeField] GameObject alertIcon;
     [SerializeField] private QuestData quest;
@@ -13,11 +13,11 @@ public class SecondCharacterController : MonoBehaviour
     [SerializeField] private Dialog inProgressDialog;
     [SerializeField] private Dialog completeDialog;
 
-    
+
 
 
     private Character characterControl;
-    private bool isPlayerInRange = false;
+    private bool hasAutoInteracted = false;
     private PlayerController playerRef;
 
 
@@ -28,25 +28,30 @@ public class SecondCharacterController : MonoBehaviour
         characterControl = GetComponent<Character>();
     }
 
-   private IEnumerator Start()
-{
-    yield return null;
-     quest.ResetProgress();
-    SetViewRotation(characterControl.Animator.ViewDirection);
-}
+    private IEnumerator Start()
+    {
+        yield return null;
+        quest.ResetProgress();
+        SetViewRotation(characterControl.Animator.ViewDirection);
+    }
 
-   public IEnumerator LaunchInteractionSequence(PlayerController player)
-{
+    public IEnumerator LaunchInteractionSequence(PlayerController player)
+    {
+        if (hasAutoInteracted || quest.isStarted)
+        yield break;
 
-    
-    alertIcon.SetActive(true);
-    yield return new WaitForSeconds(0.5f);
-    alertIcon.SetActive(false);
+        hasAutoInteracted = true;
+        playerRef = player;
 
-    Vector3 direction = player.transform.position - transform.position;
-    Vector2 movementVector = direction - direction.normalized;
-    movementVector = new Vector2(Mathf.Round(movementVector.x), Mathf.Round(movementVector.y));
-    yield return characterControl.Move(movementVector);
+
+        alertIcon.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        alertIcon.SetActive(false);
+
+        Vector3 direction = player.transform.position - transform.position;
+        Vector2 movementVector = direction - direction.normalized;
+        movementVector = new Vector2(Mathf.Round(movementVector.x), Mathf.Round(movementVector.y));
+        yield return characterControl.Move(movementVector);
 
         if (!quest.isStarted)
         {
@@ -57,21 +62,24 @@ public class SecondCharacterController : MonoBehaviour
                 pickupSpawner.SetActive(true);
 
             yield return DialogManager.Instance.Showdialog(startDialog);
+            if (view != null)
+            view.SetActive(false);
+
         }
         else if (!quest.isCompleted)
         {
             yield return DialogManager.Instance.Showdialog(inProgressDialog);
-        yield break;
-    }
+            yield break;
+        }
         else
         {
             yield return DialogManager.Instance.Showdialog(completeDialog);
 
         }
-}
+    }
 
 
-     public void SetViewRotation(WatchingDirection dir)
+    public void SetViewRotation(WatchingDirection dir)
     {
         float rotation = 0f;
 
@@ -88,10 +96,53 @@ public class SecondCharacterController : MonoBehaviour
     private void Update()
     {
         characterControl.HandleUpdate();
-      if (isPlayerInRange && Input.GetKeyDown(KeyCode.Space))
+    }
+
+   public void Interact(Transform initiator)
+{
+    
+
+    playerRef = initiator.GetComponent<PlayerController>();
+    if (playerRef != null)
     {
-        StartCoroutine(LaunchInteractionSequence(playerRef));
+        characterControl.Watching(initiator.position);
+        StartCoroutine(ManualInteraction());
+    }
+    
+}
+
+
+private IEnumerator ManualInteraction()
+{
+    
+
+    if (!quest.isStarted)
+    {
+       
+
+        quest.isStarted = true;
+        quest.currentAmount = 0;
+
+        if (pickupSpawner != null)
+            pickupSpawner.SetActive(true);
+
+        yield return DialogManager.Instance.Showdialog(startDialog);
+        yield break;
+    }
+
+    if (!quest.isCompleted)
+    {
+       
+        yield return DialogManager.Instance.Showdialog(inProgressDialog);
+    }
+    else
+    {
+       
+        yield return DialogManager.Instance.Showdialog(completeDialog);
     }
 }
+
+
+
 
 }
