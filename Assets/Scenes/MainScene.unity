@@ -682,7 +682,7 @@ MonoBehaviour:
     - waroom wil ik geen ding meer zijn
   timeBetweenSquence: 3
   pathSequence:
-  - {x: -4, y: 0}
+  - {x: -2, y: 0}
   - {x: 0, y: -2}
   - {x: -2, y: 0}
   - {x: 0, y: 2}
@@ -732,6 +732,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+--- !u!1 &563702620
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 563702622}
+  - component: {fileID: 563702621}
+  m_Layer: 0
+  m_Name: TileBlocker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &563702621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563702620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dda604cebabb0f48b74922086ef46d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemap: {fileID: 2007590274}
+  questData: {fileID: 11400000, guid: df2cf7a90d477174e849681747f62248, type: 2}
+  tilesToClear:
+  - {x: -2, y: -10, z: 0}
+  - {x: -1, y: -10, z: 0}
+--- !u!4 &563702622
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563702620}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,7 +1102,9 @@ MonoBehaviour:
     - waroom wil ik geen ding meer zijn
   timeBetweenSquence: 3
   pathSequence:
-  - {x: 8, y: 0}
+  - {x: 3, y: 0}
+  - {x: -2, y: 0}
+  - {x: -2, y: 0}
   - {x: -2, y: 0}
 --- !u!61 &895261608
 BoxCollider2D:
@@ -8519,9 +8570,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65b854678389a9d4bb6e278fada0bf35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogToShow:
-    lines:
-    - Hey jij daar wil je een snoep eten ?
   view: {fileID: 2041692700}
   alertIcon: {fileID: 1681102226}
   quest: {fileID: 0}
@@ -9364,9 +9412,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65b854678389a9d4bb6e278fada0bf35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogToShow:
-    lines:
-    - Hey jij daar wil je een snoep eten ?
   view: {fileID: 157173385}
   alertIcon: {fileID: 1089132477}
   quest: {fileID: 11400000, guid: df2cf7a90d477174e849681747f62248, type: 2}
@@ -9460,7 +9505,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.035855055, y: 0}
+  m_Offset: {x: -0.018222332, y: -0.07934713}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -9470,7 +9515,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.9282899, y: 1}
+  m_Size: {x: 0.96355534, y: 1.4408197}
   m_EdgeRadius: 0
 --- !u!50 &1220099176
 Rigidbody2D:
@@ -10066,6 +10111,26 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 32
       m_TileSpriteIndex: 32
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -2, y: -10, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 33
+      m_TileSpriteIndex: 33
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -1, y: -10, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 33
+      m_TileSpriteIndex: 33
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -11519,6 +11584,8 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 6929fb631aecb86418a4e4b9a25ea32e, type: 2}
   - m_RefCount: 30
     m_Data: {fileID: 11400000, guid: ecd3731ee6ca43a42863ede910a1065d, type: 2}
+  - m_RefCount: 2
+    m_Data: {fileID: 11400000, guid: 8d6fd3970f470d740b0a09ad77c87253, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 2
     m_Data: {fileID: -5472138256812182249, guid: cb3a56e86b2bb9c4991509ad74cde6ad, type: 3}
@@ -11586,8 +11653,10 @@ Tilemap:
     m_Data: {fileID: 5991473849112003203, guid: 6092738183c668a4d924383acaf9eb5f, type: 3}
   - m_RefCount: 30
     m_Data: {fileID: -9167755149240453841, guid: 6092738183c668a4d924383acaf9eb5f, type: 3}
+  - m_RefCount: 2
+    m_Data: {fileID: 1307626347214929657, guid: 6092738183c668a4d924383acaf9eb5f, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 154
+  - m_RefCount: 156
     m_Data:
       e00: 1
       e01: 0
@@ -11606,7 +11675,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 154
+  - m_RefCount: 156
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -11839,3 +11908,4 @@ SceneRoots:
   - {fileID: 6080505410309077730}
   - {fileID: 453139716}
   - {fileID: 1127216029}
+  - {fileID: 563702622}
