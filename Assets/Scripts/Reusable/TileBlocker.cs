@@ -19,7 +19,6 @@ public class TileBlocker : MonoBehaviour
             }
 
             hasCleared = true;
-            Debug.Log("✅ Passage débloqué !");
         }
     }
 }
