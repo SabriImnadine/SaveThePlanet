@@ -4757,7 +4757,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5640580240965418372, guid: de69b26ff87b0d4429ee5023d208de90, type: 3}
       propertyPath: tpdefiner
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5640580240965418372, guid: de69b26ff87b0d4429ee5023d208de90, type: 3}
       propertyPath: sceneToCharge
@@ -4844,7 +4844,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lightOffSprite: {fileID: 0}
   roomDarkness: {fileID: 2051211931}
-  lampID: Room1
+  lampID: Room2
   lampRenderer: {fileID: 1898446863}
   quest: {fileID: 11400000, guid: 1536608eb839a14428c9c488529a33cc, type: 2}
 --- !u!61 &1681040528

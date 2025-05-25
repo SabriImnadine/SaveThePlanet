@@ -20,6 +20,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/VillageHouse1.unity
     guid: 07baeff890bcc144ab7411a3e67d92a6
+  - enabled: 1
+    path: Assets/Scenes/VillageHouse2.unity
+    guid: 59c4ac60b3d1db048bde33ee397badcc
+  - enabled: 1
+    path: Assets/Scenes/VillageHouse3.unity
+    guid: 93f69b81cc44f39458deddbe48634349
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

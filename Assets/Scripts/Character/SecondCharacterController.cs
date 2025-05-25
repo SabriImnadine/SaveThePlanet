@@ -4,7 +4,7 @@ using System;
 
 public class SecondCharacterController : MonoBehaviour, Interactable
 {
-    
+
     [SerializeField] GameObject view;
     [SerializeField] GameObject alertIcon;
     [SerializeField] private QuestData quest;
@@ -31,14 +31,16 @@ public class SecondCharacterController : MonoBehaviour, Interactable
     private IEnumerator Start()
     {
         yield return null;
-        quest.ResetProgress();
+        quest.isStarted = PlayerPrefs.GetInt(quest.name + "_started", 0) == 1;
+        quest.isCompleted = PlayerPrefs.GetInt(quest.name + "_completed", 0) == 1;
+        quest.currentAmount = PlayerPrefs.GetInt(quest.name + "_current", 0);
         SetViewRotation(characterControl.Animator.ViewDirection);
     }
 
     public IEnumerator LaunchInteractionSequence(PlayerController player)
     {
         if (hasAutoInteracted || quest.isStarted)
-        yield break;
+            yield break;
 
         hasAutoInteracted = true;
         playerRef = player;
@@ -57,13 +59,15 @@ public class SecondCharacterController : MonoBehaviour, Interactable
         {
             quest.isStarted = true;
             quest.currentAmount = 0;
+            SaveQuestState();
+
 
             if (pickupSpawner != null)
                 pickupSpawner.SetActive(true);
 
             yield return DialogManager.Instance.Showdialog(startDialog);
             if (view != null)
-            view.SetActive(false);
+                view.SetActive(false);
 
         }
         else if (!quest.isCompleted)
@@ -98,49 +102,71 @@ public class SecondCharacterController : MonoBehaviour, Interactable
         characterControl.HandleUpdate();
     }
 
-   public void Interact(Transform initiator)
-{
-    
-
-    playerRef = initiator.GetComponent<PlayerController>();
-    if (playerRef != null)
+    public void Interact(Transform initiator)
     {
-        characterControl.Watching(initiator.position);
-        StartCoroutine(ManualInteraction());
+
+
+        playerRef = initiator.GetComponent<PlayerController>();
+        if (playerRef != null)
+        {
+            characterControl.Watching(initiator.position);
+            StartCoroutine(ManualInteraction());
+        }
+
     }
-    
+
+
+    private IEnumerator ManualInteraction()
+    {
+
+
+        if (!quest.isStarted)
+        {
+
+
+            quest.isStarted = true;
+            quest.currentAmount = 0;
+            SaveQuestState();
+
+
+            if (pickupSpawner != null)
+                pickupSpawner.SetActive(true);
+
+            yield return DialogManager.Instance.Showdialog(startDialog);
+            yield break;
+        }
+
+        if (!quest.isCompleted)
+        {
+           
+            bool lamp1 = PlayerPrefs.GetInt("Room1_done", 0) == 1;
+            bool lamp2 = PlayerPrefs.GetInt("Room2_done", 0) == 1;
+            bool lamp3 = PlayerPrefs.GetInt("Room3_done", 0) == 1;
+
+            if (lamp1 && lamp2 && lamp3)
+            {
+                quest.isCompleted = true;
+                SaveQuestState();
+                yield return DialogManager.Instance.Showdialog(completeDialog);
+            }
+            else
+            {
+                yield return DialogManager.Instance.Showdialog(inProgressDialog);
+            }
+            yield break;
+        }
+        else
+        {
+            yield return DialogManager.Instance.Showdialog(completeDialog);
+        }
+}
+private void SaveQuestState()
+{
+    PlayerPrefs.SetInt(quest.name + "_started", quest.isStarted ? 1 : 0);
+    PlayerPrefs.SetInt(quest.name + "_completed", quest.isCompleted ? 1 : 0);
+    PlayerPrefs.SetInt(quest.name + "_current", quest.currentAmount);
 }
 
-
-private IEnumerator ManualInteraction()
-{
-    
-
-    if (!quest.isStarted)
-    {
-       
-
-        quest.isStarted = true;
-        quest.currentAmount = 0;
-
-        if (pickupSpawner != null)
-            pickupSpawner.SetActive(true);
-
-        yield return DialogManager.Instance.Showdialog(startDialog);
-        yield break;
-    }
-
-    if (!quest.isCompleted)
-    {
-       
-        yield return DialogManager.Instance.Showdialog(inProgressDialog);
-    }
-    else
-    {
-       
-        yield return DialogManager.Instance.Showdialog(completeDialog);
-    }
-}
 
 
 
