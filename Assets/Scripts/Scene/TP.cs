@@ -13,6 +13,8 @@ public class TP : MonoBehaviour, Trigger
     [SerializeField] int sceneToCharge = -1;
     [SerializeField] TPDefiner tpdefiner;
     [SerializeField] Transform spawn;
+    [SerializeField] private AudioClip tpSound;
+
 
     PlayerController player;
      private Fade fade;
@@ -35,6 +37,10 @@ public class TP : MonoBehaviour, Trigger
         GameController.Instance.PauseTheGame(true);
 
         player.Character.ResetAnimationState();
+
+        if (tpSound != null)
+        MusicManager.i.PlaySFX(tpSound);
+
 
         yield return fade.Show(0.6f);
 

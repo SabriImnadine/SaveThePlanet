@@ -124,4 +124,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToCharge: 1
+  tpdefiner: 0
   spawn: {fileID: 858998098761052764}
+  tpSound: {fileID: 8300000, guid: 84bec18f1513cb0428e190adab6171d8, type: 3}
