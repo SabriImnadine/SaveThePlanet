@@ -9,16 +9,17 @@ public class TileBlocker : MonoBehaviour
 
     private bool hasCleared = false;
 
-    private void Update()
+   private void Update()
+{
+    if (!hasCleared && questData.hasBeenAcknowledged)
     {
-        if (!hasCleared && questData.isCompleted)
+        foreach (var pos in tilesToClear)
         {
-            foreach (var pos in tilesToClear)
-            {
-                tilemap.SetTile(pos, null);
-            }
-
-            hasCleared = true;
+            tilemap.SetTile(pos, null);
         }
+
+        hasCleared = true;
     }
+}
+
 }

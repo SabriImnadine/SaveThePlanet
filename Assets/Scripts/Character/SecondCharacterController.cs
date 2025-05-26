@@ -12,6 +12,9 @@ public class SecondCharacterController : MonoBehaviour, Interactable
     [SerializeField] private Dialog startDialog;
     [SerializeField] private Dialog inProgressDialog;
     [SerializeField] private Dialog completeDialog;
+    [SerializeField] private bool isLightQuest = false;
+
+    
 
 
 
@@ -31,9 +34,13 @@ public class SecondCharacterController : MonoBehaviour, Interactable
     private IEnumerator Start()
     {
         yield return null;
-        quest.isStarted = PlayerPrefs.GetInt(quest.name + "_started", 0) == 1;
-        quest.isCompleted = PlayerPrefs.GetInt(quest.name + "_completed", 0) == 1;
-        quest.currentAmount = PlayerPrefs.GetInt(quest.name + "_current", 0);
+        Debug.Log($"[LOAD] {quest.questName} | started={PlayerPrefs.GetInt(quest.questName + "_started", 0)} | completed={PlayerPrefs.GetInt(quest.questName + "_completed", 0)} | current={PlayerPrefs.GetInt(quest.questName + "_current", 0)}");
+
+        quest.isStarted = PlayerPrefs.GetInt(quest.questName + "_started", 0) == 1;
+        quest.isCompleted = PlayerPrefs.GetInt(quest.questName + "_completed", 0) == 1;
+        quest.currentAmount = PlayerPrefs.GetInt(quest.questName + "_current", 0);
+        quest.hasBeenAcknowledged = PlayerPrefs.GetInt(quest.questName + "_acknowledged", 0) == 1;
+
         SetViewRotation(characterControl.Animator.ViewDirection);
     }
 
@@ -138,12 +145,28 @@ public class SecondCharacterController : MonoBehaviour, Interactable
 
         if (!quest.isCompleted)
         {
-           
-            bool lamp1 = PlayerPrefs.GetInt("Room1_done", 0) == 1;
-            bool lamp2 = PlayerPrefs.GetInt("Room2_done", 0) == 1;
-            bool lamp3 = PlayerPrefs.GetInt("Room3_done", 0) == 1;
+            if (isLightQuest)
+            {
+                bool lamp1 = PlayerPrefs.GetInt("Room1_done", 0) == 1;
+                bool lamp2 = PlayerPrefs.GetInt("Room2_done", 0) == 1;
+                bool lamp3 = PlayerPrefs.GetInt("Room3_done", 0) == 1;
 
-            if (lamp1 && lamp2 && lamp3)
+                if (lamp1 && lamp2 && lamp3)
+                {
+                    quest.isCompleted = true;
+                    SaveQuestState();
+                    yield return DialogManager.Instance.Showdialog(completeDialog);
+                }
+                else
+                {
+                    yield return DialogManager.Instance.Showdialog(inProgressDialog);
+                }
+
+                yield break;
+            }
+
+        
+            if (quest.currentAmount >= quest.requiredAmount)
             {
                 quest.isCompleted = true;
                 SaveQuestState();
@@ -153,18 +176,25 @@ public class SecondCharacterController : MonoBehaviour, Interactable
             {
                 yield return DialogManager.Instance.Showdialog(inProgressDialog);
             }
+
             yield break;
         }
-        else
-        {
-            yield return DialogManager.Instance.Showdialog(completeDialog);
-        }
-}
-private void SaveQuestState()
+yield return DialogManager.Instance.Showdialog(completeDialog);
+
+if (!quest.hasBeenAcknowledged)
 {
-    PlayerPrefs.SetInt(quest.name + "_started", quest.isStarted ? 1 : 0);
-    PlayerPrefs.SetInt(quest.name + "_completed", quest.isCompleted ? 1 : 0);
-    PlayerPrefs.SetInt(quest.name + "_current", quest.currentAmount);
+    quest.hasBeenAcknowledged = true;
+    SaveQuestState();
+}
+
+}
+    private void SaveQuestState()
+    {
+        PlayerPrefs.SetInt(quest.questName + "_started", quest.isStarted ? 1 : 0);
+        PlayerPrefs.SetInt(quest.questName + "_completed", quest.isCompleted ? 1 : 0);
+        PlayerPrefs.SetInt(quest.questName + "_current", quest.currentAmount);
+    PlayerPrefs.SetInt(quest.questName + "_acknowledged", quest.hasBeenAcknowledged ? 1 : 0);
+
 }
 
 

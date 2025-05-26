@@ -9,6 +9,7 @@ public class QuestData : ScriptableObject
 
     public bool isStarted = false;
     public bool isCompleted = false;
+    public bool hasBeenAcknowledged = false;
 
     public void ResetProgress()
     {

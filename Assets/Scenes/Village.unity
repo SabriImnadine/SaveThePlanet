@@ -181,6 +181,7 @@ MonoBehaviour:
     - "Zo helpen we de aarde een beetje af te koelen \xE9n verkleinen we onze ecologische
       voetafdruk."
     - Dankjewel voor je hulp. Kleine acties maken een groot verschil!
+  isLightQuest: 1
 --- !u!114 &109992160
 MonoBehaviour:
   m_ObjectHideFlags: 0
