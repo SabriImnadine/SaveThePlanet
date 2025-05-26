@@ -443,7 +443,7 @@ Transform:
   m_GameObject: {fileID: 180178535}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5, y: 1.15, z: 0}
+  m_LocalPosition: {x: 2.48, y: -1.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13535,13 +13535,30 @@ MonoBehaviour:
   pickupSpawner: {fileID: 74465944}
   startDialog:
     lines:
-    - "Peux-tu m'aider \xE0 replanter les arbres perdus dans la for\xEAt ?"
+    - Hey jij daar! Ik ben blij dat je langskomt.
+    - Ons bos heeft het moeilijk... Veel bomen zijn gekapt en dat verstoort het evenwicht
+      van de natuur.
+    - Zonder genoeg bomen verdwijnen de dieren, wordt de lucht slechter en droogt
+      de grond sneller uit.
+    - Wil jij helpen door een paar nieuwe bomen te planten? Elke boom telt.
   inProgressDialog:
     lines:
-    - "Tu n'as pas encore tout plant\xE9 ! Continue."
+    - Je bent goed bezig, maar er zijn nog plekken waar nieuwe bomen nodig zijn.
+    - Elke boom helpt om CO2 op te nemen en geeft zuurstof terug aan de lucht.
+    - Ga zo door, we maken samen het bos weer levendig.
   completeDialog:
     lines:
-    - "Merci beaucoup ! Tu as aid\xE9 la nature \xE0 reprendre vie "
+    - Goed gedaan, jongere!
+    - Door die bomen te planten, heb je iets heel belangrijks gedaan voor onze planeet.
+    - "Bomen nemen CO2 op en geven zuurstof terug \u2013 precies wat wij nodig hebben
+      om te ademen!"
+    - Ze bieden ook een thuis aan dieren zoals vogels, eekhoorns en insecten.
+    - "Wist je dat \xE9\xE9n boom honderden liters water kan vasthouden? Dat voorkomt
+      overstromingen!"
+    - "Als we geen nieuwe bomen planten, verdwijnen bossen... en dat is slecht voor
+      het klimaat \xE9n de biodiversiteit."
+    - Dankzij jou groeit dit bos weer. De natuur telt op jou!
+    - Bedankt voor je hulp. Jij maakt echt het verschil!
 --- !u!114 &894620681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13725,7 +13742,7 @@ Transform:
   m_GameObject: {fileID: 894620679}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.91, y: 5.21, z: 0}
+  m_LocalPosition: {x: 13.94, y: 3.33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13969,7 +13986,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plantDialog:
     lines:
-    - Tu plantes un arbre..
+    - 'Onze held heeft een nieuwe boom geplant om de natuur te helpen. '
   quest: {fileID: 11400000, guid: 8812cddecb4c40d45bbd2ced252d22f7, type: 2}
   treeSprite: {fileID: 4012328098178919012, guid: 7abbc0d824cdc104aadbb4318509708d, type: 3}
 --- !u!1 &1176607425
@@ -14121,7 +14138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plantDialog:
     lines:
-    - Tu plantes un arbre..
+    - 'Onze held heeft een nieuwe boom geplant om de natuur te helpen. '
   quest: {fileID: 11400000, guid: 8812cddecb4c40d45bbd2ced252d22f7, type: 2}
   treeSprite: {fileID: 4012328098178919012, guid: 7abbc0d824cdc104aadbb4318509708d, type: 3}
 --- !u!1 &1192224887
@@ -15783,9 +15800,67 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plantDialog:
     lines:
-    - Tu plantes un arbre..
+    - 'Onze held heeft een nieuwe boom geplant om de natuur te helpen. '
   quest: {fileID: 11400000, guid: 8812cddecb4c40d45bbd2ced252d22f7, type: 2}
   treeSprite: {fileID: 4012328098178919012, guid: 7abbc0d824cdc104aadbb4318509708d, type: 3}
+--- !u!1 &1425817083
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1425817086}
+  - component: {fileID: 1425817085}
+  - component: {fileID: 1425817084}
+  m_Layer: 0
+  m_Name: SceneData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1425817084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425817083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e150f771a21fb44e9ab4769f1435ca3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1425817085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425817083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07d4e6371e4b2d341af9f380d25b0f14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneMusic: {fileID: 8300000, guid: a4b8999ddfa661d469894719f65faed7, type: 3}
+--- !u!4 &1425817086
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425817083}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.5751078, y: 0.11810097, z: -0.11883567}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1538746604
 GameObject:
   m_ObjectHideFlags: 0
@@ -16065,7 +16140,7 @@ Transform:
   m_GameObject: {fileID: 1708357606}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.32, y: 3.82, z: 0}
+  m_LocalPosition: {x: -7.95, y: 3.82, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16289,7 +16364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plantDialog:
     lines:
-    - Tu plantes un arbre..
+    - 'Onze held heeft een nieuwe boom geplant om de natuur te helpen. '
   quest: {fileID: 11400000, guid: 8812cddecb4c40d45bbd2ced252d22f7, type: 2}
   treeSprite: {fileID: 4012328098178919012, guid: 7abbc0d824cdc104aadbb4318509708d, type: 3}
 --- !u!1 &2135010804
@@ -16441,7 +16516,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plantDialog:
     lines:
-    - Tu plantes un arbre..
+    - 'Onze held heeft een nieuwe boom geplant om de natuur te helpen. '
   quest: {fileID: 11400000, guid: 8812cddecb4c40d45bbd2ced252d22f7, type: 2}
   treeSprite: {fileID: 4012328098178919012, guid: 7abbc0d824cdc104aadbb4318509708d, type: 3}
 --- !u!1660057539 &9223372036854775807
@@ -16457,3 +16532,4 @@ SceneRoots:
   - {fileID: 180178542}
   - {fileID: 1708357613}
   - {fileID: 1538746606}
+  - {fileID: 1425817086}

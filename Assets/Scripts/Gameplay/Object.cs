@@ -4,7 +4,7 @@ using System.Collections;
 public class Object : MonoBehaviour, Interactable
 {
     [SerializeField] private Dialog pickupDialog;
-    [SerializeField] private QuestData quest; // ← AJOUT ICI
+    [SerializeField] private QuestData quest; 
 
     public void Interact(Transform initiator)
     {

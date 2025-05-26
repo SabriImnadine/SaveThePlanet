@@ -352,7 +352,7 @@ Transform:
   m_GameObject: {fileID: 143452321}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.32, y: 3.82, z: 0}
+  m_LocalPosition: {x: -10.05, y: 3.82, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -406,7 +406,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupDialog:
     lines:
-    - Player heeft een plastic flesjes opgerapen
+    - Onze held heeft een plastic flesje opgeraapt voordat het in zee terechtkwam.
+      Goed gedaan!
   quest: {fileID: 11400000, guid: df2cf7a90d477174e849681747f62248, type: 2}
 --- !u!61 &176767101
 BoxCollider2D:
@@ -446,7 +447,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.75, y: 0.75}
+    oldSize: {x: 0.5, y: 0.9375}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -498,7 +499,7 @@ SpriteRenderer:
   m_SortingLayerID: 373917851
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6885498132332409789, guid: f64ca9a0e50d2214aa7054deb58e16bc, type: 3}
+  m_Sprite: {fileID: -1130307063785972239, guid: 739de8d61aad7bd42babed6e5c127300, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -557,7 +558,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupDialog:
     lines:
-    - Player heeft een plastic flesjes opgerapen
+    - Onze held heeft een plastic flesje opgeraapt voordat het in zee terechtkwam.
+      Goed gedaan!
   quest: {fileID: 11400000, guid: df2cf7a90d477174e849681747f62248, type: 2}
 --- !u!61 &219297291
 BoxCollider2D:
@@ -597,7 +599,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.75, y: 0.75}
+    oldSize: {x: 0.4375, y: 0.9375}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -649,7 +651,7 @@ SpriteRenderer:
   m_SortingLayerID: 373917851
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6885498132332409789, guid: f64ca9a0e50d2214aa7054deb58e16bc, type: 3}
+  m_Sprite: {fileID: 8769945195372071822, guid: 739de8d61aad7bd42babed6e5c127300, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1049,7 +1051,7 @@ Transform:
   m_GameObject: {fileID: 356568612}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5, y: 1.15, z: 0}
+  m_LocalPosition: {x: 6.45, y: 1.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1069,7 +1071,7 @@ GameObject:
   - component: {fileID: 372737369}
   - component: {fileID: 372737368}
   - component: {fileID: 372737367}
-  - component: {fileID: 372737366}
+  - component: {fileID: 372737373}
   m_Layer: 10
   m_Name: Fisher
   m_TagString: Untagged
@@ -1077,31 +1079,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &372737366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 372737365}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65b854678389a9d4bb6e278fada0bf35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  view: {fileID: 2067694700}
-  alertIcon: {fileID: 266181643}
-  quest: {fileID: 11400000, guid: df2cf7a90d477174e849681747f62248, type: 2}
-  pickupSpawner: {fileID: 1831298240}
-  startDialog:
-    lines:
-    - "\"Tu peux m\u2019aider \xE0 ramasser les d\xE9chets sur la plage ?\""
-  inProgressDialog:
-    lines:
-    - "\"Tu n\u2019as pas encore tout ramass\xE9.\""
-  completeDialog:
-    lines:
-    - "\"Merci beaucoup ! Tu as tout nettoy\xE9.\""
 --- !u!114 &372737367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1134,7 +1111,7 @@ MonoBehaviour:
   - {fileID: 7369579285134121275, guid: 667eef3cbed95024c86e712c39dc41ec, type: 3}
   - {fileID: -1211714280344312584, guid: 667eef3cbed95024c86e712c39dc41ec, type: 3}
   - {fileID: 6842672397523141539, guid: 667eef3cbed95024c86e712c39dc41ec, type: 3}
-  defaultDirection: 1
+  defaultDirection: 2
 --- !u!114 &372737368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1285,7 +1262,7 @@ Transform:
   m_GameObject: {fileID: 372737365}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.91, y: 5.21, z: 0}
+  m_LocalPosition: {x: 5.73, y: 8.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1293,6 +1270,50 @@ Transform:
   - {fileID: 266181645}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &372737373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372737365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65b854678389a9d4bb6e278fada0bf35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  view: {fileID: 2067694700}
+  alertIcon: {fileID: 266181643}
+  quest: {fileID: 11400000, guid: df2cf7a90d477174e849681747f62248, type: 2}
+  pickupSpawner: {fileID: 1831298240}
+  startDialog:
+    lines:
+    - Hallo daar, jongere held! Heb je een momentje?
+    - De laatste tijd ligt er steeds meer plastic op het strand...
+    - En dat is gevaarlijk voor de zee en de dieren die er leven.
+    - Dat maakt hen ziek, of soms... overleven ze het niet.
+    - Wil jij me helpen om het plastic op te ruimen?
+    - "Zo maken we het strand \xE9n de zee een stuk veiliger."
+  inProgressDialog:
+    lines:
+    - Je bent goed bezig, maar er ligt nog wat plastic op het strand.
+    - Kijk goed rond, soms zit het verstopt tussen het zand of achter een rots.
+    - Elk stukje dat je opruimt maakt een verschil!
+  completeDialog:
+    lines:
+    - Goed gedaan, echt waar. Je denkt misschien dat het opruimen van een paar stukjes
+      plastic niks verandert...
+    - ...maar eigenlijk heb je net levens gered.
+    - Plastic dat op het strand ligt, wordt door de wind of regen vaak in de zee
+      geblazen.
+    - Daar wordt het verward met voedsel door vissen, vogels en zeeschildpadden.
+    - Ze eten het op, worden ziek of sterven eraan. Elk stukje plastic minder is
+      een kans op leven meer.
+    - Bovendien breekt plastic nooit echt af. Het blijft honderden jaren in de natuur.
+    - Door het nu op te ruimen, bescherm je niet alleen vandaag, maar ook de toekomst
+      van de oceaan.
+    - Je hebt laten zien dat kleine daden een groot verschil kunnen maken. Dank je
+      wel!
 --- !u!1 &506525792
 GameObject:
   m_ObjectHideFlags: 0
@@ -1341,7 +1362,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupDialog:
     lines:
-    - Player heeft een plastic flesjes opgerapen
+    - Onze held heeft een plastic flesje opgeraapt voordat het in zee terechtkwam.
+      Goed gedaan!
   quest: {fileID: 11400000, guid: df2cf7a90d477174e849681747f62248, type: 2}
 --- !u!61 &506525795
 BoxCollider2D:
@@ -1381,7 +1403,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.75, y: 0.75}
+    oldSize: {x: 0.5, y: 0.9375}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1433,7 +1455,7 @@ SpriteRenderer:
   m_SortingLayerID: 373917851
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6885498132332409789, guid: f64ca9a0e50d2214aa7054deb58e16bc, type: 3}
+  m_Sprite: {fileID: 6672216462443431532, guid: 739de8d61aad7bd42babed6e5c127300, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6500,7 +6522,7 @@ Transform:
   m_GameObject: {fileID: 1223134722}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: -1.5, z: 0}
+  m_LocalPosition: {x: 0.5, y: 5.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6520,7 +6542,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupDialog:
     lines:
-    - Player heeft een plastic flesjes opgerapen
+    - Onze held heeft een plastic flesje opgeraapt voordat het in zee terechtkwam.
+      Goed gedaan!
   quest: {fileID: 11400000, guid: df2cf7a90d477174e849681747f62248, type: 2}
 --- !u!61 &1223134725
 BoxCollider2D:
@@ -6560,7 +6583,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.75, y: 0.75}
+    oldSize: {x: 0.5, y: 0.9375}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -6612,7 +6635,7 @@ SpriteRenderer:
   m_SortingLayerID: 373917851
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6885498132332409789, guid: f64ca9a0e50d2214aa7054deb58e16bc, type: 3}
+  m_Sprite: {fileID: -9065344623459322139, guid: 739de8d61aad7bd42babed6e5c127300, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6859,7 +6882,7 @@ Transform:
   m_GameObject: {fileID: 1647579919}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.5, y: -2.5, z: 0}
+  m_LocalPosition: {x: -10.5, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6879,7 +6902,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupDialog:
     lines:
-    - Player heeft een plastic flesjes opgerapen
+    - Onze held heeft een plastic flesje opgeraapt voordat het in zee terechtkwam.
+      Goed gedaan!
   quest: {fileID: 11400000, guid: df2cf7a90d477174e849681747f62248, type: 2}
 --- !u!61 &1647579922
 BoxCollider2D:
@@ -6919,7 +6943,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.75, y: 0.75}
+    oldSize: {x: 0.625, y: 0.9375}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -6971,7 +6995,7 @@ SpriteRenderer:
   m_SortingLayerID: 373917851
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6885498132332409789, guid: f64ca9a0e50d2214aa7054deb58e16bc, type: 3}
+  m_Sprite: {fileID: 2954265147668185811, guid: 739de8d61aad7bd42babed6e5c127300, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -15417,6 +15441,64 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1803421099
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1803421102}
+  - component: {fileID: 1803421101}
+  - component: {fileID: 1803421100}
+  m_Layer: 0
+  m_Name: SceneData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1803421100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803421099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e150f771a21fb44e9ab4769f1435ca3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1803421101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803421099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07d4e6371e4b2d341af9f380d25b0f14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneMusic: {fileID: 8300000, guid: 41da73d1e71d0dd4ea0ffaa38eaa18d6, type: 3}
+--- !u!4 &1803421102
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803421099}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.5751078, y: 0.11810097, z: -0.11883567}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1831298240
 GameObject:
   m_ObjectHideFlags: 0
@@ -15589,3 +15671,4 @@ SceneRoots:
   - {fileID: 356568619}
   - {fileID: 143452328}
   - {fileID: 1332223649}
+  - {fileID: 1803421102}

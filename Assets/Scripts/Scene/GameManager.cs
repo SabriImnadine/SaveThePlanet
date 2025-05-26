@@ -11,10 +11,9 @@ public class GameManager : MonoBehaviour
 #if UNITY_EDITOR
     if (!PlayerPrefs.HasKey("DevResetDone"))
     {
-        PlayerPrefs.DeleteAll(); // Supprime tout
-        PlayerPrefs.SetInt("DevResetDone", 1); // Flag pour ne pas re-reset
+        PlayerPrefs.DeleteAll(); 
+        PlayerPrefs.SetInt("DevResetDone", 1); 
         PlayerPrefs.Save();
-        Debug.Log("🧼 Reset effectué une seule fois.");
     }
 #endif
 }

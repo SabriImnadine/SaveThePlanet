@@ -11,7 +11,6 @@ public class Reset : MonoBehaviour
         {
             PlayerPrefs.DeleteAll();
             PlayerPrefs.Save();
-            Debug.Log("🧼 Tous les PlayerPrefs ont été reset.");
         }
 #endif
     }

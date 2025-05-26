@@ -159,13 +159,28 @@ MonoBehaviour:
   pickupSpawner: {fileID: 0}
   startDialog:
     lines:
-    - "\"Tu peux m\u2019aider \xE0 ramasser les d\xE9chets sur la plage ?\""
+    - Hallo daar!
+    - De bewoners moesten plots vertrekken voor een belangrijke vergadering.
+    - Maar ze zijn hun huizen uitgelopen zonder hun lichten uit te doen...
+    - Dat is zonde van de elektriciteit, toch?
+    - Zou jij kunnen helpen om de lichten in de drie huizen uit te schakelen?
+    - Zo kunnen we samen energie besparen en goed voor de planeet zorgen!
   inProgressDialog:
     lines:
-    - "\"Tu n\u2019as pas encore tout ramass\xE9.\""
+    - Je hebt nog niet alle lichten uitgedaan, denk ik.
+    - Ga gerust nog eens langs in alle huizen en kijk of het licht daar nog brandt.
+    - Hoe sneller we het doen, hoe beter voor het milieu!
   completeDialog:
     lines:
-    - "\"Merci beaucoup ! Tu as tout nettoy\xE9.\""
+    - Fantastisch werk! Alle lichten zijn nu uit.
+    - Weet je waarom dit zo belangrijk is?
+    - "Elke lamp die onnodig blijft branden, verbruikt energie \u2014 en die energie
+      komt vaak van vervuilende bronnen zoals steenkool of gas."
+    - Door lichten uit te schakelen besparen we niet alleen elektriciteit, maar verminderen
+      we ook de uitstoot van CO2.
+    - "Zo helpen we de aarde een beetje af te koelen \xE9n verkleinen we onze ecologische
+      voetafdruk."
+    - Dankjewel voor je hulp. Kleine acties maken een groot verschil!
 --- !u!114 &109992160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,7 +213,7 @@ MonoBehaviour:
   - {fileID: 7369579285134121275, guid: 667eef3cbed95024c86e712c39dc41ec, type: 3}
   - {fileID: -1211714280344312584, guid: 667eef3cbed95024c86e712c39dc41ec, type: 3}
   - {fileID: 6842672397523141539, guid: 667eef3cbed95024c86e712c39dc41ec, type: 3}
-  defaultDirection: 1
+  defaultDirection: 3
 --- !u!114 &109992161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -349,7 +364,7 @@ Transform:
   m_GameObject: {fileID: 109992158}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.91, y: 5.21, z: 0}
+  m_LocalPosition: {x: -4.91, y: 8.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -673,7 +688,7 @@ Transform:
   m_GameObject: {fileID: 453590563}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.32, y: 3.82, z: 0}
+  m_LocalPosition: {x: -8.16, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11275,6 +11290,64 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de69b26ff87b0d4429ee5023d208de90, type: 3}
+--- !u!1 &1062039745
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1062039748}
+  - component: {fileID: 1062039747}
+  - component: {fileID: 1062039746}
+  m_Layer: 0
+  m_Name: SceneData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1062039746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062039745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e150f771a21fb44e9ab4769f1435ca3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1062039747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062039745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07d4e6371e4b2d341af9f380d25b0f14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneMusic: {fileID: 8300000, guid: de3bf49ba4e082743988ae57dea8dc8d, type: 3}
+--- !u!4 &1062039748
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062039745}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.5751078, y: 0.11810097, z: -0.11883567}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1171057879
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19205,7 +19278,7 @@ Transform:
   m_GameObject: {fileID: 1906581369}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5, y: 1.15, z: 0}
+  m_LocalPosition: {x: 6.17, y: 1.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19284,3 +19357,4 @@ SceneRoots:
   - {fileID: 453590570}
   - {fileID: 1542837070}
   - {fileID: 629180079}
+  - {fileID: 1062039748}
