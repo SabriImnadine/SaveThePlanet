@@ -17632,6 +17632,8 @@ MonoBehaviour:
     lines: []
   completeDialog:
     lines: []
+  isLightQuest: 0
+  alertSound: {fileID: 0}
 --- !u!114 &1000240451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18327,6 +18329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioPlayer: {fileID: 653806480}
   sfxPlayer: {fileID: 2071748944}
+  fadeDuration: 0.6
 --- !u!1 &1206603250
 GameObject:
   m_ObjectHideFlags: 0
@@ -18525,6 +18528,8 @@ MonoBehaviour:
   completeDialog:
     lines:
     - "\"Merci beaucoup ! Tu as tout nettoy\xE9.\""
+  isLightQuest: 0
+  alertSound: {fileID: 8300000, guid: 98ab5497909104f468d0cb333d138532, type: 3}
 --- !u!114 &1220099173
 MonoBehaviour:
   m_ObjectHideFlags: 0

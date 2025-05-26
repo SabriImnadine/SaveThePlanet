@@ -13,6 +13,8 @@ public class SecondCharacterController : MonoBehaviour, Interactable
     [SerializeField] private Dialog inProgressDialog;
     [SerializeField] private Dialog completeDialog;
     [SerializeField] private bool isLightQuest = false;
+    [SerializeField] private AudioClip alertSound;
+
 
     
 
@@ -52,6 +54,8 @@ public class SecondCharacterController : MonoBehaviour, Interactable
         hasAutoInteracted = true;
         playerRef = player;
 
+        if (alertSound != null)
+        MusicManager.i.PlaySFX(alertSound);
 
         alertIcon.SetActive(true);
         yield return new WaitForSeconds(0.5f);

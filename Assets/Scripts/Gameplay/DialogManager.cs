@@ -13,6 +13,12 @@ public class DialogManager : MonoBehaviour
 
     [SerializeField] int lettersPerSecond;
 
+    [SerializeField] private AudioSource sfxPlayer;
+    [SerializeField] private AudioClip dialogAdvanceSound;
+
+ 
+
+
     public event Action OnShowDialog;
     public event Action OnCloseDialog;
 
@@ -41,6 +47,10 @@ public class DialogManager : MonoBehaviour
         onDialogDone = onDone;
 
         dialogBox.SetActive(true);
+
+         if (dialogAdvanceSound != null && sfxPlayer != null)
+        sfxPlayer.PlayOneShot(dialogAdvanceSound);
+        
         StartCoroutine(TypeDialog(dialog.Lines[0]));
     }
 
@@ -48,6 +58,11 @@ public class DialogManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && !isTyping)
         {
+
+             if (dialogAdvanceSound != null && sfxPlayer != null)
+            sfxPlayer.PlayOneShot(dialogAdvanceSound);
+
+
             ++currentLine;
             
             if (currentLine < currentDialog.Lines.Count)

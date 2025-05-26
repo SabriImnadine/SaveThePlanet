@@ -182,6 +182,7 @@ MonoBehaviour:
       voetafdruk."
     - Dankjewel voor je hulp. Kleine acties maken een groot verschil!
   isLightQuest: 1
+  alertSound: {fileID: 8300000, guid: 67bfbb1b2b857bc458780ebaa51942e2, type: 3}
 --- !u!114 &109992160
 MonoBehaviour:
   m_ObjectHideFlags: 0

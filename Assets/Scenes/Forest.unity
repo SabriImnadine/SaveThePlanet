@@ -13559,6 +13559,8 @@ MonoBehaviour:
       het klimaat \xE9n de biodiversiteit."
     - Dankzij jou groeit dit bos weer. De natuur telt op jou!
     - Bedankt voor je hulp. Jij maakt echt het verschil!
+  isLightQuest: 0
+  alertSound: {fileID: 8300000, guid: 98ab5497909104f468d0cb333d138532, type: 3}
 --- !u!114 &894620681
 MonoBehaviour:
   m_ObjectHideFlags: 0

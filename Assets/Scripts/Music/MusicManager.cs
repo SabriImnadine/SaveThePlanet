@@ -48,9 +48,15 @@ public class MusicManager : MonoBehaviour
         audioPlayer.clip = clip;
         audioPlayer.loop = loop;
         audioPlayer.Play();
-        
-         if (fade)
+
+        if (fade)
             yield return audioPlayer.DOFade(OriginalAudioVol, fadeDuration).WaitForCompletion();
 
+    }
+    
+    public void PlaySFX(AudioClip clip)
+    {
+    if (clip == null) return;
+    sfxPlayer.PlayOneShot(clip);
     }
 }

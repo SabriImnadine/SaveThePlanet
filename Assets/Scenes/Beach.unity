@@ -1314,6 +1314,8 @@ MonoBehaviour:
       van de oceaan.
     - Je hebt laten zien dat kleine daden een groot verschil kunnen maken. Dank je
       wel!
+  isLightQuest: 0
+  alertSound: {fileID: 8300000, guid: 98ab5497909104f468d0cb333d138532, type: 3}
 --- !u!1 &506525792
 GameObject:
   m_ObjectHideFlags: 0
