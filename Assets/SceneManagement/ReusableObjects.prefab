@@ -605,6 +605,9 @@ MonoBehaviour:
   tpLayer:
     serializedVersion: 2
     m_Bits: 8192
+  cutsceneLayer:
+    serializedVersion: 2
+    m_Bits: 32768
 --- !u!114 &1600206318427131440
 MonoBehaviour:
   m_ObjectHideFlags: 0

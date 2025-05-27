@@ -10,13 +10,15 @@ public class Character : MonoBehaviour
 
     public float OffsetY { get; private set; } = 0.3f;
     private AnimatorCharacter animator;
+    public bool UseInternalHandleUpdate = false;
+
 
     public void SnapToTile(Vector2 pos)
     {
         pos.x = Mathf.Floor(pos.x) + 0.5f;
         pos.y = Mathf.Floor(pos.y) + 0.5f + OffsetY;
 
-        transform.position=pos;
+        transform.position = pos;
     }
     
     private void Awake()
@@ -25,31 +27,37 @@ public class Character : MonoBehaviour
         SnapToTile(transform.position);
     }
 
-    public IEnumerator Move(Vector2 moveVec, System.Action onMoveComplete = null)
+ public IEnumerator Move(Vector2 moveVec, System.Action onMoveComplete = null)
+{
+    animator.HorizontalInput = Mathf.Clamp(moveVec.x, -1f, 1f);
+    animator.VerticalInput = Mathf.Clamp(moveVec.y, -1, 1f);
+
+    Vector3 targetPos = transform.position + new Vector3(moveVec.x, moveVec.y, 0f);
+
+    if (!IsObstacleClear(targetPos))
+        yield break;
+
+    IsCharacterMoving = true;
+
+    while ((targetPos - transform.position).sqrMagnitude > Mathf.Epsilon)
     {
-        animator.HorizontalInput = Mathf.Clamp(moveVec.x, -1f, 1f);
-        animator.VerticalInput = Mathf.Clamp(moveVec.y, -1, 1f);
+        transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
 
-        Vector3 targetPos = transform.position + new Vector3(moveVec.x, moveVec.y, 0f);
+        if (UseInternalHandleUpdate)
+            HandleUpdate();
 
-        if (!IsObstacleClear(targetPos))
-            yield break;
-
-        IsCharacterMoving = true;
-
-        while ((targetPos - transform.position).sqrMagnitude > Mathf.Epsilon)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
-           
-            yield return null;
-        }
-
-        transform.position = targetPos;
-        IsCharacterMoving = false;
-        
-
-        onMoveComplete?.Invoke();
+        yield return null;
     }
+
+    transform.position = targetPos;
+    IsCharacterMoving = false;
+
+    if (UseInternalHandleUpdate)
+        HandleUpdate();
+
+    onMoveComplete?.Invoke();
+}
+
 
     public void HandleUpdate()
     {

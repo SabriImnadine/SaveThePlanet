@@ -8,7 +8,9 @@ public class Layers : MonoBehaviour
     [SerializeField] LayerMask interactableLayer;
     [SerializeField] LayerMask viewLayer;
     [SerializeField] LayerMask characterLayer;
-     [SerializeField] LayerMask tpLayer;
+    [SerializeField] LayerMask tpLayer;
+    [SerializeField] LayerMask cutsceneLayer;
+
 
     public static Layers i { get; set; }
 
@@ -17,27 +19,37 @@ public class Layers : MonoBehaviour
         i = this;
     }
 
-    public LayerMask CharacterLayer {
+    public LayerMask CharacterLayer
+    {
         get => characterLayer;
     }
 
-    public LayerMask SolidLayer {
+    public LayerMask SolidLayer
+    {
         get => solidObjectsLayer;
     }
 
-     public LayerMask ViewLayer {
+    public LayerMask ViewLayer
+    {
         get => viewLayer;
     }
 
-    public LayerMask InteractableLayer {
+    public LayerMask InteractableLayer
+    {
         get => interactableLayer;
     }
 
-    public LayerMask TpLayer {
-     get =>  tpLayer;  
+    public LayerMask TpLayer
+    {
+        get => tpLayer;
     }
 
-     public LayerMask TriggerLayer {
-     get =>  viewLayer | tpLayer;  
+    public LayerMask TriggerLayer
+    {
+        get => viewLayer | tpLayer | cutsceneLayer;
     }
+    
+    public LayerMask CutsceneLayer {
+    get => cutsceneLayer;
+}
 }

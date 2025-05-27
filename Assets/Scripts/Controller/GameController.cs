@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum GameState { FreeRoam, Dialog, Stopscene, Paused }
+public enum GameState { FreeRoam, Dialog, Stopscene, Paused, Cutscene }
 
 public class GameController : MonoBehaviour
 {
@@ -73,6 +73,15 @@ public class GameController : MonoBehaviour
         }
     }
 
+    public void StartCutsceneState()
+    {
+        state = GameState.Cutscene;
+    }
+
+    public void StartFreemRoamState()
+    {
+        state = GameState.FreeRoam;
+    }
     public void StartDialog()
     {
         state = GameState.Dialog;

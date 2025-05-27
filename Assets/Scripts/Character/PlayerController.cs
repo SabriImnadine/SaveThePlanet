@@ -50,13 +50,17 @@ public class PlayerController : MonoBehaviour
 
     private void OnOver()
     {
+       
     var colliders = Physics2D.OverlapCircleAll(transform.position, 0.2f, Layers.i.TriggerLayer);
 
     foreach (var collider in colliders)
     {
+
+      
         var triggerable = collider.GetComponent<Trigger>();
         if (triggerable != null)
         {
+           
             triggerable.onPlayerTrigger(this);
             break;
         }
