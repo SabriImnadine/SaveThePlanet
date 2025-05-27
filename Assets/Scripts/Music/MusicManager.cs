@@ -35,6 +35,8 @@ public class MusicManager : MonoBehaviour
     {
         if (clip == null) return;
 
+        if (audioPlayer.clip == clip && audioPlayer.isPlaying) return;
+
         StartCoroutine(PlayAudioAsync(clip, loop, fade));
 
 

@@ -7,6 +7,9 @@ public class LightSwitch : MonoBehaviour, Interactable
     [SerializeField] private GameObject roomDarkness;
     [SerializeField] private string lampID;
     [SerializeField] private SpriteRenderer lampRenderer;
+    [SerializeField] private AudioClip switchSfx;
+    [SerializeField] private AudioSource sfxPlayer;
+
 
     private bool isOff;
 
@@ -19,8 +22,7 @@ public class LightSwitch : MonoBehaviour, Interactable
         {
             MarkLampAsCounted();
         }
-
-        Debug.Log($"[{lampID}] isOff: {isOff} | alreadyCounted: {WasLampCounted()}");
+        
     }
 
     public void Interact(Transform initiator)
@@ -33,6 +35,9 @@ public class LightSwitch : MonoBehaviour, Interactable
         {
             MarkLampAsCounted();
         }
+
+          if (switchSfx != null && sfxPlayer != null)
+            sfxPlayer.PlayOneShot(switchSfx);
     }
 
     private void UpdateVisual()
