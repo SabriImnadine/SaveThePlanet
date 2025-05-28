@@ -4,12 +4,14 @@ using UnityEngine;
 
 [System.Serializable]
 public abstract class CutsceneAction
-
 {
     [SerializeField] string name;
+    [SerializeField] private bool waitForCompletion = true;
 
-    public  virtual IEnumerator Play()
+    public virtual IEnumerator Play()
     {
         yield break;
     }
+
+    public bool WaitsForCompletion => waitForCompletion;
 }

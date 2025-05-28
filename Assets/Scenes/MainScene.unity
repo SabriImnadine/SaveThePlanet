@@ -382,6 +382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  UseInternalHandleUpdate: 0
 --- !u!114 &236879019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -414,7 +415,7 @@ MonoBehaviour:
   - {fileID: 7369579285134121275, guid: 667eef3cbed95024c86e712c39dc41ec, type: 3}
   - {fileID: -1211714280344312584, guid: 667eef3cbed95024c86e712c39dc41ec, type: 3}
   - {fileID: 6842672397523141539, guid: 667eef3cbed95024c86e712c39dc41ec, type: 3}
-  defaultDirection: 1
+  defaultDirection: 0
 --- !u!61 &236879020
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -552,7 +553,7 @@ Transform:
   m_GameObject: {fileID: 236879017}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.63, y: -5.69, z: 0}
+  m_LocalPosition: {x: -6.95, y: -6.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -840,7 +841,7 @@ Transform:
   m_GameObject: {fileID: 556418613}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.27, y: -5.8, z: 0}
+  m_LocalPosition: {x: -7.27, y: -0.21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -987,6 +988,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  UseInternalHandleUpdate: 0
 --- !u!1 &563702620
 GameObject:
   m_ObjectHideFlags: 0
@@ -1526,6 +1528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  UseInternalHandleUpdate: 0
 --- !u!114 &895261607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17990,6 +17993,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  UseInternalHandleUpdate: 0
 --- !u!61 &1000240453
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18298,7 +18302,7 @@ GameObject:
   - component: {fileID: 1073399889}
   - component: {fileID: 1073399888}
   m_Layer: 15
-  m_Name: TestCutscene
+  m_Name: Cutscene
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -18364,7 +18368,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actions:
   - rid: 6655263148047335501
+  - rid: 6655263153839931484
   - rid: 6655263148047335502
+  - rid: 6655263153839931463
+  - rid: 6655263153839931465
+  - rid: 6655263153839931488
+  - rid: 6655263153839931491
+  - rid: 6655263153839931495
+  - rid: 6655263153839931499
   references:
     version: 2
     RefIds:
@@ -18372,17 +18383,90 @@ MonoBehaviour:
       type: {class: ActionMoving, ns: , asm: Assembly-CSharp}
       data:
         name: Move
-        character: {fileID: 236879018}
+        waitForCompletion: 1
+        actor:
+          isPlayer: 0
+          character: {fileID: 236879018}
         movePatterns:
-        - {x: 0, y: -3}
-        - {x: 2, y: 0}
+        - {x: 0, y: -2}
+        - {x: 4, y: 0}
     - rid: 6655263148047335502
       type: {class: ActionDialog, ns: , asm: Assembly-CSharp}
       data:
         name: Dialog
+        waitForCompletion: 1
         dialog:
           lines:
           - Ga nog niet weg
+    - rid: 6655263153839931463
+      type: {class: ActionMoving, ns: , asm: Assembly-CSharp}
+      data:
+        name: MoveCharacter
+        waitForCompletion: 0
+        actor:
+          isPlayer: 0
+          character: {fileID: 236879018}
+        movePatterns:
+        - {x: 0, y: 11}
+        - {x: 3, y: 0}
+    - rid: 6655263153839931465
+      type: {class: ActionMoving, ns: , asm: Assembly-CSharp}
+      data:
+        name: moveplayer
+        waitForCompletion: 1
+        actor:
+          isPlayer: 1
+          character: {fileID: 0}
+        movePatterns:
+        - {x: -1, y: 0}
+        - {x: 0, y: 11}
+        - {x: 2, y: 0}
+    - rid: 6655263153839931484
+      type: {class: TurnAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: Facing
+        waitForCompletion: 1
+        actor:
+          isPlayer: 1
+          character: {fileID: 0}
+        direction: 2
+    - rid: 6655263153839931488
+      type: {class: TurnAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: Npc facing
+        waitForCompletion: 1
+        actor:
+          isPlayer: 0
+          character: {fileID: 236879018}
+        direction: 2
+    - rid: 6655263153839931491
+      type: {class: ActionDialog, ns: , asm: Assembly-CSharp}
+      data:
+        name: Dialog
+        waitForCompletion: 1
+        dialog:
+          lines:
+          - Hey jij daar
+    - rid: 6655263153839931495
+      type: {class: ActionMoving, ns: , asm: Assembly-CSharp}
+      data:
+        name: Npc weg
+        waitForCompletion: 1
+        actor:
+          isPlayer: 0
+          character: {fileID: 236879018}
+        movePatterns:
+        - {x: 2, y: 0}
+        - {x: 0, y: 7}
+    - rid: 6655263153839931499
+      type: {class: TurnAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: npc down
+        waitForCompletion: 1
+        actor:
+          isPlayer: 0
+          character: {fileID: 236879018}
+        direction: 1
 --- !u!4 &1073399890
 Transform:
   m_ObjectHideFlags: 0
@@ -18392,7 +18476,7 @@ Transform:
   m_GameObject: {fileID: 1073399887}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.09, y: -8.5, z: 0}
+  m_LocalPosition: {x: -0.77, y: -8.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18998,6 +19082,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  UseInternalHandleUpdate: 0
 --- !u!61 &1220099175
 BoxCollider2D:
   m_ObjectHideFlags: 0

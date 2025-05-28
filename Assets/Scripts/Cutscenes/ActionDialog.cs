@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
@@ -9,6 +8,22 @@ public class ActionDialog : CutsceneAction
 
     public override IEnumerator Play()
     {
-        yield return DialogManager.Instance.Showdialog(dialog);
+        bool dialogFinished = false;
+
+        
+        yield return DialogManager.Instance.Showdialog(dialog, () => {
+            dialogFinished = true;
+        });
+
+   
+        while (!dialogFinished)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                DialogManager.Instance.HandleUpdate();
+            }
+
+            yield return null;
+        }
     }
 }

@@ -15,6 +15,8 @@ public class CutsceneEditor : Editor
 
         if (GUILayout.Button("Add Action Move"))
             cutscene.addAction(new ActionMoving()); 
+         if (GUILayout.Button("Add Turn Action"))
+            cutscene.addAction(new TurnAction()); 
 
           serializedObject.Update();
         DrawDefaultInspector();

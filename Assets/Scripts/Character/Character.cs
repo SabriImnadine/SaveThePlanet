@@ -27,14 +27,14 @@ public class Character : MonoBehaviour
         SnapToTile(transform.position);
     }
 
- public IEnumerator Move(Vector2 moveVec, System.Action onMoveComplete = null)
+ public IEnumerator Move(Vector2 moveVec, System.Action onMoveComplete = null, bool checkCollisions=true)
 {
     animator.HorizontalInput = Mathf.Clamp(moveVec.x, -1f, 1f);
     animator.VerticalInput = Mathf.Clamp(moveVec.y, -1, 1f);
 
     Vector3 targetPos = transform.position + new Vector3(moveVec.x, moveVec.y, 0f);
 
-    if (!IsObstacleClear(targetPos))
+    if (checkCollisions && !IsObstacleClear(targetPos))
         yield break;
 
     IsCharacterMoving = true;

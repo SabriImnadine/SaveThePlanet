@@ -15,7 +15,10 @@ public class CutScene : MonoBehaviour, Trigger
 
         foreach (var action in actions)
         {
-            yield return action.Play();
+            if (action.WaitsForCompletion)
+                yield return action.Play();
+            else
+                StartCoroutine(action.Play());
         }
 
         GameController.Instance.StartFreemRoamState();

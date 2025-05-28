@@ -6,11 +6,13 @@ public class PlayerController : MonoBehaviour
 {
 
     public event Action<Collider2D> OnEnterSecondCharacterView;
+    public static PlayerController i { get; private set; }
     private Vector2 input;
     private Character character;
 
     private void Awake()
     {
+        i = this;
         character = GetComponent<Character>();
     }
 
