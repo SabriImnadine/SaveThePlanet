@@ -52,6 +52,7 @@ public class TP : MonoBehaviour, Trigger
 
         yield return fade.Hide(0.6f);
         GameController.Instance.PauseTheGame(false);
+        Destroy(gameObject);
 
         yield break;
     }

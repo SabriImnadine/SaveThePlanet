@@ -18342,7 +18342,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.09715986, y: -0.07222557}
+  m_Offset: {x: -0.7619536, y: -0.07222557}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -18352,7 +18352,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.8340063, y: 0.85554886}
+  m_Size: {x: 1.2764869, y: 0.85554886}
   m_EdgeRadius: 0
 --- !u!114 &1073399889
 MonoBehaviour:
@@ -18397,7 +18397,11 @@ MonoBehaviour:
         waitForCompletion: 1
         dialog:
           lines:
-          - Ga nog niet weg
+          - "H\xE9, wacht even!"
+          - Je kan hier nog niet weg.
+          - De wereld buiten het dorp is in gevaar... en jij hebt een belangrijke
+            rol.
+          - Kom met mij mee, ik leg het je uit.
     - rid: 6655263153839931463
       type: {class: ActionMoving, ns: , asm: Assembly-CSharp}
       data:
@@ -18446,7 +18450,16 @@ MonoBehaviour:
         waitForCompletion: 1
         dialog:
           lines:
-          - Hey jij daar
+          - Onze planeet heeft hulp nodig. Grote problemen zoals vervuiling, klimaatverandering
+            en ontbossing bedreigen ons allemaal.
+          - Jij bent hier om te leren... maar ook om het verschil te maken.
+          - In dit spel zal je verschillende missies uitvoeren om de wereld groener
+            en gezonder te maken.
+          - Praat met de mensen in het dorp, luister naar hun verhalen en help waar
+            je kan.
+          - Soms moet je afval opruimen, soms energie besparen of bomen planten.
+          - Elke actie telt. Jij bent de sleutel tot verandering.
+          - Ben je er klaar voor? Dan begint jouw avontuur... nu!
     - rid: 6655263153839931495
       type: {class: ActionMoving, ns: , asm: Assembly-CSharp}
       data:
@@ -19719,6 +19732,16 @@ Tilemap:
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
   - first: {x: -3, y: -10, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 32
+      m_TileSpriteIndex: 32
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -1, y: -10, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 32
@@ -21224,7 +21247,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 6877183c132665d4e8b934b06c6b1c82, type: 2}
   - m_RefCount: 19
     m_Data: {fileID: 11400000, guid: 6929fb631aecb86418a4e4b9a25ea32e, type: 2}
-  - m_RefCount: 30
+  - m_RefCount: 31
     m_Data: {fileID: 11400000, guid: ecd3731ee6ca43a42863ede910a1065d, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -21319,7 +21342,7 @@ Tilemap:
     m_Data: {fileID: -9128652258105010429, guid: 6092738183c668a4d924383acaf9eb5f, type: 3}
   - m_RefCount: 19
     m_Data: {fileID: 5991473849112003203, guid: 6092738183c668a4d924383acaf9eb5f, type: 3}
-  - m_RefCount: 30
+  - m_RefCount: 31
     m_Data: {fileID: -9167755149240453841, guid: 6092738183c668a4d924383acaf9eb5f, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 3608026245190458011, guid: 6092738183c668a4d924383acaf9eb5f, type: 3}
@@ -21350,7 +21373,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 678973239949852538, guid: cb3a56e86b2bb9c4991509ad74cde6ad, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 159
+  - m_RefCount: 160
     m_Data:
       e00: 1
       e01: 0
@@ -21369,7 +21392,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 159
+  - m_RefCount: 160
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1

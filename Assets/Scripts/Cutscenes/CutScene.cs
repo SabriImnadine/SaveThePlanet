@@ -7,7 +7,7 @@ public class CutScene : MonoBehaviour, Trigger
     [SerializeReference]
     [SerializeField] List<CutsceneAction> actions;
 
-    public bool TriggerRepeatedly => false; 
+    public bool TriggerRepeatedly => false;
 
     public IEnumerator Play()
     {
@@ -22,6 +22,7 @@ public class CutScene : MonoBehaviour, Trigger
         }
 
         GameController.Instance.StartFreemRoamState();
+         gameObject.SetActive(false);
     }
 
     public void addAction(CutsceneAction action)
