@@ -14323,8 +14323,6 @@ MonoBehaviour:
     - Nog een beetje! (6/8)
   - lines:
     - Bijna klaar! (7/8)
-  - lines:
-    - Het gat is klaar! (8/8)
 --- !u!1 &1176607425
 GameObject:
   m_ObjectHideFlags: 0
@@ -14495,8 +14493,6 @@ MonoBehaviour:
     - Nog een beetje! (6/8)
   - lines:
     - Bijna klaar! (7/8)
-  - lines:
-    - Het gat is klaar! (8/8)
 --- !u!1 &1192224887
 GameObject:
   m_ObjectHideFlags: 0
@@ -16615,8 +16611,6 @@ MonoBehaviour:
     - Nog een beetje! (6/8)
   - lines:
     - Bijna klaar! (7/8)
-  - lines:
-    - Het gat is klaar! (8/8)
 --- !u!1 &1425817083
 GameObject:
   m_ObjectHideFlags: 0
@@ -17200,8 +17194,6 @@ MonoBehaviour:
     - Nog een beetje! (6/8)
   - lines:
     - Bijna klaar! (7/8)
-  - lines:
-    - Het gat is klaar! (8/8)
 --- !u!1 &2135010804
 GameObject:
   m_ObjectHideFlags: 0
@@ -17372,8 +17364,6 @@ MonoBehaviour:
     - Nog een beetje! (6/8)
   - lines:
     - Bijna klaar! (7/8)
-  - lines:
-    - Het gat is klaar! (8/8)
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class SeedPickup : MonoBehaviour, Interactable
 {
@@ -13,9 +14,21 @@ public class SeedPickup : MonoBehaviour, Interactable
             inventory.hasSeeds = true;
 
             if (pickupDialog != null)
-                StartCoroutine(DialogManager.Instance.Showdialog(pickupDialog));
-
-            Destroy(gameObject);
+            {
+                StartCoroutine(PickupRoutine(inventory));
+            }
+            else
+            {
+                inventory.hasSeeds = true;
+                Destroy(gameObject);
+            }
         }
     }
+  private IEnumerator PickupRoutine(PlayerInventory inventory)
+{
+    yield return DialogManager.Instance.Showdialog(pickupDialog);
+    inventory.hasSeeds = true;
+    Destroy(gameObject);
+}
+
 }

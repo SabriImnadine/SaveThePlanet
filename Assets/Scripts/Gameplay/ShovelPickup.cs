@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class ShovelPickup : MonoBehaviour, Interactable
 {
@@ -13,8 +14,23 @@ public class ShovelPickup : MonoBehaviour, Interactable
             inventory.hasShovel = true;
 
             if (pickupDialog != null)
-                StartCoroutine(DialogManager.Instance.Showdialog(pickupDialog));
-            Destroy(gameObject);
+            {
+                StartCoroutine(PickupRoutine(inventory));
+            }
+            else
+            {
+                inventory.hasShovel = true; 
+                Destroy(gameObject);
+            }
+
         }
     }
+    
+    private IEnumerator PickupRoutine(PlayerInventory inventory)
+{
+    yield return DialogManager.Instance.Showdialog(pickupDialog);
+    inventory.hasShovel = true;
+    Destroy(gameObject);
+}
+
 }
