@@ -1,25 +1,66 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PlantSpot : MonoBehaviour, Interactable
 {
+    [SerializeField] private Dialog digDialog;
     [SerializeField] private Dialog plantDialog;
     [SerializeField] private QuestData quest;
     [SerializeField] private Sprite treeSprite;
+    [SerializeField] private List<Dialog> digProgressDialogs;
 
+
+    private bool isDug = false;
     private bool isPlanted = false;
+    private int digProgress = 0;
+    private int digRequired = 8;
 
     public void Interact(Transform initiator)
     {
-        if (isPlanted || quest == null || !quest.isStarted || quest.isCompleted)
-            return;
-
-        StartCoroutine(PlantRoutine());
+        StartCoroutine(HandleInteraction(initiator));
     }
 
-    private IEnumerator PlantRoutine()
+    private IEnumerator HandleInteraction(Transform initiator)
+    {
+        PlayerInventory inventory = initiator.GetComponent<PlayerInventory>();
+        if (inventory == null || isPlanted || quest == null || !quest.isStarted || quest.isCompleted)
+            yield break;
+
+        if (!isDug)
+        {
+            if (!inventory.hasShovel)
+                yield break;
+
+            digProgress++;
+
+           if (digProgress - 1 < digProgressDialogs.Count)
+{
+    yield return DialogManager.Instance.Showdialog(digProgressDialogs[digProgress - 1]);
+}
+
+
+            if (digProgress >= digRequired)
+            {
+                isDug = true;
+
+                if (digDialog != null)
+                    yield return DialogManager.Instance.Showdialog(digDialog);
+            }
+        }
+        else
+        {
+            if (!inventory.hasSeeds)
+                yield break;
+
+            yield return PlantRoutine(inventory);
+        }
+    }
+
+    private IEnumerator PlantRoutine(PlayerInventory inventory)
     {
         isPlanted = true;
+       // inventory.hasSeeds = false;
 
         if (plantDialog != null)
             yield return DialogManager.Instance.Showdialog(plantDialog);
@@ -32,4 +73,6 @@ public class PlantSpot : MonoBehaviour, Interactable
             quest.isCompleted = true;
         }
     }
+
+   
 }
