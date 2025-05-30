@@ -158,6 +158,7 @@ public class SecondCharacterController : MonoBehaviour, Interactable
                 if (lamp1 && lamp2 && lamp3)
                 {
                     quest.isCompleted = true;
+                    quest.hasBeenAcknowledged = true; 
                     SaveQuestState();
                     yield return DialogManager.Instance.Showdialog(completeDialog);
                 }
