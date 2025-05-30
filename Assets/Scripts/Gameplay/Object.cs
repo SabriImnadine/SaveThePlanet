@@ -11,20 +11,22 @@ public class Object : MonoBehaviour, Interactable
         StartCoroutine(PickupRoutine());
     }
 
-    private IEnumerator PickupRoutine()
-    {
-        if (quest == null || !quest.isStarted || quest.isCompleted)
-            yield break;
+   private IEnumerator PickupRoutine()
+{
+    if (quest == null || !quest.isStarted || quest.isCompleted)
+        yield break;
 
-        if (pickupDialog != null)
-            yield return DialogManager.Instance.Showdialog(pickupDialog);
+    if (pickupDialog != null)
+        yield return DialogManager.Instance.Showdialog(pickupDialog);
 
-        quest.currentAmount++;
+   PlayerInventory inventory = Object.FindFirstObjectByType<PlayerInventory>();
 
-        if (quest.currentAmount >= quest.requiredAmount)
-            quest.isCompleted = true;
 
-        Destroy(gameObject);
-    }
+    if (inventory != null)
+        inventory.trashCount++;
+
+    Destroy(gameObject);
+}
+
 }
 
