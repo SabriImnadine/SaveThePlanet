@@ -15,18 +15,19 @@ public class PlantSpot : MonoBehaviour, Interactable
     private bool isPlanted = false;
     private int digProgress = 0;
     private int digRequired = 8;
-       private bool isInteracting = false;
+     private SpriteRenderer spriteRenderer;
 
+    private void Awake()
+    {
+    spriteRenderer = GetComponent<SpriteRenderer>();
+    }
     public void Interact(Transform initiator)
     {
-         if (!isInteracting)
-        StartCoroutine(HandleInteraction(initiator));
+            StartCoroutine(HandleInteraction(initiator));
     }
 
     private IEnumerator HandleInteraction(Transform initiator)
     {
-        isInteracting = true;
-
         PlayerInventory inventory = initiator.GetComponent<PlayerInventory>();
         if (inventory == null || isPlanted || quest == null || !quest.isStarted || quest.isCompleted)
             yield break;
@@ -34,11 +35,12 @@ public class PlantSpot : MonoBehaviour, Interactable
         if (!isDug)
         {
             if (!inventory.hasShovel)
-            { 
-             isInteracting = false;
+            {
                 yield break;
             }
             digProgress++;
+            float progressRatio = (float)digProgress / digRequired;
+            spriteRenderer.color = Color.Lerp(Color.white, Color.black, progressRatio * 0.6f);
 
             if (digProgress - 1 < digProgressDialogs.Count)
             {
@@ -58,12 +60,10 @@ public class PlantSpot : MonoBehaviour, Interactable
         {
             if (!inventory.hasSeeds)
             {
-             isInteracting = false;
                 yield break;
-             }
+            }
             yield return PlantRoutine(inventory);
         }
-         isInteracting = false;
     }
 
     private IEnumerator PlantRoutine(PlayerInventory inventory)
@@ -75,6 +75,7 @@ public class PlantSpot : MonoBehaviour, Interactable
             yield return DialogManager.Instance.Showdialog(plantDialog);
 
         GetComponent<SpriteRenderer>().sprite = treeSprite;
+         spriteRenderer.color = Color.white;
 
         quest.currentAmount++;
         if (quest.currentAmount >= quest.requiredAmount)
