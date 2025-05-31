@@ -15,14 +15,18 @@ public class PlantSpot : MonoBehaviour, Interactable
     private bool isPlanted = false;
     private int digProgress = 0;
     private int digRequired = 8;
+       private bool isInteracting = false;
 
     public void Interact(Transform initiator)
     {
+         if (!isInteracting)
         StartCoroutine(HandleInteraction(initiator));
     }
 
     private IEnumerator HandleInteraction(Transform initiator)
     {
+        isInteracting = true;
+
         PlayerInventory inventory = initiator.GetComponent<PlayerInventory>();
         if (inventory == null || isPlanted || quest == null || !quest.isStarted || quest.isCompleted)
             yield break;
@@ -30,14 +34,16 @@ public class PlantSpot : MonoBehaviour, Interactable
         if (!isDug)
         {
             if (!inventory.hasShovel)
+            { 
+             isInteracting = false;
                 yield break;
-
+            }
             digProgress++;
 
-           if (digProgress - 1 < digProgressDialogs.Count)
-{
-    yield return DialogManager.Instance.Showdialog(digProgressDialogs[digProgress - 1]);
-}
+            if (digProgress - 1 < digProgressDialogs.Count)
+            {
+                yield return DialogManager.Instance.Showdialog(digProgressDialogs[digProgress - 1]);
+            }
 
 
             if (digProgress >= digRequired)
@@ -51,10 +57,13 @@ public class PlantSpot : MonoBehaviour, Interactable
         else
         {
             if (!inventory.hasSeeds)
+            {
+             isInteracting = false;
                 yield break;
-
+             }
             yield return PlantRoutine(inventory);
         }
+         isInteracting = false;
     }
 
     private IEnumerator PlantRoutine(PlayerInventory inventory)
