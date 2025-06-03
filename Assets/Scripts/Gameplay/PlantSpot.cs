@@ -9,6 +9,9 @@ public class PlantSpot : MonoBehaviour, Interactable
     [SerializeField] private QuestData quest;
     [SerializeField] private Sprite treeSprite;
     [SerializeField] private List<Dialog> digProgressDialogs;
+    [SerializeField] private Dialog noShovelDialog;
+    [SerializeField] private Dialog noSeedsDialog;
+
 
 
     private bool isDug = false;
@@ -36,6 +39,8 @@ public class PlantSpot : MonoBehaviour, Interactable
         {
             if (!inventory.hasShovel)
             {
+                if (noShovelDialog != null)
+                yield return DialogManager.Instance.Showdialog(noShovelDialog);
                 yield break;
             }
             digProgress++;
@@ -60,6 +65,8 @@ public class PlantSpot : MonoBehaviour, Interactable
         {
             if (!inventory.hasSeeds)
             {
+                if (noSeedsDialog != null)
+                yield return DialogManager.Instance.Showdialog(noSeedsDialog);
                 yield break;
             }
             yield return PlantRoutine(inventory);
