@@ -18460,6 +18460,8 @@ MonoBehaviour:
           - Soms moet je afval opruimen, soms energie besparen of bomen planten.
           - Elke actie telt. Jij bent de sleutel tot verandering.
           - Ben je er klaar voor? Dan begint jouw avontuur... nu!
+          - 'Ga naar de volgende scene om je reis voort te zetten en te ontdekken
+            hoe jij elke dag het verschil kunt maken voor onze planeet.  '
     - rid: 6655263153839931495
       type: {class: ActionMoving, ns: , asm: Assembly-CSharp}
       data:

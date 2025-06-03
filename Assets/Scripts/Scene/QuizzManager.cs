@@ -51,26 +51,38 @@ public class QuizManager : MonoBehaviour
     }
 
     void OnAnswerSelected(int index)
+{
+    answered = true;
+    QuestionData q = questions[currentQuestionIndex];
+
+    if (index == q.correctAnswerIndex)
     {
-        answered = true;
-        QuestionData q = questions[currentQuestionIndex];
-
-        if (index == q.correctAnswerIndex)
-        {
-            score++;
-        }
-
-        // Indicate correct/wrong visually
-        for (int i = 0; i < answerButtons.Count; i++)
-        {
-            ColorBlock cb = answerButtons[i].colors;
-            cb.normalColor = (i == q.correctAnswerIndex) ? Color.green : Color.red;
-            answerButtons[i].colors = cb;
-            answerButtons[i].interactable = false;
-        }
-
-        nextButton.interactable = true;
+        score++;
     }
+
+    for (int i = 0; i < answerButtons.Count; i++)
+    {
+        Image btnImage = answerButtons[i].GetComponent<Image>();
+
+        if (i == q.correctAnswerIndex)
+        {
+            btnImage.color = Color.green;
+        }
+        else if (i == index)
+        {
+            btnImage.color = Color.red;
+        }
+        else
+        {
+            btnImage.color = Color.white;
+        }
+
+        answerButtons[i].interactable = false;
+    }
+
+    nextButton.interactable = true;
+}
+
 
     void NextQuestion()
     {
@@ -86,15 +98,14 @@ public class QuizManager : MonoBehaviour
         }
     }
 
-    void ResetButtonColors()
+   void ResetButtonColors()
+{
+    foreach (var btn in answerButtons)
     {
-        foreach (var btn in answerButtons)
-        {
-            ColorBlock cb = btn.colors;
-            cb.normalColor = Color.white;
-            btn.colors = cb;
-        }
+        btn.GetComponent<Image>().color = Color.white;
     }
+}
+
 
     void EndQuiz()
     {
