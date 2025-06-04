@@ -296,11 +296,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 0.9490196, g: 0.9764706, b: 0.9490196, a: 1}
+    m_HighlightedColor: {r: 0.8117647, g: 0.9098039, b: 0.8117647, a: 1}
+    m_PressedColor: {r: 0.20784314, g: 0.39607844, b: 0.3019608, a: 1}
+    m_SelectedColor: {r: 0.64705884, g: 0.8392157, b: 0.654902, a: 1}
+    m_DisabledColor: {r: 0.8, g: 0.8, b: 0.8, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1019,8 +1019,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Het maakt het strand onaantrekkelijk
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 44f5c69c32a1dc14daafd378bf0d7eaa, type: 2}
+  m_sharedMaterial: {fileID: 8626874685346681126, guid: 44f5c69c32a1dc14daafd378bf0d7eaa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1050,7 +1050,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1374,8 +1374,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Het maakt het strand onaantrekkelijk
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 44f5c69c32a1dc14daafd378bf0d7eaa, type: 2}
+  m_sharedMaterial: {fileID: 8626874685346681126, guid: 44f5c69c32a1dc14daafd378bf0d7eaa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1405,7 +1405,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1549,11 +1549,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 0.9490196, g: 0.9764706, b: 0.9490196, a: 1}
+    m_HighlightedColor: {r: 0.8117647, g: 0.9098039, b: 0.8117647, a: 1}
+    m_PressedColor: {r: 0.20784314, g: 0.39607844, b: 0.3019608, a: 1}
+    m_SelectedColor: {r: 0.64705884, g: 0.8392157, b: 0.654902, a: 1}
+    m_DisabledColor: {r: 0.8, g: 0.8, b: 0.8, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1861,7 +1861,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.47450984, g: 0.6, b: 0.47450984, a: 0.392}
+  m_Color: {r: 0.47450984, g: 0.6, b: 0.47450984, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1947,8 +1947,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 44f5c69c32a1dc14daafd378bf0d7eaa, type: 2}
+  m_sharedMaterial: {fileID: 8626874685346681126, guid: 44f5c69c32a1dc14daafd378bf0d7eaa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1978,7 +1978,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -2058,7 +2058,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -21, y: -58}
+  m_AnchoredPosition: {x: -21, y: -67}
   m_SizeDelta: {x: 533.9961, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &627376228
@@ -2091,8 +2091,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "1. Wat is het grootste probleem van plastic afval in zee\xEBn en oceanen?"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 44f5c69c32a1dc14daafd378bf0d7eaa, type: 2}
+  m_sharedMaterial: {fileID: 8626874685346681126, guid: 44f5c69c32a1dc14daafd378bf0d7eaa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2527,6 +2527,26 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: -1, y: 1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 46
+      m_TileSpriteIndex: 46
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 0, y: 1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 44
+      m_TileSpriteIndex: 44
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: -7, y: 2, z: 0}
     second:
       serializedVersion: 2
@@ -2560,8 +2580,8 @@ Tilemap:
   - first: {x: -1, y: 2, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 46
-      m_TileSpriteIndex: 46
+      m_TileIndex: 43
+      m_TileSpriteIndex: 43
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2570,8 +2590,8 @@ Tilemap:
   - first: {x: 0, y: 2, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 44
-      m_TileSpriteIndex: 44
+      m_TileIndex: 41
+      m_TileSpriteIndex: 41
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2628,26 +2648,6 @@ Tilemap:
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
   - first: {x: -5, y: 3, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 41
-      m_TileSpriteIndex: 41
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -1, y: 3, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 43
-      m_TileSpriteIndex: 43
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 0, y: 3, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 41
@@ -4071,8 +4071,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Het maakt het strand onaantrekkelijk
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 44f5c69c32a1dc14daafd378bf0d7eaa, type: 2}
+  m_sharedMaterial: {fileID: 8626874685346681126, guid: 44f5c69c32a1dc14daafd378bf0d7eaa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4102,7 +4102,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -4441,11 +4441,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 0.9490196, g: 0.9764706, b: 0.9490196, a: 1}
+    m_HighlightedColor: {r: 0.8117647, g: 0.9098039, b: 0.8117647, a: 1}
+    m_PressedColor: {r: 0.20784314, g: 0.39607844, b: 0.3019608, a: 1}
+    m_SelectedColor: {r: 0.64705884, g: 0.8392157, b: 0.654902, a: 1}
+    m_DisabledColor: {r: 0.8, g: 0.8, b: 0.8, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -4513,25 +4513,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   downSprites:
-  - {fileID: -8922328891513336043, guid: 667eef3cbed95024c86e712c39dc41ec, type: 3}
-  - {fileID: 5527661196443274707, guid: 667eef3cbed95024c86e712c39dc41ec, type: 3}
-  - {fileID: -2495014906627460004, guid: 667eef3cbed95024c86e712c39dc41ec, type: 3}
-  - {fileID: 5610367206947713552, guid: 667eef3cbed95024c86e712c39dc41ec, type: 3}
+  - {fileID: 2783436438741164206, guid: ed7f57f5f4b2a0945aa688a5da6a99a8, type: 3}
+  - {fileID: 7577679753080463769, guid: ed7f57f5f4b2a0945aa688a5da6a99a8, type: 3}
+  - {fileID: 2783436438741164206, guid: ed7f57f5f4b2a0945aa688a5da6a99a8, type: 3}
+  - {fileID: 461804781477725145, guid: ed7f57f5f4b2a0945aa688a5da6a99a8, type: 3}
   upSprites:
-  - {fileID: 307091595780809877, guid: 667eef3cbed95024c86e712c39dc41ec, type: 3}
-  - {fileID: -2126968859773451732, guid: 667eef3cbed95024c86e712c39dc41ec, type: 3}
-  - {fileID: -5535047699543943917, guid: 667eef3cbed95024c86e712c39dc41ec, type: 3}
-  - {fileID: -4526993761146232485, guid: 667eef3cbed95024c86e712c39dc41ec, type: 3}
+  - {fileID: 1594394951405079680, guid: ed7f57f5f4b2a0945aa688a5da6a99a8, type: 3}
+  - {fileID: 256529187110200823, guid: ed7f57f5f4b2a0945aa688a5da6a99a8, type: 3}
+  - {fileID: 1594394951405079680, guid: ed7f57f5f4b2a0945aa688a5da6a99a8, type: 3}
+  - {fileID: 3416503811803513337, guid: ed7f57f5f4b2a0945aa688a5da6a99a8, type: 3}
   rightSprites:
-  - {fileID: 2230936588577103941, guid: 667eef3cbed95024c86e712c39dc41ec, type: 3}
-  - {fileID: -9111473675286820144, guid: 667eef3cbed95024c86e712c39dc41ec, type: 3}
-  - {fileID: -5627484699997550656, guid: 667eef3cbed95024c86e712c39dc41ec, type: 3}
-  - {fileID: -5051899674784280284, guid: 667eef3cbed95024c86e712c39dc41ec, type: 3}
+  - {fileID: 6864200421085694979, guid: ed7f57f5f4b2a0945aa688a5da6a99a8, type: 3}
+  - {fileID: -4410026835633661151, guid: ed7f57f5f4b2a0945aa688a5da6a99a8, type: 3}
+  - {fileID: 6864200421085694979, guid: ed7f57f5f4b2a0945aa688a5da6a99a8, type: 3}
+  - {fileID: -6257783829813909065, guid: ed7f57f5f4b2a0945aa688a5da6a99a8, type: 3}
   leftSprites:
-  - {fileID: 4614894318121576524, guid: 667eef3cbed95024c86e712c39dc41ec, type: 3}
-  - {fileID: 7369579285134121275, guid: 667eef3cbed95024c86e712c39dc41ec, type: 3}
-  - {fileID: -1211714280344312584, guid: 667eef3cbed95024c86e712c39dc41ec, type: 3}
-  - {fileID: 6842672397523141539, guid: 667eef3cbed95024c86e712c39dc41ec, type: 3}
+  - {fileID: 331144018641499733, guid: ed7f57f5f4b2a0945aa688a5da6a99a8, type: 3}
+  - {fileID: -1634602585246584623, guid: ed7f57f5f4b2a0945aa688a5da6a99a8, type: 3}
+  - {fileID: 331144018641499733, guid: ed7f57f5f4b2a0945aa688a5da6a99a8, type: 3}
+  - {fileID: -1251082241343025629, guid: ed7f57f5f4b2a0945aa688a5da6a99a8, type: 3}
   defaultDirection: 0
 --- !u!114 &1384567064
 MonoBehaviour:
@@ -4587,7 +4587,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2}
+    oldSize: {x: 1.0833334, y: 2.0833333}
     newSize: {x: 1.0625, y: 1.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -4666,7 +4666,7 @@ SpriteRenderer:
   m_SortingLayerID: -2021490647
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8922328891513336043, guid: 667eef3cbed95024c86e712c39dc41ec, type: 3}
+  m_Sprite: {fileID: 2783436438741164206, guid: ed7f57f5f4b2a0945aa688a5da6a99a8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5118,11 +5118,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 0.9490196, g: 0.9764706, b: 0.9490196, a: 1}
+    m_HighlightedColor: {r: 0.8117647, g: 0.9098039, b: 0.8117647, a: 1}
+    m_PressedColor: {r: 0.20784314, g: 0.39607844, b: 0.3019608, a: 1}
+    m_SelectedColor: {r: 0.64705884, g: 0.8392157, b: 0.654902, a: 1}
+    m_DisabledColor: {r: 0.8, g: 0.8, b: 0.8, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -7161,8 +7161,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Het breekt waterdieren hun natuurlijke leefgebied af
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 44f5c69c32a1dc14daafd378bf0d7eaa, type: 2}
+  m_sharedMaterial: {fileID: 8626874685346681126, guid: 44f5c69c32a1dc14daafd378bf0d7eaa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7192,7 +7192,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535

@@ -83,6 +83,7 @@ public class PlayerController : MonoBehaviour
     if (detectedField != null)
     {
         character.Animator.IsCharacterMoving = false;
+        character.Watching(detectedField.transform.position);
         OnEnterSecondCharacterView?.Invoke(detectedField);
     }
     }
