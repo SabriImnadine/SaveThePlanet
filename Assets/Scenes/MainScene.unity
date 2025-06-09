@@ -821,7 +821,7 @@ SpriteRenderer:
   m_SortingLayerID: -2021490647
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8612991417953451190, guid: cdf904a9ca1db7b46aeeee61c338bba9, type: 3}
+  m_Sprite: {fileID: 8705908797283999011, guid: ed7f57f5f4b2a0945aa688a5da6a99a8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -885,7 +885,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.0833334, y: 1.7916666}
+    oldSize: {x: 1.1666666, y: 2.25}
     newSize: {x: 1.0625, y: 1.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -934,8 +934,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     lines:
-    - 'Ik heb echt honger ik wil iets gaan eten kom je mee ? '
-    - waroom wil ik geen ding meer zijn
+    - Hey daar! Jij ziet er nieuw uit in het dorp.
+    - We proberen hier samen goed te zorgen voor de natuur.
+    - Als je rondkijkt, zie je vast waar je kan helpen!
   timeBetweenSquence: 3
   pathSequence:
   - {x: 0, y: -2}
@@ -955,25 +956,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   downSprites:
-  - {fileID: 8612991417953451190, guid: cdf904a9ca1db7b46aeeee61c338bba9, type: 3}
-  - {fileID: -1949647675682081600, guid: cdf904a9ca1db7b46aeeee61c338bba9, type: 3}
-  - {fileID: 8612991417953451190, guid: cdf904a9ca1db7b46aeeee61c338bba9, type: 3}
-  - {fileID: -5687483187230044562, guid: cdf904a9ca1db7b46aeeee61c338bba9, type: 3}
+  - {fileID: 8705908797283999011, guid: ed7f57f5f4b2a0945aa688a5da6a99a8, type: 3}
+  - {fileID: -722608584529794511, guid: ed7f57f5f4b2a0945aa688a5da6a99a8, type: 3}
+  - {fileID: 8705908797283999011, guid: ed7f57f5f4b2a0945aa688a5da6a99a8, type: 3}
+  - {fileID: -1673006311364759105, guid: ed7f57f5f4b2a0945aa688a5da6a99a8, type: 3}
   upSprites:
-  - {fileID: 4552151494666861248, guid: cdf904a9ca1db7b46aeeee61c338bba9, type: 3}
-  - {fileID: 5374508162716424461, guid: cdf904a9ca1db7b46aeeee61c338bba9, type: 3}
-  - {fileID: 4552151494666861248, guid: cdf904a9ca1db7b46aeeee61c338bba9, type: 3}
-  - {fileID: -8383466652725001720, guid: cdf904a9ca1db7b46aeeee61c338bba9, type: 3}
+  - {fileID: -7189821162333996509, guid: ed7f57f5f4b2a0945aa688a5da6a99a8, type: 3}
+  - {fileID: -2162042873131279757, guid: ed7f57f5f4b2a0945aa688a5da6a99a8, type: 3}
+  - {fileID: -7189821162333996509, guid: ed7f57f5f4b2a0945aa688a5da6a99a8, type: 3}
+  - {fileID: -6508074301836782407, guid: ed7f57f5f4b2a0945aa688a5da6a99a8, type: 3}
   rightSprites:
-  - {fileID: -5590999028098904782, guid: cdf904a9ca1db7b46aeeee61c338bba9, type: 3}
-  - {fileID: -2691628870791704963, guid: cdf904a9ca1db7b46aeeee61c338bba9, type: 3}
-  - {fileID: -5590999028098904782, guid: cdf904a9ca1db7b46aeeee61c338bba9, type: 3}
-  - {fileID: -1233170437052793560, guid: cdf904a9ca1db7b46aeeee61c338bba9, type: 3}
+  - {fileID: -8773639056053682142, guid: ed7f57f5f4b2a0945aa688a5da6a99a8, type: 3}
+  - {fileID: -1576366898908733992, guid: ed7f57f5f4b2a0945aa688a5da6a99a8, type: 3}
+  - {fileID: -8773639056053682142, guid: ed7f57f5f4b2a0945aa688a5da6a99a8, type: 3}
+  - {fileID: -2624010201793982680, guid: ed7f57f5f4b2a0945aa688a5da6a99a8, type: 3}
   leftSprites:
-  - {fileID: 496672345041064932, guid: cdf904a9ca1db7b46aeeee61c338bba9, type: 3}
-  - {fileID: 8328877743540731406, guid: cdf904a9ca1db7b46aeeee61c338bba9, type: 3}
-  - {fileID: 496672345041064932, guid: cdf904a9ca1db7b46aeeee61c338bba9, type: 3}
-  - {fileID: -7570605050978611535, guid: cdf904a9ca1db7b46aeeee61c338bba9, type: 3}
+  - {fileID: -739553383038283223, guid: ed7f57f5f4b2a0945aa688a5da6a99a8, type: 3}
+  - {fileID: 3816646285544587017, guid: ed7f57f5f4b2a0945aa688a5da6a99a8, type: 3}
+  - {fileID: -739553383038283223, guid: ed7f57f5f4b2a0945aa688a5da6a99a8, type: 3}
+  - {fileID: 6617814177893132337, guid: ed7f57f5f4b2a0945aa688a5da6a99a8, type: 3}
   defaultDirection: 1
 --- !u!114 &556418620
 MonoBehaviour:

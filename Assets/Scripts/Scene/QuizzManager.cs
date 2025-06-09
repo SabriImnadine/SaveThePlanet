@@ -2,6 +2,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
+
+
 
 public class QuizManager : MonoBehaviour
 {
@@ -106,14 +109,61 @@ public class QuizManager : MonoBehaviour
     }
 }
 
+void EndQuiz()
+{
+    foreach (var btn in answerButtons)
+        btn.gameObject.SetActive(false);
 
-    void EndQuiz()
+    nextButton.gameObject.SetActive(false);
+    questionText.text = 
+    $"🌍 Je hebt de quiz voltooid!\n" +
+    $"Je score: {score}/{questions.Count}\n\n" +
+    $"{GetEcoMessage(score)}\n\n" +
+    "Bedankt om deel te nemen aan dit avontuur.\n" +
+    "Elke stap die je zet helpt onze planeet.\n" +
+    "Samen kunnen we een verschil maken.\n\n" +
+    "Je wordt over enkele seconden teruggestuurd naar het hoofdmenu...";
+
+
+    
+   StartCoroutine(CountdownToMenu());
+
+}
+
+string GetEcoMessage(int score)
+{
+    if (score >= 8) return "Fantastisch! Je bent een echte klimaatexpert";
+    if (score >= 5) return "Goed gedaan! Je weet al best veel, blijf leren!";
+    return "Er is nog werk aan de winkel, maar elke stap telt.";
+}
+
+IEnumerator CountdownToMenu()
+{
+    int seconds = 15;
+
+    string baseMessage =
+        $"Je hebt de quiz voltooid!\n" +
+        $"Je score: {score}/{questions.Count}\n\n" +
+        $"{GetEcoMessage(score)}\n\n" +
+        "Bedankt om deel te nemen aan dit avontuur.\n" +
+        "Elke stap die je zet helpt onze planeet.\n" +
+        "Samen kunnen we een verschil maken.";
+
+    for (int i = seconds; i > 0; i--)
     {
-        questionText.text = $"Je hebt de quiz voltooid!\nJe score: {score}/{questions.Count}";
-
-        foreach (var btn in answerButtons)
-            btn.gameObject.SetActive(false);
-
-        nextButton.gameObject.SetActive(false);
+        questionText.text = baseMessage + $"\n\nTerug naar het menu in {i} seconden...";
+        yield return new WaitForSeconds(1);
     }
+
+    questionText.text = baseMessage + "\n\nLaden van het hoofdmenu...";
+    yield return new WaitForSeconds(5);
+
+    ReturnToMainMenu();
+}
+
+
+    void ReturnToMainMenu()
+{
+    UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+}
 }
