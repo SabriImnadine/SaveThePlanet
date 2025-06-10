@@ -64,7 +64,7 @@ public class DialogManager : MonoBehaviour
 
 
             ++currentLine;
-            
+
             if (currentLine < currentDialog.Lines.Count)
             {
                 StartCoroutine(TypeDialog(currentDialog.Lines[currentLine]));
@@ -76,6 +76,7 @@ public class DialogManager : MonoBehaviour
                 dialogBox.SetActive(false);
                 onDialogDone?.Invoke();
                 OnCloseDialog?.Invoke();
+                
             }
         }
     }
