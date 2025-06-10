@@ -20,6 +20,10 @@ public class QuizManager : MonoBehaviour
     public TMP_Text questionText;
     public List<Button> answerButtons;
     public Button nextButton;
+    public QuizzBarProgress progressBar;
+    public TMP_Text progressLabel;
+
+
 
     [Header("Questions")]
     public List<QuestionData> questions;
@@ -31,6 +35,8 @@ public class QuizManager : MonoBehaviour
     void Start()
     {
         ShowQuestion();
+        progressBar.UpdateProgress(currentQuestionIndex + 1);
+
         nextButton.onClick.AddListener(NextQuestion);
     }
 
@@ -55,6 +61,7 @@ public class QuizManager : MonoBehaviour
 
     void OnAnswerSelected(int index)
 {
+     Debug.Log("Réponse cliquée !");
     answered = true;
     QuestionData q = questions[currentQuestionIndex];
 
@@ -66,19 +73,23 @@ public class QuizManager : MonoBehaviour
     for (int i = 0; i < answerButtons.Count; i++)
     {
         Image btnImage = answerButtons[i].GetComponent<Image>();
+        TMP_Text btnText = answerButtons[i].GetComponentInChildren<TMP_Text>();
 
-        if (i == q.correctAnswerIndex)
-        {
-            btnImage.color = Color.green;
-        }
-        else if (i == index)
-        {
-            btnImage.color = Color.red;
-        }
-        else
-        {
-            btnImage.color = Color.white;
-        }
+            if (i == q.correctAnswerIndex)
+            {
+                btnImage.color = Color.green;
+              btnText.color = new Color(0.2f, 0.9f, 0.6f); 
+
+            }
+            else if (i == index)
+            {
+                btnImage.color = Color.red;
+                 btnText.color = new Color(1f, 0.4f, 0.4f);
+            }
+            else
+            {
+                btnImage.color = Color.white;
+            }
 
         answerButtons[i].interactable = false;
     }
@@ -89,11 +100,15 @@ public class QuizManager : MonoBehaviour
 
     void NextQuestion()
     {
+         Debug.Log("Next cliqué !");
         currentQuestionIndex++;
+
+
         if (currentQuestionIndex < questions.Count)
         {
             ResetButtonColors();
             ShowQuestion();
+            progressBar.UpdateProgress(currentQuestionIndex + 1);
         }
         else
         {
@@ -103,26 +118,39 @@ public class QuizManager : MonoBehaviour
 
    void ResetButtonColors()
 {
-    foreach (var btn in answerButtons)
-    {
-        btn.GetComponent<Image>().color = Color.white;
+        foreach (var btn in answerButtons)
+        {
+            btn.GetComponent<Image>().color = Color.white;
+         btn.GetComponentInChildren<TMP_Text>().color = Color.white;
     }
 }
 
 void EndQuiz()
 {
     foreach (var btn in answerButtons)
-        btn.gameObject.SetActive(false);
-
+    btn.gameObject.SetActive(false);
+    progressBar.Hide();
     nextButton.gameObject.SetActive(false);
-    questionText.text = 
-    $"🌍 Je hebt de quiz voltooid!\n" +
-    $"Je score: {score}/{questions.Count}\n\n" +
-    $"{GetEcoMessage(score)}\n\n" +
-    "Bedankt om deel te nemen aan dit avontuur.\n" +
+
+    RectTransform rt = questionText.GetComponent<RectTransform>();
+    rt.anchorMin = new Vector2(0.5f, 0.5f);
+    rt.anchorMax = new Vector2(0.5f, 0.5f);
+    rt.pivot = new Vector2(0.5f, 0.5f);
+    rt.anchoredPosition = Vector2.zero;
+
+
+    questionText.alignment = TextAlignmentOptions.Center;
+    questionText.fontSize = 28; 
+
+    questionText.text =
+    "<size=36>Je hebt de quiz voltooid!</size>\n" +
+    $"<size=30>Je score: {score}/{questions.Count}</size>\n\n" +
+    $"<i>{GetEcoMessage(score)}</i>\n\n" +
+    "<size=26><color=#A0FFD0>Bedankt om deel te nemen aan dit avontuur.</color>\n" +
     "Elke stap die je zet helpt onze planeet.\n" +
-    "Samen kunnen we een verschil maken.\n\n" +
-    "Je wordt over enkele seconden teruggestuurd naar het hoofdmenu...";
+    "Samen kunnen we een verschil maken.</size>\n\n" +
+    $"<size=20><color=#CCCCCC>Terug naar het menu in 15 seconden...</color></size>";
+
 
 
     
