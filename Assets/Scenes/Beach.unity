@@ -675,6 +675,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 1612859951434055448, guid: de69b26ff87b0d4429ee5023d208de90, type: 3}
+      propertyPath: m_Size.y
+      value: 0.8041687
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612859951434055448, guid: de69b26ff87b0d4429ee5023d208de90, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.09791565
+      objectReference: {fileID: 0}
     - target: {fileID: 5640580240965418372, guid: de69b26ff87b0d4429ee5023d208de90, type: 3}
       propertyPath: tpdefiner
       value: 2
@@ -1104,10 +1112,10 @@ MonoBehaviour:
   - {fileID: -7225207652179368751, guid: 7a764f4689d20964b8cb85e6cd1ca71a, type: 3}
   - {fileID: 5274199036575383275, guid: 7a764f4689d20964b8cb85e6cd1ca71a, type: 3}
   rightSprites:
-  - {fileID: -4446881809158499301, guid: 7a764f4689d20964b8cb85e6cd1ca71a, type: 3}
-  - {fileID: -2564191378160370997, guid: 7a764f4689d20964b8cb85e6cd1ca71a, type: 3}
-  - {fileID: -4446881809158499301, guid: 7a764f4689d20964b8cb85e6cd1ca71a, type: 3}
-  - {fileID: 4728044984709603983, guid: 7a764f4689d20964b8cb85e6cd1ca71a, type: 3}
+  - {fileID: -4939093601626451155, guid: 7a764f4689d20964b8cb85e6cd1ca71a, type: 3}
+  - {fileID: -785991101699303545, guid: 7a764f4689d20964b8cb85e6cd1ca71a, type: 3}
+  - {fileID: -4939093601626451155, guid: 7a764f4689d20964b8cb85e6cd1ca71a, type: 3}
+  - {fileID: 3109162550677297279, guid: 7a764f4689d20964b8cb85e6cd1ca71a, type: 3}
   leftSprites:
   - {fileID: -4446881809158499301, guid: 7a764f4689d20964b8cb85e6cd1ca71a, type: 3}
   - {fileID: -2564191378160370997, guid: 7a764f4689d20964b8cb85e6cd1ca71a, type: 3}
@@ -1319,6 +1327,8 @@ MonoBehaviour:
       van de oceaan.
     - Je hebt laten zien dat kleine daden een groot verschil kunnen maken. Dank je
       wel!
+    - 'Ga naar de volgende scene om je reis voort te zetten en te ontdekken hoe jij
+      elke dag het verschil kunt maken voor onze planeet. '
   isLightQuest: 0
   alertSound: {fileID: 8300000, guid: 98ab5497909104f468d0cb333d138532, type: 3}
 --- !u!1 &506525792

@@ -4937,7 +4937,6 @@ GameObject:
   - component: {fileID: 1384567067}
   - component: {fileID: 1384567066}
   - component: {fileID: 1384567065}
-  - component: {fileID: 1384567064}
   - component: {fileID: 1384567062}
   - component: {fileID: 1384567063}
   m_Layer: 10
@@ -4994,22 +4993,6 @@ MonoBehaviour:
   - {fileID: -5071040216406359543, guid: 7a764f4689d20964b8cb85e6cd1ca71a, type: 3}
   - {fileID: 1447446532190851104, guid: 7a764f4689d20964b8cb85e6cd1ca71a, type: 3}
   defaultDirection: 0
---- !u!114 &1384567064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1384567061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 526fff4af9b95ab4e99c29a592192337, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialog:
-    lines: []
-  timeBetweenSquence: 0
-  pathSequence: []
 --- !u!61 &1384567065
 BoxCollider2D:
   m_ObjectHideFlags: 0

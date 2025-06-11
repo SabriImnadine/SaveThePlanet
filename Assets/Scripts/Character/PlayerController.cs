@@ -69,11 +69,8 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-
-
         CheckIfInSecondCharacterView();
     }
-
 
     private void CheckIfInSecondCharacterView()
     {

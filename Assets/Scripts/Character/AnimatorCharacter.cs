@@ -7,7 +7,6 @@ public class AnimatorCharacter : MonoBehaviour
     [SerializeField] private List<Sprite> upSprites;
     [SerializeField] private List<Sprite> rightSprites;
     [SerializeField] private List<Sprite> leftSprites;
-
     [SerializeField] WatchingDirection defaultDirection = WatchingDirection.Down;
 
 
@@ -92,7 +91,4 @@ public WatchingDirection ViewDirection {
     get => currentDirection;
 }
 }
-
-
-
 public enum WatchingDirection { Up, Down, Left, Right}

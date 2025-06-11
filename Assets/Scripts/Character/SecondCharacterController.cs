@@ -15,18 +15,9 @@ public class SecondCharacterController : MonoBehaviour, Interactable
     [SerializeField] private bool isLightQuest = false;
     [SerializeField] private AudioClip alertSound;
 
-
-    
-
-
-
-
     private Character characterControl;
     private bool hasAutoInteracted = false;
     private PlayerController playerRef;
-
-
-
 
     private void Awake()
     {
@@ -126,14 +117,11 @@ public class SecondCharacterController : MonoBehaviour, Interactable
 
     }
 
-
     private IEnumerator ManualInteraction()
     {
 
-
         if (!quest.isStarted)
         {
-
 
             quest.isStarted = true;
             quest.currentAmount = 0;
@@ -201,9 +189,4 @@ if (!quest.hasBeenAcknowledged)
     PlayerPrefs.SetInt(quest.questName + "_acknowledged", quest.hasBeenAcknowledged ? 1 : 0);
 
 }
-
-
-
-
-
 }

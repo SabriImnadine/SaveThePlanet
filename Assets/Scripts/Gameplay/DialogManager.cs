@@ -10,14 +10,9 @@ public class DialogManager : MonoBehaviour
 {
     [SerializeField] GameObject dialogBox;
     [SerializeField] TextMeshProUGUI dialogText;
-
     [SerializeField] int lettersPerSecond;
-
     [SerializeField] private AudioSource sfxPlayer;
     [SerializeField] private AudioClip dialogAdvanceSound;
-
- 
-
 
     public event Action OnShowDialog;
     public event Action OnCloseDialog;

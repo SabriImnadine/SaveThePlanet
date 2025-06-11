@@ -11220,7 +11220,6 @@ GameObject:
   - component: {fileID: 1033598912}
   - component: {fileID: 1033598911}
   - component: {fileID: 1033598910}
-  - component: {fileID: 1033598909}
   - component: {fileID: 1033598908}
   - component: {fileID: 1033598907}
   m_Layer: 10
@@ -11277,22 +11276,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   UseInternalHandleUpdate: 0
---- !u!114 &1033598909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1033598906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 526fff4af9b95ab4e99c29a592192337, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialog:
-    lines: []
-  timeBetweenSquence: 0
-  pathSequence: []
 --- !u!61 &1033598910
 BoxCollider2D:
   m_ObjectHideFlags: 0
