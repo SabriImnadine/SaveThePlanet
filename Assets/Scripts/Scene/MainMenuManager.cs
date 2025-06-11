@@ -21,6 +21,8 @@ public class MainMenuManager : MonoBehaviour
 
     private IEnumerator StartGameRoutine()
     {
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
         yield return fade.Show(1f); 
         SceneManager.LoadScene(sceneToLoad); 
     }
