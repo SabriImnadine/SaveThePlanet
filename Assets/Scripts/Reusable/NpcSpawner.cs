@@ -13,7 +13,10 @@ public class NpcSpawner : MonoBehaviour
             Destroy(oldMayor);
         }
 
-        if (PlayerPrefs.GetInt("MayorMission_acknowledged", 0) == 0)
+        int acknowledged = PlayerPrefs.GetInt("LightQuest_acknowledged", 0);
+        Debug.Log("[SPAWNER] LightQuest_acknowledged = " + acknowledged);
+
+        if (acknowledged == 0)
         {
             Instantiate(mayorPrefab, spawnPoint.position, Quaternion.identity);
         }

@@ -101,8 +101,7 @@ public class Character : MonoBehaviour
 
     public void ResetAnimationState()
 {
-    animator.HorizontalInput = 0;
-    animator.VerticalInput = 0;
+    
     animator.IsCharacterMoving = false;
     IsCharacterMoving = false;
 }

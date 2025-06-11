@@ -35,6 +35,7 @@ public class SecondCharacterController : MonoBehaviour, Interactable
         quest.hasBeenAcknowledged = PlayerPrefs.GetInt(quest.questName + "_acknowledged", 0) == 1;
 
         SetViewRotation(characterControl.Animator.ViewDirection);
+        if (quest.isStarted) view.SetActive(false);
     }
 
     public IEnumerator LaunchInteractionSequence(PlayerController player)

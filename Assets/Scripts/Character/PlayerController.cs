@@ -31,11 +31,18 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        character.HandleUpdate();
+
 
         if (Input.GetKeyDown(KeyCode.Space))
+          
+        {
             Interact();
+        }
+
+        character.HandleUpdate();
     }
+
+
 
     void Interact()
     {
@@ -46,6 +53,7 @@ public class PlayerController : MonoBehaviour
         if (collider != null)
         {
             character.ResetAnimationState();
+            Debug.Log("ntm bojour");
             collider.GetComponent<Interactable>()?.Interact(transform);
         }
     }
@@ -74,15 +82,15 @@ public class PlayerController : MonoBehaviour
 
     private void CheckIfInSecondCharacterView()
     {
-        
-    Collider2D detectedField = Physics2D.OverlapCircle(transform.position, 0.2f, Layers.i.ViewLayer);
-    
-    if (detectedField != null)
-    {
-        character.Animator.IsCharacterMoving = false;
-        character.Watching(detectedField.transform.position);
-        OnEnterSecondCharacterView?.Invoke(detectedField);
-    }
+
+        Collider2D detectedField = Physics2D.OverlapCircle(transform.position, 0.2f, Layers.i.ViewLayer);
+
+        if (detectedField != null)
+        {
+            character.Animator.IsCharacterMoving = false;
+            character.Watching(detectedField.transform.position);
+            OnEnterSecondCharacterView?.Invoke(detectedField);
+        }
     }
 
     public Character Character => character;
