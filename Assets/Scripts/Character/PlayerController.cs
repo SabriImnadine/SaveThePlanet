@@ -18,27 +18,32 @@ public class PlayerController : MonoBehaviour
 
     public void HandleUpdate()
     {
-        if (!character.IsCharacterMoving)
+        if (!GameController.Instance.isCutScene)
         {
-            input.x = Input.GetAxisRaw("Horizontal");
-            input.y = Input.GetAxisRaw("Vertical");
-
-            if (input.x != 0) input.y = 0;
-
-            if (input != Vector2.zero)
+            Debug.Log("Message");
+            if (!character.IsCharacterMoving)
             {
-                StartCoroutine(character.Move(input, OnOver));
+                input.x = Input.GetAxisRaw("Horizontal");
+                input.y = Input.GetAxisRaw("Vertical");
+
+                if (input.x != 0) input.y = 0;
+
+                if (input != Vector2.zero)
+                {
+                    StartCoroutine(character.Move(input, OnOver));
+                }
             }
+
+
+
+            if (Input.GetKeyDown(KeyCode.Space))
+
+            {
+                Interact();
+            }
+
+
         }
-
-
-
-        if (Input.GetKeyDown(KeyCode.Space))
-          
-        {
-            Interact();
-        }
-
         character.HandleUpdate();
     }
 
@@ -53,7 +58,6 @@ public class PlayerController : MonoBehaviour
         if (collider != null)
         {
             character.ResetAnimationState();
-            Debug.Log("ntm bojour");
             collider.GetComponent<Interactable>()?.Interact(transform);
         }
     }

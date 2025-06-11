@@ -8,7 +8,9 @@ public class GameController : MonoBehaviour
 {
     [SerializeField] PlayerController playerController;
 
-    GameState state;
+
+    public GameState state;
+    public bool isCutScene = false;
     GameState StateBeforePause;
 
     public static GameController Instance { get; private set; }

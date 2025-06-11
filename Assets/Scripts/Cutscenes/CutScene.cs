@@ -12,17 +12,31 @@ public class CutScene : MonoBehaviour, Trigger
     public IEnumerator Play()
     {
         GameController.Instance.StartCutsceneState();
+        GameController.Instance.isCutScene = true;
+        List<IEnumerator> runningRoutines = new List<IEnumerator>();
 
         foreach (var action in actions)
         {
             if (action.WaitsForCompletion)
+            {
                 yield return action.Play();
+            }
             else
-                StartCoroutine(action.Play());
+            {
+                IEnumerator routine = action.Play();
+                runningRoutines.Add(routine);
+                StartCoroutine(routine);
+            }
         }
 
+
+        foreach (var routine in runningRoutines)
+        {
+            yield return routine;
+        }
+        GameController.Instance.isCutScene = false;
         GameController.Instance.StartFreemRoamState();
-         gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 
     public void addAction(CutsceneAction action)
@@ -32,7 +46,6 @@ public class CutScene : MonoBehaviour, Trigger
 
     public void onPlayerTrigger(PlayerController player)
     {
-
         player.Character.Animator.IsCharacterMoving = false;
         StartCoroutine(Play());
     }
