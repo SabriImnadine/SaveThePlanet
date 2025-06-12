@@ -27,7 +27,6 @@ public class SecondCharacterController : MonoBehaviour, Interactable
     private IEnumerator Start()
     {
         yield return null;
-        Debug.Log($"[LOAD] {quest.questName} | started={PlayerPrefs.GetInt(quest.questName + "_started", 0)} | completed={PlayerPrefs.GetInt(quest.questName + "_completed", 0)} | current={PlayerPrefs.GetInt(quest.questName + "_current", 0)}");
 
         quest.isStarted = PlayerPrefs.GetInt(quest.questName + "_started", 0) == 1;
         quest.isCompleted = PlayerPrefs.GetInt(quest.questName + "_completed", 0) == 1;

@@ -26,7 +26,6 @@ public class PlantSpot : MonoBehaviour, Interactable
     }
     public void Interact(Transform initiator)
     {
-        Debug.Log("ntm bojour");
             StartCoroutine(HandleInteraction(initiator));
     }
 

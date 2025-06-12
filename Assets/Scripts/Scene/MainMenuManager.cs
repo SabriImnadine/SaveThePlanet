@@ -9,10 +9,9 @@ public class MainMenuManager : MonoBehaviour
 
     private void Start()
 {
-    if (fade == null)
-        Debug.LogError("Fade is not assigned !");
-    else
-        StartCoroutine(fade.Hide(1f));
+        if (fade == null) ;
+        else
+            StartCoroutine(fade.Hide(1f));
 }
     public void StartGame()
     {
@@ -29,7 +28,6 @@ public class MainMenuManager : MonoBehaviour
 
     public void QuitGame()
     {
-        Application.Quit();
-        Debug.Log("Quit Game");
+        Application.Quit(); 
     }
 }

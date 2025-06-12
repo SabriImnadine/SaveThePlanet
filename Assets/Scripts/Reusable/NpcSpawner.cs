@@ -14,7 +14,6 @@ public class NpcSpawner : MonoBehaviour
         }
 
         int acknowledged = PlayerPrefs.GetInt("LightQuest_acknowledged", 0);
-        Debug.Log("[SPAWNER] LightQuest_acknowledged = " + acknowledged);
 
         if (acknowledged == 0)
         {

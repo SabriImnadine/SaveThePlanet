@@ -61,7 +61,6 @@ public class QuizManager : MonoBehaviour
 
     void OnAnswerSelected(int index)
 {
-     Debug.Log("Réponse cliquée !");
     answered = true;
     QuestionData q = questions[currentQuestionIndex];
 
@@ -100,7 +99,6 @@ public class QuizManager : MonoBehaviour
 
     void NextQuestion()
     {
-         Debug.Log("Next cliqué !");
         currentQuestionIndex++;
 
 

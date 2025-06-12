@@ -74,10 +74,6 @@ public class Character : MonoBehaviour
         animator.HorizontalInput = Mathf.Clamp(xDiff, -1f, 1f);
         animator.VerticalInput = Mathf.Clamp(yDiff, -1f, 1f);
     }
-    else
-    {
-        Debug.LogError("Character can't watch diagonally");
-    }
 }
 
     private bool IsWalkable(Vector3 targetPos)

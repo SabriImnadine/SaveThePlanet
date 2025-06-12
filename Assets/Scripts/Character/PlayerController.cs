@@ -20,7 +20,6 @@ public class PlayerController : MonoBehaviour
     {
         if (!GameController.Instance.isCutScene)
         {
-            Debug.Log("Message");
             if (!character.IsCharacterMoving)
             {
                 input.x = Input.GetAxisRaw("Horizontal");

@@ -19552,7 +19552,7 @@ GameObject:
   - component: {fileID: 1935676759}
   - component: {fileID: 1935676758}
   - component: {fileID: 1935676757}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: npc (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19619,8 +19619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    lines:
-    - Bzzzzzz Bzzzzzzzz..
+    lines: []
   timeBetweenSquence: 0.2
   pathSequence:
   - {x: 0, y: -4}
