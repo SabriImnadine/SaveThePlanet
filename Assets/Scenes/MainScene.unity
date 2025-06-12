@@ -1111,9 +1111,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     lines:
-    - Hey daar! Jij ziet er nieuw uit in het dorp.
-    - We proberen hier samen goed te zorgen voor de natuur.
-    - Als je rondkijkt, zie je vast waar je kan helpen!
+    - "Hey daar! Jij bent nieuw hier in het dorp, h\xE8?"
+    - We zorgen hier samen goed voor de natuur.
+    - "Kijk gerust rond \u2013 je zal vast iets vinden waarmee je kan helpen!  "
   timeBetweenSquence: 3
   pathSequence:
   - {x: 0, y: -2}
@@ -18571,7 +18571,7 @@ MonoBehaviour:
           lines:
           - "H\xE9, wacht even!"
           - Je kan hier nog niet weg.
-          - De wereld buiten het dorp is in gevaar... en jij hebt een belangrijke
+          - De wereld buiten het dorp is in gevaar... en jij speelt een belangrijke
             rol.
           - Kom met mij mee, ik leg het je uit.
     - rid: 6655263153839931463

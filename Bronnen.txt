@@ -1,0 +1,45 @@
+==============================
+🎨 GRAFISCHE ASSETS
+==============================
+
+- NPC Sprites (humanoïde): https://solaarnoble.itch.io/free-npcs
+- Katten sprites: https://pop-shop-packs.itch.io/cats-pixel-asset-pack?download
+- Boerderijdieren: https://jamiebrownhill.itch.io/solaria-farm-animal-sprites?download
+- Afval en rommel: https://btl-games.itch.io/trash-and-junk-asset-pack?download
+- Bijen sprites: https://elthen.itch.io/2d-pixel-art-bumble-bee-sprites
+- Wilde dieren: https://thkaspar.itch.io/tth-animals
+- Pokémon-style assets (basis voor player/NPC): https://github.com/GameDevExperiments/Pokemon-Tutorial-Art-Assets
+
+==============================
+🎵 AUDIO & MUZIEK
+==============================
+
+- Village muziek: https://opengameart.org/content/village-music
+- Strand muziek: https://opengameart.org/content/beach-01
+- Bos muziek: https://opengameart.org/content/forest-theme
+- Stadsthema: https://opengameart.org/content/town-theme-rpg
+- Menu muziek (Dreamy RPG): https://opengameart.org/content/dreamy-side-scrolling-rpg-title-menu-and-rpg-village-exploration-hitctrl-remixed
+
+- Win geluid: https://opengameart.org/content/win-sound-2
+- Beep geluid (confirmatie): https://opengameart.org/content/beep-tone-sound-sfx
+- Teleport geluid: https://opengameart.org/content/teleport-spell
+- Lichtschakelaar geluid: https://opengameart.org/content/light-switch-on-sfx-sound-effect
+- Regengeluid / ambiance schooldag: https://opengameart.org/content/school-day-rain-sun-loop
+
+==============================
+📺 TUTORIALS & INSPIRATIE
+==============================
+
+- YouTube tutorials (dialogen, NPC logica, quest triggers...): https://www.youtube.com/@GameDevExperiments/videos
+
+==============================
+🖼️ AI-GENERERDE BEELDEN
+==============================
+
+- Hoofdmenu achtergrond (stijlvol landschap): gegenereerd via ChatGPT/DALL·E
+
+==============================
+📚 DOCUMENTATIE EN HANDLES
+==============================
+
+- Handleiding / educatief kader (schoolklimaat + quiz idee): https://anyflip.com/ddgxy/gurr/basic

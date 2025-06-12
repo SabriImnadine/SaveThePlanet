@@ -407,8 +407,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupDialog:
     lines:
-    - Onze held heeft een plastic flesje opgeraapt voordat het in zee terechtkwam.
-      Goed gedaan!
+    - 'Je hebt een plastic flesje opgeraapt voordat het in zee terechtkwam. Goed
+      gedaan!  '
   quest: {fileID: 11400000, guid: df2cf7a90d477174e849681747f62248, type: 2}
 --- !u!61 &176767101
 BoxCollider2D:
@@ -559,8 +559,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupDialog:
     lines:
-    - Onze held heeft een plastic flesje opgeraapt voordat het in zee terechtkwam.
-      Goed gedaan!
+    - 'Je hebt een plastic flesje opgeraapt voordat het in zee terechtkwam. Goed
+      gedaan!  '
   quest: {fileID: 11400000, guid: df2cf7a90d477174e849681747f62248, type: 2}
 --- !u!61 &219297291
 BoxCollider2D:
@@ -1299,7 +1299,7 @@ MonoBehaviour:
   pickupSpawner: {fileID: 1831298240}
   startDialog:
     lines:
-    - Hallo daar, jongere held! Heb je een momentje?
+    - Hallo daar, heb je een momentje?
     - De laatste tijd ligt er steeds meer plastic op het strand...
     - En dat is gevaarlijk voor de zee en de dieren die er leven.
     - Dat maakt hen ziek, of soms... overleven ze het niet.
@@ -1308,9 +1308,8 @@ MonoBehaviour:
   inProgressDialog:
     lines:
     - Je bent goed bezig, maar er ligt nog wat plastic op het strand.
-    - Kijk goed rond, soms zit het verstopt tussen het zand of achter een rots.
-    - Heb je al al het plastic verzameld? Vergeet dan niet om het in de vuilnisbak
-      te gooien!
+    - "Kijk goed rond \u2014 soms zit het verstopt in het zand of achter een rots."
+    - Heb je alles gevonden? Vergeet dan niet om het in de vuilnisbak te gooien.
     - Elk stukje dat je opruimt maakt een verschil!
   completeDialog:
     lines:
@@ -1379,8 +1378,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupDialog:
     lines:
-    - Onze held heeft een plastic flesje opgeraapt voordat het in zee terechtkwam.
-      Goed gedaan!
+    - 'Je hebt een plastic flesje opgeraapt voordat het in zee terechtkwam. Goed
+      gedaan!  '
   quest: {fileID: 11400000, guid: df2cf7a90d477174e849681747f62248, type: 2}
 --- !u!61 &506525795
 BoxCollider2D:
@@ -5848,8 +5847,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupDialog:
     lines:
-    - Onze held heeft een plastic flesje opgeraapt voordat het in zee terechtkwam.
-      Goed gedaan!
+    - 'Je hebt een plastic flesje opgeraapt voordat het in zee terechtkwam. Goed
+      gedaan!  '
   quest: {fileID: 11400000, guid: df2cf7a90d477174e849681747f62248, type: 2}
 --- !u!61 &1223134725
 BoxCollider2D:
@@ -6304,8 +6303,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupDialog:
     lines:
-    - Onze held heeft een plastic flesje opgeraapt voordat het in zee terechtkwam.
-      Goed gedaan!
+    - 'Je hebt een plastic flesje opgeraapt voordat het in zee terechtkwam. Goed
+      gedaan!  '
   quest: {fileID: 11400000, guid: df2cf7a90d477174e849681747f62248, type: 2}
 --- !u!61 &1647579922
 BoxCollider2D:

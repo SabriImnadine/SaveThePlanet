@@ -14271,7 +14271,7 @@ MonoBehaviour:
     - Ga zo door, we maken samen het bos weer levendig.
   completeDialog:
     lines:
-    - Goed gedaan, jongere!
+    - Goed gedaan!
     - Door die bomen te planten, heb je iets heel belangrijks gedaan voor onze planeet.
     - "Bomen nemen CO2 op en geven zuurstof terug \u2013 precies wat wij nodig hebben
       om te ademen!"
@@ -14470,7 +14470,7 @@ Transform:
   m_GameObject: {fileID: 894620679}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.01, y: 3.02, z: 0}
+  m_LocalPosition: {x: 13.01, y: 2.47, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14717,7 +14717,7 @@ MonoBehaviour:
     - Goed gedaan! Het gat is klaar voor een nieuw boompje. Tijd om te planten!
   plantDialog:
     lines:
-    - 'Onze held heeft een nieuwe boom geplant om de natuur te helpen. '
+    - Je hebt een nieuwe boom geplant om de natuur te helpen.
   quest: {fileID: 11400000, guid: 8812cddecb4c40d45bbd2ced252d22f7, type: 2}
   treeSprite: {fileID: 4012328098178919012, guid: 7abbc0d824cdc104aadbb4318509708d, type: 3}
   digProgressDialogs:
