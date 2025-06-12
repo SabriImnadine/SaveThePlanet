@@ -22,6 +22,13 @@ public class MainMenuManager : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
         PlayerPrefs.Save();
+      GameObject reusable = GameObject.Find("ReusableObjects(Clone)");
+    if (reusable != null)
+    {
+    Destroy(reusable);
+    yield return null;
+    }
+
         yield return fade.Show(1f); 
         SceneManager.LoadScene(sceneToLoad); 
     }
