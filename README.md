@@ -124,6 +124,7 @@ Deze AI-ondersteuning hielp me vooral om sneller oplossingen te vinden en proble
 ### 🖼️ Afbeeldingen
 - Hoofdmenu achtergrond: **AI gegenereerd via ChatGPT**
 
+
 ### 📁 Designmateriaal
 - Quizvragen en gegenereerde afbeelding zijn te vinden in de map `/Design`
 
