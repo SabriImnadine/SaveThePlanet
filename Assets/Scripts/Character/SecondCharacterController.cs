@@ -63,6 +63,9 @@ public class SecondCharacterController : MonoBehaviour, Interactable
             quest.currentAmount = 0;
             SaveQuestState();
 
+            PlayerPrefs.SetInt("ForestQuestState", 1);
+            FindObjectOfType<WeatherManager>()?.UpdateWeather();
+
 
             if (pickupSpawner != null)
                 pickupSpawner.SetActive(true);
@@ -127,6 +130,8 @@ public class SecondCharacterController : MonoBehaviour, Interactable
             quest.currentAmount = 0;
             SaveQuestState();
 
+            PlayerPrefs.SetInt("ForestQuestState", 1);
+            FindObjectOfType<WeatherManager>()?.UpdateWeather();
 
             if (pickupSpawner != null)
                 pickupSpawner.SetActive(true);

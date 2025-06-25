@@ -88,6 +88,8 @@ public class PlantSpot : MonoBehaviour, Interactable
         if (quest.currentAmount >= quest.requiredAmount)
         {
             quest.isCompleted = true;
+            PlayerPrefs.SetInt("ForestQuestState", 2);
+            FindObjectOfType<WeatherManager>()?.UpdateWeather();
         }
     }
 
