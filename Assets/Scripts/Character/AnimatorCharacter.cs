@@ -24,6 +24,8 @@ public class AnimatorCharacter : MonoBehaviour
     [SerializeField] private List<Sprite> pickupUpSprites;
     [SerializeField] private List<Sprite> pickupLeftSprites;
     [SerializeField] private List<Sprite> pickupRightSprites;
+    
+    [SerializeField] private List<Sprite> switchUpSprites;
 
 
 
@@ -49,6 +51,8 @@ public class AnimatorCharacter : MonoBehaviour
     private AnimatorSprite pickupUpAnim;
     private AnimatorSprite pickupLeftAnim;
     private AnimatorSprite pickupRightAnim;
+    private AnimatorSprite switchUpAnim;
+
 
     private AnimatorSprite currentAnim;
     private SpriteRenderer spriteRenderer;
@@ -63,6 +67,9 @@ public class AnimatorCharacter : MonoBehaviour
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        switchUpAnim = new AnimatorSprite(switchUpSprites, spriteRenderer);
+
 
         plantDownAnim = new AnimatorSprite(plantDownSprites, spriteRenderer);
         plantUpAnim = new AnimatorSprite(plantUpSprites, spriteRenderer);
@@ -157,8 +164,19 @@ public IEnumerator PlayPlantAnimation(WatchingDirection direction)
 
     isPlayingSpecialAnimation = false;
     }
+    
+    public IEnumerator PlaySwitchAnimationUp()
+    {
+        isPlayingSpecialAnimation = true;
 
+        yield return switchUpAnim.PlayStepByStep();
 
+        spriteRenderer.sprite = switchUpAnim.FirstFrame;
+
+        yield return new WaitForSeconds(0.1f);
+
+        isPlayingSpecialAnimation = false;
+    }
 
     private void Update()
     {

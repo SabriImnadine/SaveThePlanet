@@ -228,6 +228,10 @@ MonoBehaviour:
   - {fileID: -7878970950182602543, guid: 116fad66e95053f4d938f9850fd6f9ce, type: 3}
   - {fileID: -3491536401941020551, guid: 116fad66e95053f4d938f9850fd6f9ce, type: 3}
   - {fileID: 5139461276061279004, guid: 116fad66e95053f4d938f9850fd6f9ce, type: 3}
+  switchUpSprites:
+  - {fileID: 9055943518457937359, guid: 116fad66e95053f4d938f9850fd6f9ce, type: 3}
+  - {fileID: -8848827954738058006, guid: 116fad66e95053f4d938f9850fd6f9ce, type: 3}
+  - {fileID: 8185452622247561542, guid: 116fad66e95053f4d938f9850fd6f9ce, type: 3}
 --- !u!114 &791007168205340821
 MonoBehaviour:
   m_ObjectHideFlags: 0

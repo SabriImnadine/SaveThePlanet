@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
 public class LightSwitch : MonoBehaviour, Interactable
@@ -27,18 +29,36 @@ public class LightSwitch : MonoBehaviour, Interactable
 
     public void Interact(Transform initiator)
     {
-        isOff = !isOff;
-        PlayerPrefs.SetInt(lampID, isOff ? 1 : 0);
-        UpdateVisual();
-
-        if (isOff && !WasLampCounted())
-        {
-            MarkLampAsCounted();
-        }
-
-          if (switchSfx != null && sfxPlayer != null)
-            sfxPlayer.PlayOneShot(switchSfx);
+        StartCoroutine(HandleSwitch(initiator));
     }
+
+    private IEnumerator HandleSwitch(Transform initiator)
+{
+    Character character = initiator.GetComponent<Character>();
+
+    if (character != null)
+    {
+        character.CanMove = false;
+        if (character.Animator.ViewDirection == WatchingDirection.Up)
+        {
+            yield return character.Animator.PlaySwitchAnimationUp();
+        }
+    }
+
+    isOff = !isOff;
+    PlayerPrefs.SetInt(lampID, isOff ? 1 : 0);
+    UpdateVisual();
+
+    if (isOff && !WasLampCounted())
+        MarkLampAsCounted();
+
+    if (switchSfx != null && sfxPlayer != null)
+        sfxPlayer.PlayOneShot(switchSfx);
+
+    if (character != null)
+        character.CanMove = true;
+}
+
 
     private void UpdateVisual()
     {
