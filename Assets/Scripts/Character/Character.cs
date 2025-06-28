@@ -11,6 +11,8 @@ public class Character : MonoBehaviour
     public float OffsetY { get; private set; } = 0.3f;
     private AnimatorCharacter animator;
     public bool UseInternalHandleUpdate = false;
+    public bool CanMove { get; set; } = true;
+
 
 
     public void SnapToTile(Vector2 pos)
@@ -36,6 +38,10 @@ public class Character : MonoBehaviour
 
     if (checkCollisions && !IsObstacleClear(targetPos))
         yield break;
+       
+        if (!CanMove)
+            yield break;
+
 
     IsCharacterMoving = true;
 

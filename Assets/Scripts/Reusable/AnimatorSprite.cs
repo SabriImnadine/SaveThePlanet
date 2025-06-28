@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System.Collections;
+
 using UnityEngine;
 
 public class AnimatorSprite
@@ -36,7 +38,19 @@ public class AnimatorSprite
         }
     }
 
+    public IEnumerator PlayStepByStep()
+{
+    for (int i = 0; i < frameList.Count; i++)
+    {
+        renderer.sprite = frameList[i];
+        yield return new WaitForSeconds(speed);
+    }
+}
+
+
     public Sprite FirstFrame => frameList[0];
+    public int FrameCount => frameList.Count;
+
 
 }
 
