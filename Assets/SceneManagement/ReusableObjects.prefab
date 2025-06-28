@@ -192,6 +192,26 @@ MonoBehaviour:
   - {fileID: -3280891658003242529, guid: 280b517e3c09ab64b8b976212064fcdc, type: 3}
   - {fileID: 6794031663104073358, guid: 280b517e3c09ab64b8b976212064fcdc, type: 3}
   - {fileID: -3888074447357534224, guid: 280b517e3c09ab64b8b976212064fcdc, type: 3}
+  plantDownSprites:
+  - {fileID: -2782981688245489676, guid: 116fad66e95053f4d938f9850fd6f9ce, type: 3}
+  - {fileID: 868222304341909628, guid: 116fad66e95053f4d938f9850fd6f9ce, type: 3}
+  - {fileID: -5586543031298876683, guid: 116fad66e95053f4d938f9850fd6f9ce, type: 3}
+  - {fileID: 2286529051307924897, guid: 116fad66e95053f4d938f9850fd6f9ce, type: 3}
+  plantUpSprites:
+  - {fileID: -1018553799550522611, guid: 116fad66e95053f4d938f9850fd6f9ce, type: 3}
+  - {fileID: 5057442481395430831, guid: 116fad66e95053f4d938f9850fd6f9ce, type: 3}
+  - {fileID: 7013858334873095654, guid: 116fad66e95053f4d938f9850fd6f9ce, type: 3}
+  - {fileID: -8791914765037721630, guid: 116fad66e95053f4d938f9850fd6f9ce, type: 3}
+  plantLeftSprites:
+  - {fileID: 2557494431455597551, guid: 116fad66e95053f4d938f9850fd6f9ce, type: 3}
+  - {fileID: -8057401219156772014, guid: 116fad66e95053f4d938f9850fd6f9ce, type: 3}
+  - {fileID: -5067658872020712055, guid: 116fad66e95053f4d938f9850fd6f9ce, type: 3}
+  - {fileID: 8745397751384686171, guid: 116fad66e95053f4d938f9850fd6f9ce, type: 3}
+  plantRightSprites:
+  - {fileID: 2351783952769286105, guid: 116fad66e95053f4d938f9850fd6f9ce, type: 3}
+  - {fileID: -4852964343193014620, guid: 116fad66e95053f4d938f9850fd6f9ce, type: 3}
+  - {fileID: -3513290295136993151, guid: 116fad66e95053f4d938f9850fd6f9ce, type: 3}
+  - {fileID: 2266619135743694703, guid: 116fad66e95053f4d938f9850fd6f9ce, type: 3}
 --- !u!114 &791007168205340821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,7 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31fba0b1052ad464d894baafa674bb1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4.5
+  moveSpeed: 5
   UseInternalHandleUpdate: 0
 --- !u!50 &5165742942953343103
 Rigidbody2D:

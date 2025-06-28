@@ -15,6 +15,12 @@ public class AnimatorCharacter : MonoBehaviour
     [SerializeField] private List<Sprite> digLeftSprites;
     [SerializeField] private List<Sprite> digRightSprites;
 
+    [SerializeField] private List<Sprite> plantDownSprites;
+    [SerializeField] private List<Sprite> plantUpSprites;
+    [SerializeField] private List<Sprite> plantLeftSprites;
+    [SerializeField] private List<Sprite> plantRightSprites;
+
+
 
 
     public float HorizontalInput { get; set; }
@@ -30,6 +36,10 @@ public class AnimatorCharacter : MonoBehaviour
     private AnimatorSprite upAnim;
     private AnimatorSprite rightAnim;
     private AnimatorSprite leftAnim;
+    private AnimatorSprite plantDownAnim;
+    private AnimatorSprite plantUpAnim;
+    private AnimatorSprite plantLeftAnim;
+    private AnimatorSprite plantRightAnim;
 
     private AnimatorSprite currentAnim;
     private SpriteRenderer spriteRenderer;
@@ -44,6 +54,13 @@ public class AnimatorCharacter : MonoBehaviour
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        plantDownAnim = new AnimatorSprite(plantDownSprites, spriteRenderer);
+        plantUpAnim = new AnimatorSprite(plantUpSprites, spriteRenderer);
+        plantLeftAnim = new AnimatorSprite(plantLeftSprites, spriteRenderer);
+        plantRightAnim = new AnimatorSprite(plantRightSprites, spriteRenderer);
+
+        
 
         digDownAnim = new AnimatorSprite(digDownSprites, spriteRenderer);
         digUpAnim = new AnimatorSprite(digUpSprites, spriteRenderer);
@@ -76,41 +93,64 @@ public class AnimatorCharacter : MonoBehaviour
         yield return digAnim.PlayStepByStep();
 
         spriteRenderer.sprite = digAnim.FirstFrame;
-    
-     yield return new WaitForSeconds(0.1f); 
+
+        yield return new WaitForSeconds(0.1f);
+
+        isPlayingSpecialAnimation = false;
+    }
+
+public IEnumerator PlayPlantAnimation(WatchingDirection direction)
+{
+    isPlayingSpecialAnimation = true;
+
+    AnimatorSprite plantAnim = direction switch
+    {
+        WatchingDirection.Up => plantUpAnim,
+        WatchingDirection.Down => plantDownAnim,
+        WatchingDirection.Left => plantLeftAnim,
+        WatchingDirection.Right => plantRightAnim,
+        _ => plantDownAnim
+    };
+
+    yield return plantAnim.PlayStepByStep();
+
+    spriteRenderer.sprite = plantAnim.FirstFrame;
+
+    yield return new WaitForSeconds(0.1f);
 
     isPlayingSpecialAnimation = false;
 }
 
 
 
+
     private void Update()
     {
         if (isPlayingSpecialAnimation)
-        return;
+            return;
 
         var previousAnim = currentAnim;
 
         if (HorizontalInput == 1)
-{
-    currentAnim = rightAnim;
-    lastDirection = WatchingDirection.Right;
-}
-else if (HorizontalInput == -1)
-{
-    currentAnim = leftAnim;
-    lastDirection = WatchingDirection.Left;
-}
-else if (VerticalInput == 1)
-{
-    currentAnim = upAnim;
-    lastDirection = WatchingDirection.Up;
-}
-else if (VerticalInput == -1)
-{
-    currentAnim = downAnim;
-    lastDirection = WatchingDirection.Down;
-}
+        {
+            currentAnim = rightAnim;
+            lastDirection = WatchingDirection.Right;
+        }
+        else if (HorizontalInput == -1)
+        {
+            currentAnim = leftAnim;
+            lastDirection = WatchingDirection.Left;
+        }
+        else if (VerticalInput == 1)
+        {
+            currentAnim = upAnim;
+            lastDirection = WatchingDirection.Up;
+        }
+        else if (VerticalInput == -1)
+        {
+            currentAnim = downAnim;
+            lastDirection = WatchingDirection.Down;
+        }
 
 
         if (currentAnim != previousAnim || IsCharacterMoving != wasMovingPreviously)

@@ -85,9 +85,20 @@ public class PlantSpot : MonoBehaviour, Interactable
             {
                 if (noSeedsDialog != null)
                     yield return DialogManager.Instance.Showdialog(noSeedsDialog);
-                    isBusy = false;
+                isBusy = false;
                 yield break;
+                
+                
             }
+            var character = inventory.GetComponent<Character>();
+if (character != null)
+{
+    character.CanMove = false;
+    yield return character.Animator.PlayPlantAnimation(character.Animator.ViewDirection);
+    yield return new WaitForSeconds(0.2f);
+    character.CanMove = true;
+}
+
             yield return PlantRoutine(inventory);
 
         }
