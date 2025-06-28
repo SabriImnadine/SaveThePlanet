@@ -15,9 +15,16 @@ public class Object : MonoBehaviour, Interactable
 {
     if (quest == null || !quest.isStarted || quest.isCompleted)
         yield break;
+        
+         var character = GameObject.FindObjectOfType<Character>();
+    if (character != null)
+    {
+        var direction = character.Animator.ViewDirection;
+        yield return character.Animator.PlayPickupAnimation(direction);
+    }
 
     if (pickupDialog != null)
-        yield return DialogManager.Instance.Showdialog(pickupDialog);
+            yield return DialogManager.Instance.Showdialog(pickupDialog);
 
    PlayerInventory inventory = Object.FindFirstObjectByType<PlayerInventory>();
 

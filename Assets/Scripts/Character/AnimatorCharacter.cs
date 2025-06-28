@@ -20,6 +20,11 @@ public class AnimatorCharacter : MonoBehaviour
     [SerializeField] private List<Sprite> plantLeftSprites;
     [SerializeField] private List<Sprite> plantRightSprites;
 
+    [SerializeField] private List<Sprite> pickupDownSprites;
+    [SerializeField] private List<Sprite> pickupUpSprites;
+    [SerializeField] private List<Sprite> pickupLeftSprites;
+    [SerializeField] private List<Sprite> pickupRightSprites;
+
 
 
 
@@ -40,6 +45,10 @@ public class AnimatorCharacter : MonoBehaviour
     private AnimatorSprite plantUpAnim;
     private AnimatorSprite plantLeftAnim;
     private AnimatorSprite plantRightAnim;
+    private AnimatorSprite pickupDownAnim;
+    private AnimatorSprite pickupUpAnim;
+    private AnimatorSprite pickupLeftAnim;
+    private AnimatorSprite pickupRightAnim;
 
     private AnimatorSprite currentAnim;
     private SpriteRenderer spriteRenderer;
@@ -59,6 +68,12 @@ public class AnimatorCharacter : MonoBehaviour
         plantUpAnim = new AnimatorSprite(plantUpSprites, spriteRenderer);
         plantLeftAnim = new AnimatorSprite(plantLeftSprites, spriteRenderer);
         plantRightAnim = new AnimatorSprite(plantRightSprites, spriteRenderer);
+
+        pickupDownAnim = new AnimatorSprite(pickupDownSprites, spriteRenderer);
+        pickupUpAnim = new AnimatorSprite(pickupUpSprites, spriteRenderer);
+        pickupLeftAnim = new AnimatorSprite(pickupLeftSprites, spriteRenderer);
+        pickupRightAnim = new AnimatorSprite(pickupRightSprites, spriteRenderer);
+
 
         
 
@@ -121,6 +136,27 @@ public IEnumerator PlayPlantAnimation(WatchingDirection direction)
     isPlayingSpecialAnimation = false;
 }
 
+    public IEnumerator PlayPickupAnimation(WatchingDirection direction)
+    {
+    isPlayingSpecialAnimation = true;
+
+    AnimatorSprite pickupAnim = direction switch
+    {
+        WatchingDirection.Up => pickupUpAnim,
+        WatchingDirection.Down => pickupDownAnim,
+        WatchingDirection.Left => pickupLeftAnim,
+        WatchingDirection.Right => pickupRightAnim,
+        _ => pickupDownAnim
+    };
+
+    yield return pickupAnim.PlayStepByStep();
+
+    spriteRenderer.sprite = pickupAnim.FirstFrame;
+
+    yield return new WaitForSeconds(0.1f);
+
+    isPlayingSpecialAnimation = false;
+    }
 
 
 
