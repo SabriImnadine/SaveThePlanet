@@ -70,14 +70,12 @@ Assets/
 
 ---
 
-## 📺 Tutorials & Inspiratie
+## 📺 Inspiratie & Technische Basis
 
-Aan het begin van mijn project heb ik tutorials gevolgd van het YouTube-kanaal [**GameDev Experiments**](https://www.youtube.com/@GameDevExperiments/videos). Deze tutorials hielpen mij bij het begrijpen van:
+Aan het begin van mijn project heb ik tutorials bekeken van het YouTube-kanaal [**GameDev Experiments**](https://www.youtube.com/@GameDevExperiments/videos). Deze tutorials hielpen mij bij het begrijpen van:
 
-- Interactie met NPC’s  
-- Quest-logica  
-- ScriptableObjects voor dialogen  
-- Veldzicht en automatische beweging  
+- De werking van ScriptableObjects voor dialogen 
+- De implementatie van veldzicht en simpele NPC-interacties 
 
 Na het opbouwen van deze basis heb ik het spel **volledig gepersonaliseerd en aangepast aan mijn eigen projectdoel**:
 
@@ -87,7 +85,7 @@ Na het opbouwen van deze basis heb ik het spel **volledig gepersonaliseerd en aa
 - Toegevoegde quiz en eco-score  
 - Unieke combinatie van grafische en auditieve assets  
 
-🎯 **Het eindresultaat is dus een eigen creatie**, gebouwd op geleerde technieken maar met een volledige persoonlijke invulling.
+🎯 Mijn spel is dus geen kopie van een tutorial, maar een persoonlijk project dat gebruikmaakt van enkele technieken die ik heb geleerd, net zoals je leert autorijden op les maar zelf je weg kiest.
 
 
 ---
