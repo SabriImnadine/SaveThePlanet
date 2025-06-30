@@ -51,9 +51,11 @@ public class LightSwitch : MonoBehaviour, Interactable
 
     if (isOff && !WasLampCounted())
         MarkLampAsCounted();
+    GameStatsManager.Instance.ReduceElectricityWaste(7); 
+
 
     if (switchSfx != null && sfxPlayer != null)
-        sfxPlayer.PlayOneShot(switchSfx);
+            sfxPlayer.PlayOneShot(switchSfx);
 
     if (character != null)
         character.CanMove = true;

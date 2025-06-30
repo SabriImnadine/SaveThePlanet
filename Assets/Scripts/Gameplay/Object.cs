@@ -31,7 +31,7 @@ public class Object : MonoBehaviour, Interactable
 
     if (inventory != null)
         inventory.trashCount++;
-
+    GameStatsManager.Instance.ReducePlasticPollution(6); 
     Destroy(gameObject);
 }
 

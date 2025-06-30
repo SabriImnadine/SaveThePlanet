@@ -116,6 +116,8 @@ if (character != null)
 
         GetComponent<SpriteRenderer>().sprite = treeSprite;
         spriteRenderer.color = Color.white;
+        GameStatsManager.Instance.ReduceCO2(10);
+
 
         quest.currentAmount++;
         if (quest.currentAmount >= quest.requiredAmount)
