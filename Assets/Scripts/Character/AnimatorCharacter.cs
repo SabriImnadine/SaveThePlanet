@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class AnimatorCharacter : MonoBehaviour
 {
+    [SerializeField] private List<Sprite> throwDownSprites;
+    [SerializeField] private List<Sprite> throwUpSprites;
+    [SerializeField] private List<Sprite> throwLeftSprites;
+    [SerializeField] private List<Sprite> throwRightSprites;
     [SerializeField] private List<Sprite> downSprites;
     [SerializeField] private List<Sprite> upSprites;
     [SerializeField] private List<Sprite> rightSprites;
@@ -34,7 +38,10 @@ public class AnimatorCharacter : MonoBehaviour
     public float VerticalInput { get; set; }
     public bool IsCharacterMoving { get; set; }
 
-    
+    private AnimatorSprite throwDownAnim;
+    private AnimatorSprite throwUpAnim;
+    private AnimatorSprite throwLeftAnim;
+    private AnimatorSprite throwRightAnim;
     private AnimatorSprite digDownAnim;
     private AnimatorSprite digUpAnim;
     private AnimatorSprite digLeftAnim;
@@ -70,6 +77,10 @@ public class AnimatorCharacter : MonoBehaviour
 
         switchUpAnim = new AnimatorSprite(switchUpSprites, spriteRenderer);
 
+        throwDownAnim = new AnimatorSprite(throwDownSprites, spriteRenderer);
+        throwUpAnim = new AnimatorSprite(throwUpSprites, spriteRenderer);
+        throwLeftAnim = new AnimatorSprite(throwLeftSprites, spriteRenderer);
+        throwRightAnim = new AnimatorSprite(throwRightSprites, spriteRenderer);
 
         plantDownAnim = new AnimatorSprite(plantDownSprites, spriteRenderer);
         plantUpAnim = new AnimatorSprite(plantUpSprites, spriteRenderer);
@@ -177,6 +188,29 @@ public IEnumerator PlayPlantAnimation(WatchingDirection direction)
 
         isPlayingSpecialAnimation = false;
     }
+
+    public IEnumerator PlayThrowAnimation(WatchingDirection direction)
+{
+    isPlayingSpecialAnimation = true;
+
+    AnimatorSprite throwAnim = direction switch
+    {
+        WatchingDirection.Up => throwUpAnim,
+        WatchingDirection.Down => throwDownAnim,
+        WatchingDirection.Left => throwLeftAnim,
+        WatchingDirection.Right => throwRightAnim,
+        _ => throwDownAnim
+    };
+
+    yield return throwAnim.PlayStepByStep();
+
+    spriteRenderer.sprite = throwAnim.FirstFrame;
+
+    yield return new WaitForSeconds(0.1f);
+
+    isPlayingSpecialAnimation = false;
+}
+
 
     private void Update()
     {

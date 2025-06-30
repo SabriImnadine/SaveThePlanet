@@ -118,6 +118,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86ffd6bd9685d894f8b634d666f9b759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  throwDownSprites:
+  - {fileID: -3225523838822816671, guid: 116fad66e95053f4d938f9850fd6f9ce, type: 3}
+  - {fileID: -3197973398544493098, guid: 116fad66e95053f4d938f9850fd6f9ce, type: 3}
+  - {fileID: 1850725237202784418, guid: 116fad66e95053f4d938f9850fd6f9ce, type: 3}
+  throwUpSprites:
+  - {fileID: 9055943518457937359, guid: 116fad66e95053f4d938f9850fd6f9ce, type: 3}
+  - {fileID: 1477175440271969062, guid: 116fad66e95053f4d938f9850fd6f9ce, type: 3}
+  - {fileID: -8848827954738058006, guid: 116fad66e95053f4d938f9850fd6f9ce, type: 3}
+  throwLeftSprites:
+  - {fileID: 6319543533002960423, guid: 116fad66e95053f4d938f9850fd6f9ce, type: 3}
+  - {fileID: 4937998278621445135, guid: 116fad66e95053f4d938f9850fd6f9ce, type: 3}
+  - {fileID: -8085448589561768242, guid: 116fad66e95053f4d938f9850fd6f9ce, type: 3}
+  throwRightSprites:
+  - {fileID: -7878970950182602543, guid: 116fad66e95053f4d938f9850fd6f9ce, type: 3}
+  - {fileID: -3491536401941020551, guid: 116fad66e95053f4d938f9850fd6f9ce, type: 3}
+  - {fileID: 5139461276061279004, guid: 116fad66e95053f4d938f9850fd6f9ce, type: 3}
   downSprites:
   - {fileID: 4408406346810168619, guid: 076a846b09da9584194fcb978813f967, type: 3}
   - {fileID: -485737157877676475, guid: 076a846b09da9584194fcb978813f967, type: 3}

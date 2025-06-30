@@ -8,9 +8,15 @@ public class TrashCan : MonoBehaviour, Interactable
     public void Interact(Transform initiator)
     {
         PlayerInventory inventory = initiator.GetComponent<PlayerInventory>();
+        Character character = initiator.GetComponent<Character>();
 
         if (inventory != null && quest.isStarted && !quest.isCompleted && inventory.trashCount > 0)
         {
+             if (character != null)
+        {
+            var direction = character.Animator.ViewDirection;
+            character.StartCoroutine(character.Animator.PlayThrowAnimation(direction));
+        }
             quest.currentAmount += inventory.trashCount;
             inventory.trashCount = 0;
 
