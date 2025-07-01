@@ -5126,6 +5126,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86ffd6bd9685d894f8b634d666f9b759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  throwDownSprites: []
+  throwUpSprites: []
+  throwLeftSprites: []
+  throwRightSprites: []
   downSprites:
   - {fileID: 4653764268054747508, guid: 0982c674eab586543949f2e32bfdf2b2, type: 3}
   - {fileID: -7203969087833245949, guid: 0982c674eab586543949f2e32bfdf2b2, type: 3}
@@ -5393,6 +5397,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86ffd6bd9685d894f8b634d666f9b759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  throwDownSprites: []
+  throwUpSprites: []
+  throwLeftSprites: []
+  throwRightSprites: []
   downSprites:
   - {fileID: -5556342291460878815, guid: 480ad64026867e2438af50e381a26e4f, type: 3}
   - {fileID: 4421211610113885424, guid: 480ad64026867e2438af50e381a26e4f, type: 3}
@@ -18992,6 +19000,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86ffd6bd9685d894f8b634d666f9b759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  throwDownSprites: []
+  throwUpSprites: []
+  throwLeftSprites: []
+  throwRightSprites: []
   downSprites: []
   upSprites: []
   rightSprites: []
@@ -19233,6 +19245,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86ffd6bd9685d894f8b634d666f9b759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  throwDownSprites: []
+  throwUpSprites: []
+  throwLeftSprites: []
+  throwRightSprites: []
   downSprites:
   - {fileID: -4256026317592073442, guid: 03325900d27c4ed4e9b46687e544f0fd, type: 3}
   - {fileID: -4422150675288407715, guid: 03325900d27c4ed4e9b46687e544f0fd, type: 3}
@@ -26999,6 +27015,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86ffd6bd9685d894f8b634d666f9b759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  throwDownSprites: []
+  throwUpSprites: []
+  throwLeftSprites: []
+  throwRightSprites: []
   downSprites:
   - {fileID: 7463426482028988641, guid: cc72f90d4ee0620429685001b0e58499, type: 3}
   - {fileID: 7578741680063003695, guid: cc72f90d4ee0620429685001b0e58499, type: 3}
@@ -27510,6 +27530,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86ffd6bd9685d894f8b634d666f9b759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  throwDownSprites: []
+  throwUpSprites: []
+  throwLeftSprites: []
+  throwRightSprites: []
   downSprites:
   - {fileID: -8439172176330849405, guid: 4758c081ab0022f43932d496665f15e5, type: 3}
   - {fileID: 8191313065465555045, guid: 4758c081ab0022f43932d496665f15e5, type: 3}
