@@ -1,0 +1,962 @@
+fileFormatVersion: 2
+guid: 73c23aa8d14b8eb428dd0fe94b6d82c6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6818012243853343984
+    second: Goldie_0
+  - first:
+      213: -5865970001753367430
+    second: Goldie_1
+  - first:
+      213: 6142890683408301583
+    second: Goldie_2
+  - first:
+      213: -4773244381422018351
+    second: Goldie_3
+  - first:
+      213: -4066030956503282781
+    second: Goldie_4
+  - first:
+      213: 8659635905885775805
+    second: Goldie_5
+  - first:
+      213: -7480959597273930536
+    second: Goldie_6
+  - first:
+      213: 4069522021629047776
+    second: Goldie_7
+  - first:
+      213: 9163161644653541415
+    second: Goldie_8
+  - first:
+      213: 6829095904565953925
+    second: Goldie_9
+  - first:
+      213: 8315691445757726930
+    second: Goldie_10
+  - first:
+      213: -4947395699492685017
+    second: Goldie_11
+  - first:
+      213: 5406985698399876794
+    second: Goldie_12
+  - first:
+      213: 4592064158200173512
+    second: Goldie_13
+  - first:
+      213: 4097016851142310236
+    second: Goldie_14
+  - first:
+      213: -2754250457715614799
+    second: Goldie_15
+  - first:
+      213: -1021417510157514869
+    second: Goldie_16
+  - first:
+      213: 760584893134473639
+    second: Goldie_17
+  - first:
+      213: -4699987267563192362
+    second: Goldie_18
+  - first:
+      213: 8498231908001225097
+    second: Goldie_19
+  - first:
+      213: -4963358794672786819
+    second: Goldie_20
+  - first:
+      213: -2804138026597155784
+    second: Goldie_21
+  - first:
+      213: 5260512344581878874
+    second: Goldie_22
+  - first:
+      213: 2220980989573170263
+    second: Goldie_23
+  - first:
+      213: -8712555846015407925
+    second: Goldie_24
+  - first:
+      213: 8429203409021817651
+    second: Goldie_25
+  - first:
+      213: 7231637162123945550
+    second: Goldie_26
+  - first:
+      213: -1108768782950762643
+    second: Goldie_27
+  - first:
+      213: 6542871821618658409
+    second: Goldie_28
+  - first:
+      213: -3992258156250113920
+    second: Goldie_29
+  - first:
+      213: 7394299195697026024
+    second: Goldie_30
+  - first:
+      213: 1911141356507247373
+    second: Goldie_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 24
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Goldie_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 287
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0138bd2dcfd8161a0800000000000000
+      internalID: -6818012243853343984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goldie_1
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 287
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7c9466dc53e79ea0800000000000000
+      internalID: -5865970001753367430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goldie_2
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 287
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0ebb96b78eef3550800000000000000
+      internalID: 6142890683408301583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goldie_3
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 287
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d0263b568702cdb0800000000000000
+      internalID: -4773244381422018351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goldie_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 247
+        width: 31
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ab41e7436e8297c0800000000000000
+      internalID: -4066030956503282781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goldie_5
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 247
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db72a86c9f43d2870800000000000000
+      internalID: 8659635905885775805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goldie_6
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 247
+        width: 31
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d42071d1ea4e2890800000000000000
+      internalID: -7480959597273930536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goldie_7
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 247
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e334d8a7b8d97830800000000000000
+      internalID: 4069522021629047776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goldie_8
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 207
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 728fe01a7f61a2f70800000000000000
+      internalID: 9163161644653541415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goldie_9
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 207
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5858ab80b82d5ce50800000000000000
+      internalID: 6829095904565953925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goldie_10
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 207
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d0d42ebf45476370800000000000000
+      internalID: 8315691445757726930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goldie_11
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 207
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72b7170e2d1575bb0800000000000000
+      internalID: -4947395699492685017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goldie_12
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 167
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab6fdb268d8790b40800000000000000
+      internalID: 5406985698399876794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goldie_13
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 167
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c31357a50a4abf30800000000000000
+      internalID: 4592064158200173512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goldie_14
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 167
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5970238e178bd830800000000000000
+      internalID: 4097016851142310236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goldie_15
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 167
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bb57652dcfe6c9d0800000000000000
+      internalID: -2754250457715614799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goldie_16
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 127
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8782bbaf2233d1f0800000000000000
+      internalID: -1021417510157514869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goldie_17
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 127
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a90fc83ee32e8a00800000000000000
+      internalID: 760584893134473639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goldie_18
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 127
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6df79045b7a46ceb0800000000000000
+      internalID: -4699987267563192362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goldie_19
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 127
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9899d4f05e8cfe570800000000000000
+      internalID: 8498231908001225097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goldie_20
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 87
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d72b7b6297b9e1bb0800000000000000
+      internalID: -4963358794672786819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goldie_21
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 87
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83cf28f5253b519d0800000000000000
+      internalID: -2804138026597155784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goldie_22
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 87
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a543c532b18110940800000000000000
+      internalID: 5260512344581878874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goldie_23
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 87
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7548768517282de10800000000000000
+      internalID: 2220980989573170263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goldie_24
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 47
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc8af708e98c61780800000000000000
+      internalID: -8712555846015407925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goldie_25
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 47
+        width: 31
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 333d14637db8af470800000000000000
+      internalID: 8429203409021817651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goldie_26
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 47
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4669e02fafeb5460800000000000000
+      internalID: 7231637162123945550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goldie_27
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 47
+        width: 31
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d677d2a9aacdc90f0800000000000000
+      internalID: -1108768782950762643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goldie_28
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 7
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96c3e729143fcca50800000000000000
+      internalID: 6542871821618658409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goldie_29
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 7
+        width: 31
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0885e09db56a898c0800000000000000
+      internalID: -3992258156250113920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goldie_30
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 7
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e35a7a11f3dd9660800000000000000
+      internalID: 7394299195697026024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goldie_31
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 7
+        width: 31
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d033c2620fcb58a10800000000000000
+      internalID: 1911141356507247373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Goldie_0: -6818012243853343984
+      Goldie_1: -5865970001753367430
+      Goldie_10: 8315691445757726930
+      Goldie_11: -4947395699492685017
+      Goldie_12: 5406985698399876794
+      Goldie_13: 4592064158200173512
+      Goldie_14: 4097016851142310236
+      Goldie_15: -2754250457715614799
+      Goldie_16: -1021417510157514869
+      Goldie_17: 760584893134473639
+      Goldie_18: -4699987267563192362
+      Goldie_19: 8498231908001225097
+      Goldie_2: 6142890683408301583
+      Goldie_20: -4963358794672786819
+      Goldie_21: -2804138026597155784
+      Goldie_22: 5260512344581878874
+      Goldie_23: 2220980989573170263
+      Goldie_24: -8712555846015407925
+      Goldie_25: 8429203409021817651
+      Goldie_26: 7231637162123945550
+      Goldie_27: -1108768782950762643
+      Goldie_28: 6542871821618658409
+      Goldie_29: -3992258156250113920
+      Goldie_3: -4773244381422018351
+      Goldie_30: 7394299195697026024
+      Goldie_31: 1911141356507247373
+      Goldie_4: -4066030956503282781
+      Goldie_5: 8659635905885775805
+      Goldie_6: -7480959597273930536
+      Goldie_7: 4069522021629047776
+      Goldie_8: 9163161644653541415
+      Goldie_9: 6829095904565953925
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

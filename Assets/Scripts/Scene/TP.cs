@@ -50,6 +50,20 @@ public class TP : MonoBehaviour, Trigger
 
         player.Character.SnapToTile(destinationTP.Spawn.position);
 
+        GameObject dogObj = GameObject.FindGameObjectWithTag("EcoDog");
+if (dogObj != null)
+{
+    Vector3 dogOffset = new Vector3(-1f, 0f, 0f); // Position à gauche du joueur (modifiable)
+    dogObj.transform.position = destinationTP.Spawn.position + dogOffset;
+
+    // Réinitialise le idleTimer du chien
+    EcoDogController dogController = dogObj.GetComponent<EcoDogController>();
+    if (dogController != null)
+    {
+        dogController.ResetStateAfterTP();
+    }
+}
+
         yield return fade.Hide(0.6f);
         GameController.Instance.PauseTheGame(false);
         Destroy(gameObject);

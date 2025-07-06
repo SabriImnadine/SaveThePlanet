@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Major
   - Mayor
+  - EcoDog
   layers:
   - Default
   - TransparentFX
