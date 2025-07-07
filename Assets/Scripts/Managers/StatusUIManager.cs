@@ -11,8 +11,8 @@ public class StatsUIManager : MonoBehaviour
     {
         if (GameStatsManager.Instance == null) return;
 
-        co2Text.text = "🌱 CO₂-vervuiling: " + GameStatsManager.Instance.Co2Level;
-        electricityText.text = "⚡ Elektriciteitsverspilling: " + GameStatsManager.Instance.ElectricityWaste;
-        plasticText.text = "🧴 Plasticvervuiling: " + GameStatsManager.Instance.PlasticPollution;
+        co2Text.text = "🌱 CO₂-vervuiling: " + GameStatsManager.Instance.Co2Level + "%";
+        electricityText.text = "⚡ Elektriciteitsverspilling: " + GameStatsManager.Instance.ElectricityWaste + "%";
+        plasticText.text = "🧴 Plasticvervuiling: " + GameStatsManager.Instance.PlasticPollution + "%";
     }
 }
