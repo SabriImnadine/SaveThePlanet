@@ -54,19 +54,19 @@ public class EcoDogController : MonoBehaviour
             Vector3 rawDirection = player.position - transform.position;
             Vector3 moveDirection = Vector3.zero;
 
-            // ❌ PAS de déplacement diagonal — priorité à l'axe le plus éloigné
+            
             if (Mathf.Abs(rawDirection.x) > Mathf.Abs(rawDirection.y))
                 moveDirection = new Vector3(Mathf.Sign(rawDirection.x), 0f, 0f);
             else
                 moveDirection = new Vector3(0f, Mathf.Sign(rawDirection.y), 0f);
 
-            // Déplacement
+        
            if (IsWalkable(moveDirection))
 {
     transform.position += moveDirection * followSpeed * Time.deltaTime;
 }
 
-            // Animation (input simulé pour AnimatorCharacter si tu l'utilises)
+           
             if (animator != null)
             {
                 animator.HorizontalInput = moveDirection.x > 0.1f ? 1 : moveDirection.x < -0.1f ? -1 : 0;
@@ -119,7 +119,7 @@ public class EcoDogController : MonoBehaviour
             if (!isSitting)
             {
 
-                // Reste immobile sur la bonne frame de direction
+                
                 List<Sprite> idleSprites = currentDirection switch
                 {
                     WatchingDirection.Up => walkUpSprites,
@@ -137,7 +137,7 @@ public class EcoDogController : MonoBehaviour
 
     private bool IsWalkable(Vector3 direction)
 {
-    // Cast une petite ligne pour vérifier s’il y a un obstacle devant
+    
     RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, 0.3f, Layers.i.SolidLayer);
     return hit.collider == null;
 }
