@@ -2,13 +2,15 @@
 🎨 GRAFISCHE ASSETS
 ==============================
 
-- NPC Sprites (humanoïde): https://solaarnoble.itch.io/free-npcs
 - Katten sprites: https://pop-shop-packs.itch.io/cats-pixel-asset-pack?download
 - Boerderijdieren: https://jamiebrownhill.itch.io/solaria-farm-animal-sprites?download
 - Afval en rommel: https://btl-games.itch.io/trash-and-junk-asset-pack?download
 - Bijen sprites: https://elthen.itch.io/2d-pixel-art-bumble-bee-sprites
 - Wilde dieren: https://thkaspar.itch.io/tth-animals
-- Pokémon-style assets (basis voor player/NPC): https://github.com/GameDevExperiments/Pokemon-Tutorial-Art-Assets
+- https://github.com/GameDevExperiments/Pokemon-Tutorial-Art-Assets
+- eco dog: https://artoellie.itch.io/adopt-goldie-for-free
+- nieuwe huizen: https://netorca91.itch.io/basictowntiles
+- alle zelf gedesiged NPC's: https://liberatedpixelcup.github.io/Universal-LPC-Spritesheet-Character-Generator
 
 ==============================
 🎵 AUDIO & MUZIEK
@@ -27,19 +29,13 @@
 - Regengeluid / ambiance schooldag: https://opengameart.org/content/school-day-rain-sun-loop
 
 ==============================
-📺 TUTORIALS & INSPIRATIE
+📺 INSPIRATIE
 ==============================
 
-- YouTube tutorials (dialogen, NPC logica, quest triggers...): https://www.youtube.com/@GameDevExperiments/videos
+https://www.youtube.com/@GameDevExperiments/videos
 
 ==============================
 🖼️ AI-GENERERDE BEELDEN
 ==============================
 
-- Hoofdmenu achtergrond (stijlvol landschap): gegenereerd via ChatGPT/DALL·E
-
-==============================
-📚 DOCUMENTATIE EN HANDLES
-==============================
-
-- Handleiding / educatief kader (schoolklimaat + quiz idee): https://anyflip.com/ddgxy/gurr/basic
+- Hoofdmenu pixel-art achtergrond (stijlvol landschap): gegenereerd via ChatGPT/DALL·E

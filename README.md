@@ -104,28 +104,51 @@ Deze AI-ondersteuning hielp me vooral om sneller oplossingen te vinden en proble
 ## 📚 Bronnen & Credits
 
 ### 🎨 Grafische assets
-- NPC Sprites: [solaarnoble.itch.io](https://solaarnoble.itch.io/free-npcs)
 - Katten sprites: [pop-shop-packs](https://pop-shop-packs.itch.io/cats-pixel-asset-pack?download)
-- Boerderij dieren: [Solaria Farm](https://jamiebrownhill.itch.io/solaria-farm-animal-sprites?download)
-- Afval sprites: [BTL Games](https://btl-games.itch.io/trash-and-junk-asset-pack?download)
+- Boerderijdieren: [Solaria Farm](https://jamiebrownhill.itch.io/solaria-farm-animal-sprites?download)
+- Afval en rommel: [BTL Games](https://btl-games.itch.io/trash-and-junk-asset-pack?download)
 - Bijen sprites: [Elthen](https://elthen.itch.io/2d-pixel-art-bumble-bee-sprites)
 - Wilde dieren: [TTH Animals](https://thkaspar.itch.io/tth-animals)
+- Pokémon Tutorial Art Assets: [GameDevExperiments GitHub](https://github.com/GameDevExperiments/Pokemon-Tutorial-Art-Assets)
+- Eco Dog: [Artoellie](https://artoellie.itch.io/adopt-goldie-for-free)
+- Nieuwe huizen tileset: [netorca91](https://netorca91.itch.io/basictowntiles)
+- Zelf ontworpen NPC’s gebaseerd op: [Universal LPC Character Generator](https://liberatedpixelcup.github.io/Universal-LPC-Spritesheet-Character-Generator)
+
+---
 
 ### 🎵 Audio & Muziek
-- Village muziek: [OpenGameArt - Village Music](https://opengameart.org/content/village-music)
-- Strand muziek: [OpenGameArt - Beach 01](https://opengameart.org/content/beach-01)
-- Bos muziek: [OpenGameArt - Forest Theme](https://opengameart.org/content/forest-theme)
-- Stadsthema: [OpenGameArt - Town Theme](https://opengameart.org/content/town-theme-rpg)
-- Menu muziek: [Dreamy RPG Theme](https://opengameart.org/content/dreamy-side-scrolling-rpg-title-menu-and-rpg-village-exploration-hitctrl-remixed)
-- Win sound, light switch, beep, teleport: zie `Bronnen.txt` in het project
+- Village muziek: [OpenGameArt – Village Music](https://opengameart.org/content/village-music)  
+- Strand muziek: [OpenGameArt – Beach 01](https://opengameart.org/content/beach-01)  
+- Bos muziek: [OpenGameArt – Forest Theme](https://opengameart.org/content/forest-theme)  
+- Stadsthema: [OpenGameArt – Town Theme](https://opengameart.org/content/town-theme-rpg)  
+- Menu muziek: [OpenGameArt – Dreamy RPG Theme](https://opengameart.org/content/dreamy-side-scrolling-rpg-title-menu-and-rpg-village-exploration-hitctrl-remixed)  
 
-### 🖼️ Afbeeldingen
-- Hoofdmenu achtergrond: **AI gegenereerd via ChatGPT**
+- Win geluid: [OpenGameArt – Win Sound](https://opengameart.org/content/win-sound-2)  
+- Beep geluid: [OpenGameArt – Beep Tone SFX](https://opengameart.org/content/beep-tone-sound-sfx)  
+- Teleport geluid: [OpenGameArt – Teleport Spell](https://opengameart.org/content/teleport-spell)  
+- Lichtschakelaar geluid: [OpenGameArt – Light Switch](https://opengameart.org/content/light-switch-on-sfx-sound-effect)  
+- Regengeluid / ambiance: [OpenGameArt – School Day Rain](https://opengameart.org/content/school-day-rain-sun-loop)  
+
+---
+
+### 📺 Inspiratie
+- Tutorials: [GameDev Experiments – YouTube](https://www.youtube.com/@GameDevExperiments/videos)
+
+---
+
+### 🖼️ AI-gegenereerde beelden
+- Hoofdmenu pixel-art achtergrond (stijlvol landschap): **gegenereerd via ChatGPT / DALL·E**
 
 
 ### 📁 Designmateriaal
-- Quizvragen en gegenereerde afbeelding zijn te vinden in de map `/Design`
-
+-  Afbeeldingen zijn te vinden in de map `/Design`
+- **Quizvragen**: zelf geschreven in het Nederlands, afgestemd op 11–15 jaar.  
+- **Quiz‑UI**: zelf ontworpen pixelart‑schoolbord als achtergrond (map `/Design`).  
+- **DialogBox (pixelart)**: **zelf ontworpen** dialoogvenster (rechthoekige sprite met zachte rand), handmatig gepositioneerd/geschaald en geïntegreerd met mijn dialoogsysteem (`DialogManager`).  
+- **Hoofdmenu achtergrond**: AI-gegenereerd via ChatGPT/DALL·E, met persoonlijke prompt en integratie.  
+- **Sleutelbeeld (cover Save The Planet)**: zelf samengesteld voor presentaties.  
+- **Tiles**: eigen ontworpen tilesets voor strand, water, bos, gras en interieurvloeren.  
+- **NPC’s**: zelf ontworpen via de LPC Character Generator, met eigen outfits/kleuren/details.  
 
 ---
 
@@ -134,6 +157,58 @@ Deze AI-ondersteuning hielp me vooral om sneller oplossingen te vinden en proble
 Een volledig overzicht van alle assets, muziek, geluiden en bronnen bevindt zich in het bestand **`Bronnen.txt`** in deze projectmap.
 
 ---
+
+## 📑 Tweede Zit – Reflectie & Eigen Inbreng
+
+In deze reflectie toon ik aan hoeveel werk en persoonlijke inzet ik geleverd heb in de verdere ontwikkeling van mijn educatieve game **‘Save The Planet’**.  
+Alle onderstaande toevoegingen en verbeteringen zijn specifiek uitgewerkt in het kader van mijn **tweede zit**.  
+
+Na de eerste feedbackronde (8/20 wegens *"onvoldoende eigen inzet"*) heb ik besloten om mijn bijdrage grondig uit te breiden. In totaal heb ik **18 onderdelen** volledig zelf ontworpen, gecodeerd of geanalyseerd, inclusief animaties, interactieve systemen, visuele elementen en gameplay-mechanica.  
+
+Elk onderdeel wordt hieronder concreet opgesomd, maar voor de **volledige technische en pedagogische details** verwijs ik naar mijn **documentatie**. Daarin heb ik elke toevoeging uitgebreid beschreven met uitleg over het proces, de oplossingen voor bugs, en de educatieve keuzes.  
+
+---
+
+### 1. Dynamisch weersysteem in het bos  
+### 2. Optiemenu – Geluidsinstellingen  
+### 3. Wind-effect op het strand  
+### 4. Eigen karakter + realistische graafanimatie  
+### 5. Realistische zaai-animatie bij bomen planten  
+### 6. Oprap-animatie bij flessen  
+### 7. Schakel-animatie bij lampen  
+### 8. Eigen DialogBox implementatie  
+### 9. Unieke NPC-creatie  
+### 10. Eigen pixelart-schoolbord voor quiz  
+### 11. AI-achtergrond hoofdmenu met persoonlijke prompt  
+### 12. Poging richtingspijl (pointer)  
+### 13. Trashcan animatie  
+### 14. Statistieken bovenaan het scherm  
+### 15. Nieuwe huizen met unieke stijl  
+### 16. EcoDog volgsysteem  
+### 17. Eigen ontworpen tiles (strand, water, bos, gras, vloertileset)  
+### 18. Aanpassingen aan mijn magazine – visuele samenhang met het spel  
+
+---
+
+### 🎯 Onderzoeksvraag
+**Hoe kunnen we een educatief spel ontwerpen dat jongeren bewust maakt van klimaatproblemen en hen aanzet tot duurzamer gedrag?**
+
+### 💡 Antwoord van mijn game
+- Jongeren voeren drie concrete acties uit: bomen planten, afval opruimen, energie besparen.  
+- Bij elke actie verandert de spelwereld én dalen de live-statistieken.  
+- NPC’s geven weetjes in verhalende vorm, gekoppeld aan thema’s.  
+- Aan het einde: een **eco-score**, gebaseerd op keuzes.  
+
+Zo maakt mijn spel duidelijk: **jouw keuzes hebben impact**.  
+Dat is precies de kern van mijn onderzoeksvraag.
+
+---
+
+Met dit document toon ik aan dat ik tijdens mijn tweede zit **actief en zelfstandig gewerkt** heb aan mijn spel.  
+Ik heb gekozen om verschillende onderdelen volledig zelf te ontwerpen, te programmeren en te verbeteren.  
+
+👉 Voor meer details over elk onderdeel verwijs ik naar mijn **Tweede Zit documentatie**, waarin alles uitgebreid beschreven staat.  
+
 
 ## 👨‍💻 Auteur
 
